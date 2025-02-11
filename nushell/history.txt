@@ -1,0 +1,1022 @@
+print hello
+clear
+ls
+ls -a
+yay -S ags-hyprpanel-git
+sudo pacman -S wireplumber networkmanager bluez bluez-utils aylurs-gtk-shell-git libgtop dart-sass wl-clipboard upower gvfs
+yay -S aylurs-gtk-shell-git
+clear
+yay -S ags-hyprpanel-git
+hyprpanel
+brightnessctl
+yay -S brightnessctl
+brightnessctl
+clear
+ls
+clear
+hyprpanel
+killall waybar
+cd .config
+ls
+ls -a
+cd hypr
+ls
+nvim
+logout
+exit
+clear
+brightnessctl
+brightnessctl set 20
+brightnessctl set 1
+clear
+brightnessctl set 20
+brightnessctl set 10
+wlr-randr
+swaymsg
+clear
+xbacklight
+light
+clear
+light -U 5
+sudo pacman -S light
+yay -S light
+light -U 5
+light -U 50
+light -S 0
+light -U 50
+hyprpanel
+killall hyprpanel
+clear
+exit
+clear
+ls
+cd (ls|get 0|get name)
+cd ..
+ls -a
+cd (ls -a|get 5|get name)
+ls
+ls -a
+cd ghostty
+ls
+nvim
+clea
+exit
+clear
+ls
+cd waybar
+ls
+touch config
+nvim
+waybar
+clear
+touch oldworld.css
+touch style.css
+nvim
+waybar
+clear
+cd ..
+nvim
+killall hyprpanel
+logout
+exit
+cd .config
+ls
+nvim starship.toml
+clear
+exit
+clear
+ls
+shutdown
+shutdwon now
+exit
+ls
+clear
+exit
+clear
+ls
+clear
+fdm
+fdm a
+clear
+ls
+cd hypr
+nvim
+clear
+fdm
+clear
+freedownloadmanager
+yay -S freedownloadmanager
+yay -R freedownloadmanager
+sudo pacman -S nvidia nvidia-utils<\n>
+sudo pacman -S xf86-video-amdgpu<\n>
+sudo pacman -Syu
+sudo Xorg -configure
+clear
+journalctl -xe<\n>
+clear
+journalctl -xe<\n>
+clear
+ls
+yay -S ollama
+llama
+clear
+ollama
+ollama run deepseek-rq
+ollama run deepseek-r1
+tmux
+exit
+brightnessctl set 10
+brightnessctl set 49
+brightnessctl set 10
+hyprbar
+ls
+cd .config
+ls
+ls | where bar
+ls | where "bar"
+wher
+where
+clear
+where --help
+ls | where name ~="bar"
+ls | where name =~ "bar"
+ls | where name =~ hypr
+hyprpanel
+ls
+exit
+clear
+ls -a
+mkdir github
+zoxide github
+cd github
+clear
+ls
+git clone windowrule = float, ^(kitty)$
+git clone https://github.com/GitSquared/edex-ui
+npm run install-linux
+ls
+cd (ls -a|get 0|get name)
+ls
+npm run install-linux
+npm run build-linux
+clear
+npm run start
+clear
+cd .. ..
+cd .
+cd..
+cd ..
+cd ~
+cd Download
+ls
+cd Downloads
+ls
+rm (ls -a|get 1|get name)
+ls
+rm (ls -a|get 1|get name)
+ls
+chmod +x (ls|get 0|get name)
+./(ls|get 0|get name)
+ls
+./eDex-UI-Linux-x86_64.AppImage
+./(ls|get 0|get name)\
+./(ls|get 0|get name)
+reboot
+exit
+ls
+clear
+nvim
+config nu
+$env.config.buffer_editor = "nvim"
+config nu
+ckear
+clear
+exit
+clear
+clc
+clear
+nu config
+config
+clea
+rclear
+clear
+exit
+ls
+tmux
+exit
+clear
+ls -a
+cd github
+clear
+ls
+mkdir ags-app
+ls
+mkdir ags-test
+rm -rf ags-app
+clear
+ls
+cd ags-test
+ags init --gtk 4
+clear
+ls
+apprun (ls|get 1|get name))
+apprun (ls|get 1|get name)
+yay -S apprun
+cd Downloads
+clear
+ls
+chmod +x (ls|get 2|get name)
+ls
+clear
+nvim .bashrc
+clear
+exit
+config nu
+starship init nu
+nvim .bashrc
+config nu
+clear
+exit
+clear
+cd github
+ls
+cd ags-test
+ls
+gs init
+ls
+ags init
+ags init --gtk 4
+cd ..
+~/.config/ags
+clear
+ls
+clear
+ls
+clear
+ags run
+clear
+ls
+clear
+exit
+nvim
+hyprpanel
+clear
+cd .
+cd ..
+ls
+cd hypr
+ls
+hyprcursor
+yay -S hyprcursor
+clear
+hyprcursor
+clear
+hyprcursor
+exit
+exit
+cd Downloads
+ls
+./(ls|get 2|get name)
+cd ~/.config/hypr
+nvim
+clear
+ls
+cd ..
+ls
+ls|where name =~ bar
+ls|where name =~ yypr
+ls|where name =~ ypr
+cd hyprpanel
+ls
+yay -Syu aylurs-gtk-shell-git<\n>wireplumber<\n>libgtop<\n>bluez<\n>bluez-utils<\n>networkmanager<\n>dart-sass<\n>wl-clipboard<\n>upower<\n>gvfs
+exit
+nvim
+clear
+fastanime --preview --manga --fzf anilist
+reboot
+clear
+alias
+alis -h
+alias -h
+alias clc =clear
+alias clc = clear
+clc
+cd .config
+ls
+cd hyprpanel
+clc
+ls
+nvim
+clear
+cava
+pywa;
+pywal
+clc
+yay -S pywal
+clc
+cd ..
+cd ags
+ls
+nvim
+yay -S libastal-lua-git
+clc
+ags
+ags init --lua
+ags init
+cd ..
+rm -rf ags
+ags init
+cd ags
+ls
+ags run
+clear
+ags run
+yay -S prettier
+clear
+ags run
+clear
+ags run
+clear
+nvim
+clear
+cd .
+cd ..
+clear
+cd hypr
+hyprctl clients
+clear
+mpv
+clear
+hyprctl clients
+fastanime --preview --manga --fzf anilist
+exit
+nvim 
+exit
+tmux
+exit
+yay -S inotify-tools
+cd .config/ags
+clear
+ls
+clc
+clear
+ls
+ags run
+clear
+mkdir tester
+exit
+clear
+ls
+cd tester
+ls
+./testBash
+testBash
+chmod +x (ls|get 0|get name)
+ls
+nvim
+ls
+./testBash
+exit
+clear
+ls
+./testBash
+FILE_TO_WATCH="testBash"<\n><\n># Use inotifywait to watch for changes to the file<\n>inotifywait -m -e modify "$FILE_TO_WATCH" |<\n>while read path action file; do<\n>  echo "$file has been modified."<\n>  # You can add any action you want to take after the file is edited here.<\n>done
+clear
+chmod +x testTest
+exit
+nvim
+;q
+exit
+ls
+./testTest
+clear
+./testTest.sh
+chmod +x testTest.sh
+clc
+clear
+ls
+./testTest.sh
+clear
+./testTest.sh
+yay -S inotify-tools
+./testTest.sh
+clear
+./testTest.sh
+clear
+./testTest.sh
+clear
+./testTest.sh
+clear
+./testTest.sh
+inotify --help
+inotifywait --help
+./testTest.sh
+inotifywait --include "testTest.sh"
+inotifywait -m --include "testTest.sh"
+inotifywait -m --include "testTest.sh" ~/.config/ags/tester
+inotifywait --include "testTest.sh" ~/.config/ags/tester
+clear
+./testTest.sh
+clear
+./testTest.sh
+clear
+./testBash.sh
+clear
+./testBash.sh
+clear
+./testBash.sh
+clear
+./testBash.sh
+killall ags
+./testBash.sh
+clear
+./testBash.sh
+ags
+ags quit
+clear
+exit
+./testBash.sh
+clear
+./testBash.sh
+ags quit
+ags run
+clear
+./testBash.sh
+ags quit
+./testBash.sh
+clear
+./testBash.sh
+clear
+./testBash.sh
+exit
+tmux
+exit
+cd .config/ags
+ls
+cd tester
+ls
+clear
+ls
+ags types
+exit
+astal
+clc
+clear
+asstal --inspector
+astal --inspector
+exit
+killall hyprpanel
+exit
+sleep
+sleep 5
+sleep 5ms
+sleep 5s
+sleep 5000ms
+yay -S tlp
+tpl
+alias clc = clear
+clc
+asusutil
+yay -S asusutil
+sudo pacman -S asusutil
+sudo pacman -S asusctl
+clc
+clear
+yay -S asusctl
+clear
+asusuctl
+asusctl
+asusctl -c 95
+asusctl -c 85
+clc
+asusctl
+asusctl armoury
+clear
+asusctl
+asusctl armoury --help
+asusctl -c --help
+asusctl -c -h
+asusctl -c 85
+asusctl bios -D 0
+asusctl graphics -D 0
+clc
+yay -S supergfxctl
+cd /etc
+ls
+yazi
+cd ~
+clc
+supergfxctl -s
+systemctl enable supergfxd
+supergfxctl -s
+supergfxctl -g
+supergfxctl -m hybrid
+asusctl
+asusctl -k bright
+asusctl -k high
+asusctl -k off
+asusctl -k high
+asusctl -k off
+yay -s rog-control-center
+rog-control-center
+yay -s rog-control-center
+yay -S rog-control-center
+sudo pacman -S upower<\n>
+clc
+celar
+clear
+upower -e<\n>
+upower -i /org/freedesktop/UPower/devices/battery_BAT0<\n>
+exit
+cd .config
+cd ags
+ls
+cd tester
+ls
+./testBash.sh
+ls
+cd ..
+ls
+cd Downloads
+ls
+./(ls|get 2|get name)
+ls
+rm zenCss
+ls
+./(ls|get 2|get name)&
+./(ls|get 2|get name) &
+nohup
+nohup ./(ls|get 2|get name) &
+ags types
+gtk --init
+clc
+clear
+nvim
+exit
+tmux
+clear
+exit
+btop
+cd.config
+cd .config
+clear
+cd ags
+ls
+clear
+cd ags
+ls
+clear
+exit
+tmux
+clear
+cd .config/ags
+clear
+ls
+./tester/testBash.sh
+exit
+nvim
+ls
+nvim
+ls
+cd ..
+rm ags
+rm -rf ags
+clear
+ls
+CLEAR
+clear
+yay -S libastal-lua-git
+clear
+mkdir ags
+ls
+cd ags
+clear
+touch init.lua
+ls
+lua init.lua
+clear
+lua init.lua
+lua init.lua & PID=$! sleep 5 kill $PID 
+clear
+chmod +x thing.sh
+./thing.sh
+exit
+./thing.sh
+nvim
+./thing.sh
+clear
+./
+./thing.sh
+lua init.lua
+clear
+exit
+clear
+exit
+clear
+lua init.lua
+exit
+lua init.lua
+c;ear
+clear
+lua init.lua
+clear
+lua init.lua
+clear
+lua init.lua
+clear
+lua init.lua
+clear
+lua init.lua
+clear
+lua init.lua
+c;ear
+clear
+lua init.lua
+clear
+exit
+clear
+./thing.sh
+btop
+clear
+exit
+clear
+./thing.sh
+clear
+./
+./thing.sh
+ollama run deepseek-r1
+exit
+ollama serve
+exit
+clear
+exit
+./thing.sh
+clear
+zoxide
+clear
+zoxide ags
+zoxide github
+zoxide
+zoxide init
+zoxide init nu
+zoxide init nushell
+nu config
+config nu
+clear
+exiut
+exit
+clear
+z
+clear
+z githun
+clear
+z ags
+cd .config/ags
+cd ~
+z ags
+clear
+ls
+z 
+exity
+exit
+clear
+z ags
+./thing.sh
+clear
+./thing.sh
+nvim
+clear
+btop
+exit
+fastanime --preview --manga --fzf anilist
+exit
+./thing.sh
+exit
+tmux
+exit
+yay -S nish
+yay -S nsh
+clear
+nsh
+exit
+cd .config
+clear
+mkdir tags
+git clone https://github.com/suryavamsi6/dotfiles-yami tags
+clear
+cd tags
+ls
+ts
+typescript
+clear
+ags 
+ags run 
+ags run tags
+cd ..
+ags run tags
+ags quit
+ags run tags
+clear
+ags run tags
+nvim
+clear
+ags run
+exit
+nvim
+clear
+ags run
+clear
+yazi
+ags run
+clear
+cd ags
+ls
+./thing.sh
+exit
+clear
+ls
+z .config
+clear
+cd ~
+z ags
+ls
+cd ..
+yazi
+clear
+z ags
+cd ags-lua
+clear
+cd ~
+z ags-lua
+clear
+cd ~
+clear
+sudo timedatectl set-timezone America/Chicago<\n>
+clear
+reboot
+yazi
+z ags-lua
+clear
+ls
+./thing.sh
+z ags-lua
+clear
+ls
+nvimn
+vim
+clear
+vi
+v
+nv
+config nu
+exit
+clear
+nv
+clear
+z ags-lua
+ls
+nv
+nvim
+./thing.sh
+killall lua
+./thing.sh
+killall lua
+exit
+clear
+./thing.sh
+killall lua
+clear
+./thing.sh
+killall lua
+./thing.sh
+killall lua
+./thing.sh
+killall lua
+./thing.sh
+killall lua
+./thing.sh
+killall lua
+./thing.sh
+clear
+killall lua
+./thing.sh
+killall lua
+./thing.sh
+killall lua
+bash <(curl -sSL https://spotx-official.github.io/run.sh)
+exit
+bash <(curl -sSL https://raw.githubusercontent.com/SpotX-Official/SpotX-Bash/refs/heads/main/spotx.sh)
+clear
+bash <(curl -s https://raw.githubusercontent.com/SpotX-Official/SpotX-Bash/refs/heads/main/spotx.sh)
+bash <(wget -q0- https://raw.githubusercontent.com/SpotX-Official/SpotX-Bash/refs/heads/main/spotx.sh)
+bash <(wget -qo- https://raw.githubusercontent.com/SpotX-Official/SpotX-Bash/refs/heads/main/spotx.sh)
+clear
+ls
+nvim
+bash spotx.sh
+flatpak
+bash spotx.sh
+exit
+./thing.sh
+;q
+;
+exit
+nvim
+clear
+./thing.sh
+clear
+./thing.sh
+cd /usr/local/share/lua/5.4/astal
+cd /
+ls
+cd usr
+ls
+cd share
+ls
+sudo ls
+ls
+ls|where name =~ lua
+cd lua
+ls
+cd 5.4
+ls
+cd astal
+ls
+cd gtk3
+ls
+cd ..
+yazi
+grep
+grep gkt
+grep gtk
+grep -h "gtk"
+grep -h "export"
+clear
+ls
+nvim
+clear
+./thing.sh
+clear
+./thing.sh
+clear
+ls
+nvim
+nv
+ags init
+clear
+exit
+ls
+cd ..
+ls
+cd ags
+ls
+ags run
+exit
+nvim
+exit
+nvim
+exit
+./thing.sh
+clear
+exitr
+exit
+tmux
+clear
+yazi
+exit
+date
+exit
+bash
+exit
+date
+date now
+z ags-lua
+clear
+ls
+clear
+ls
+z .confgi
+z .config
+z hypr
+ls
+nv
+exit
+z hypr
+cd ~/.config/hypr
+cd ~
+z hypr\
+z hypr
+z
+zoxide
+zoxide query
+zoxide query hypr
+zoxide query h
+zoxide query a
+zoxide query b
+z ~/.config/hypr
+ls
+nvim
+exit
+z github
+z ~/github
+ls
+z github
+clear
+ls
+git clone https://github.com/stevedonovan/LuaMacro
+ls
+cd LuaMacro
+ls
+luam
+./luam
+touch test.lua
+luam
+./luam test.lua
+yay -S lpeg
+luarock
+luarocks
+luarocks install
+luarocks install lpeg
+sudo luarocks install lpeg
+./luam test.lua
+cd ..
+ls
+sudo luarocks install luamacro
+sudo luarocks install lua
+sudo luarocks install lgi
+exit
+nvim
+exit
+clear
+z ags-lua
+ls
+nvim
+z ags-lua
+clear
+ls
+rofi -show drun
+exit
+bash rofi -show drun
+bash -c rofi -show drun
+bash -c 'rofi -show drun'
+./thing.sh
+ags run
+clear
+exit
+./thing.sh
+clear
+./thing.sh
+clear
+nvim
+./thing.sh
+exit
+z hypr
+z ~/.config/hypr
+ls
+z ags-lua
+ls
+nvim
+nv
+v
+exit
+nvim
+clear
+exit
+tmux
+exit
+chsh -s /usr/bin/nu<\n>
+rebot
+reboot
+clear
+exit
+z ags-lua
+ls
+./thing.sh
+nv
+cd ~
+nv .bashrc
+z ags-lua
+ls
+nv init.lua
+ls
+./thing.sh
+systemctl suspend
+exit
+./thing.sh
+clear
+./thing.sh
+clear
+./thing.sh
+clear
+./thing.sh
+clear
+nvim
+exit
+./thing.sh
+exit
+tmux
+exit
+z .config
+ls
+ls | where name =~ git
+git clone https://github.com/mintoya/dotfiles remotegit
