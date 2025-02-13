@@ -3,7 +3,6 @@ w_dir = "$HOME/.config/ags-lua"
 
 $your_command &
 PID=$!
-
 inotifywait -m -r "$HOME/.config/ags-lua" \
   | while read path action file; do
     if [[ "$action" == "MODIFY" ]]; then
@@ -14,3 +13,5 @@ inotifywait -m -r "$HOME/.config/ags-lua" \
       PID=$!
     fi
   done
+# luastatic init.lua -o testo  -llu
+# command to bundle the file

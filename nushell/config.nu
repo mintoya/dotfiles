@@ -102,3 +102,4 @@ alias zi = __zoxide_zi
 #
 # Note: zoxide only supports Nushell v0.89.0+.
 alias nv = nvim
+alias lgit = lazygit

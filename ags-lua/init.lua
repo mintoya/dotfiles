@@ -1,3 +1,45 @@
+local function status()
+  local handle = io.popen("bash -c 'playerctl status 2>/dev/null'")
+
+  if (handle == nil) then return { exists = false } end
+
+  local output = handle:read("*a") -- Read all output
+  handle:close()
+  if output == "" then
+    return nil
+  else
+    return string.find(output, "Playing") == 1
+  end
+end
+local function Media()
+  local handle = io.popen("bash -c 'playerctl metadata 2>/dev/null'")
+
+  if (handle == nil) then return { exists = false } end
+
+  local output = handle:read("*a") -- Read all output
+  handle:close()
+  local otable = {
+    exists = not (output == ""),
+  }
+  otable.playing = status()
+  for line in string.gmatch(output, "[^\n\r]+") do
+    local key = ""
+    local place = string.find(line, ":")
+    place = place + 1
+    while string.sub(line, place, place) ~= " " do
+      key = key .. string.sub(line, place, place)
+      place = place + 1
+    end
+    while string.sub(line, place, place) == " " do
+      place = place + 1
+    end
+    local val = string.sub(line, place)
+    otable[key] = val
+  end
+  return otable
+end
+
+
 local Astal = require("astal")
 local Exec = Astal.exec
 local App = require("astal.gtk3.app")
@@ -6,24 +48,7 @@ local Battery = Astal.require("AstalBattery")
 local Gtk = require("astal.gtk3").Gtk
 local Widget = require("astal.gtk3.widget")
 local Anchor = require("astal.gtk3").Astal.WindowAnchor
--- sleep: systemctl suspend
---[[ example for executing file
-local out, err = exec("/path/to/script")
-
-if err ~= nil then
-    print(err)
-else
-    print(out)
-end
-
-exec_async({ "bash", "-c", "/path/to/script.sh" }, function(out, err)
-    if err ~= nil then
-        print(err)
-    else
-        print(out)
-    end
-end)
-]]
+local Wp = Astal.require("AstalWp")
 
 local fgColor = "rgba(144,144,255,1)"
 local bgColor = "rgba(32,32,64,1)"
@@ -51,7 +76,6 @@ local stateTable = {
   actionCenter = Astal.Variable(false)
 }
 local function Left()
-  local count = Astal.Variable(0)
   return
       Widget.Box({
         halign = Gtk.Align.START,
@@ -85,9 +109,7 @@ local function Left()
             font-size: 24px;
             margin-right:2px;
             ]],
-            label = Astal.bind(count):as(function(st)
-              return "󱗼"
-            end),
+            label = "󱗼"
           }),
         }),
       })
@@ -103,21 +125,26 @@ local function Right()
     end
   )
   local battery = Astal.Variable(""):poll(
-    10000,
+    1000,
     function()
-      -- print(Battery.get_default()["is-present"])
-      local batteryPercentage = math.floor(100 * Battery.get_default()["percentage"])
+      local bState = Battery.get_default()
+      if not (bState["is-present"]) then return " " end
+      local batteryPercentage = math.floor(100 * bState["percentage"])
       local bicon = BatteryIcons[math.floor(batteryPercentage / 20) + 1]
-      return (bicon .. "   " .. batteryPercentage .. "%")
+      if (bState["state"] == "CHARGING") then
+        bicon = bicon .. " 󱐋 "
+      else
+        bicon = bicon .. "   "
+      end
+      return (bicon .. batteryPercentage .. "%")
     end
   )
   return
       Widget.Box({
-        css = "background-color: transparent;",
+        css = cssA.tbg,
         halign = Gtk.Align.END,
         Widget.Button({
-          css = cssA.button ..
-              [[
+          css = cssA.button .. [[
           padding-left:9px;
           padding-right:9px;
           margin-left:5px;
@@ -144,15 +171,68 @@ local function Right()
       })
 end
 local function Center()
-  local count = Astal.Variable(0)
+  local button = [[
+      background:]] .. fgColor .. [[;
+      color:black;
+      box-shadow:none;
+      text-shadow:none;
+      border-width: 0px;
+      font-size: 20px;
+      font-weight:bold;
+      margin-left: 2px;
+      margin-right:2px;
+      border-radius :5px;
+      ]]
+  local media = Astal.Variable(Media()):poll(
+    500,
+    Media
+  )
   return
-      Widget.Button({
+      Widget.Box({
         halign = Gtk.Align.END,
-        css = cssA.button,
-        Widget.Label({
-          css = cssA.text,
-          label = "middle",
+        on_destroy = media.drop,
+        vertical = false,
+        visible = Astal.bind(media):as(function(t)
+          return t.exists
+        end),
+        Widget.Button({
+          css = button,
+          label = "",
+          on_click_release = function()
+            Exec("bash -c 'playerctl previous'")
+          end
         }),
+        Widget.Button({
+          css = button,
+          label = Astal.bind(media):as(function(t)
+            if not t.exists then return "" end
+            if (not t.playing) then
+              return ""
+            else
+              return ""
+            end
+          end),
+          on_click_release = function()
+            Exec("bash -c 'playerctl play-pause'")
+          end
+        }),
+        Widget.Button({
+          css = button,
+          label = "",
+          on_click_release = function()
+            Exec("bash -c 'playerctl next'")
+          end
+        }),
+        Widget.Label({
+          css = button .. [[
+          padding-left:5px;
+          padding-right:5px;
+          ]],
+          label = Astal.bind(media):as(function(t)
+            if not t.exists then return "" end
+            return t.title:sub(1, 15)
+          end),
+        })
       })
 end
 local function actionCenter()
@@ -178,6 +258,7 @@ local function actionCenter()
         css = button,
         on_click_release = function()
           print("shutdown")
+          Exec("bash -c 'shutdown now'")
         end,
         Widget.Label({
           css = "margin-right:5px;",
@@ -188,6 +269,7 @@ local function actionCenter()
         css = button,
         on_click_release = function()
           print("reboot")
+          Exec("bash -c 'reboot'")
         end,
         Widget.Label({
           css = "margin-right:5px;",
@@ -198,6 +280,7 @@ local function actionCenter()
         css = button,
         on_click_release = function()
           print("suspend")
+          Exec("bash -c 'systemctl suspend'")
         end,
         Widget.Label({
           css = "margin-right:5px;",
@@ -208,6 +291,7 @@ local function actionCenter()
         css = button,
         on_click_release = function()
           print("logout")
+          Exec("bash -c 'pkill -u $(whoami)'")
         end,
         Widget.Label({
           css = "margin-right:5px;",
@@ -216,16 +300,66 @@ local function actionCenter()
       }),
     })
   end
-  return Widget.Box({
-    css = cssA.button ..
-        [[
-        margin-top: 10px;
-        padding:5px;
-        ]],
-    halign = Gtk.Align.START,
-    actions(),
-  })
+  local function sliders()
+    local speaker = Wp.get_default().audio.default_speaker
+    local function setBrightness(percentBrightness)
+      local _, err = Exec("bash -c 'brightnessctl set " .. math.floor(100 * percentBrightness) .. "'")
+      if err ~= nil then
+        print(err)
+      end
+    end
+    local function getBrightness()
+      local out, err = Exec("bash -c 'brightnessctl get' ")
+      if err ~= nil then
+        print(err)
+      else
+        return (tonumber(out))
+      end
+      return 0
+    end
+    local brightness = Astal.Variable(getBrightness())
+    return
+        Widget.Box({
+          vertical = true,
+          Widget.Slider({
+            css = cssA.button,
+            hexpand = true,
+            on_dragged = function(self) speaker.volume = self.value end,
+            value = Astal.bind(speaker, "volume"),
+          }),
+
+          Widget.Slider({
+            hexpand = true,
+            css = cssA.button,
+            on_dragged = function(self) setBrightness(self.value) end,
+            value = Astal.bind(brightness),
+          })
+        })
+  end
+  return
+      Widget.Box({
+        Widget.Box({
+          css = [[
+          margin-top:10px;
+          padding:2px;
+          margin:2px;
+          border-radius: 10px;
+          background-color:]] .. fgColor .. [[
+          ]],
+          hexpand = false,
+          Widget.Box({
+            css = cssA.button .. [[
+            padding:5px;
+            ]],
+            halign = Gtk.Align.START,
+            vertical = true,
+            sliders(),
+            actions(),
+          })
+        })
+      })
 end
+
 local function modals(monitor)
   return
       Widget.Window({
@@ -243,12 +377,13 @@ local function Bar(monitor)
     exclusivity = "EXCLUSIVE",
     css = cssA.tbg,
     Widget.CenterBox({
+      vertical = false,
       Left(),
       Center(),
       Right(),
+      modals(monitor),
     }),
     --?
-    modals(monitor),
   })
 end
 

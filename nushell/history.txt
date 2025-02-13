@@ -1020,3 +1020,661 @@ z .config
 ls
 ls | where name =~ git
 git clone https://github.com/mintoya/dotfiles remotegit
+yazi
+cd remotegit
+ls
+lazygit
+config nu
+;q
+exit
+z remotegit
+ls
+lg
+lgit
+git config
+git config user.email
+git config user.email hfm598@gmail.com
+git config user.email
+git config user.name paa@arch
+lgit
+gh
+gh auth
+git-cli 
+gh-cli
+yay -S github-cli
+github-cli
+clear
+gh
+gh auth github
+gh auth login
+gh auth github
+gh auth login
+z remotegit
+clear
+ls
+lgit
+yazi
+lazygit
+exit
+clear
+ls
+z ags-lua
+ls
+z ags-lua
+ls
+nvim
+clear
+ls
+git clone https://github.com/Aylur/astal/tree/feat/python/examples/lua/simple-bar 
+ls
+git clone https://github.com/Aylur/astal/
+ls
+cd asta
+cd astal
+ls
+cd examples
+ls
+cd gtk3
+ls
+cd lua
+ls
+cd media-player
+ls
+lua init.lua
+killall hyprpanel
+btop
+nvim
+cd ..
+ls
+cd notifications
+cd ..
+cd simple-bar
+ls
+lua init.lua
+killall ags
+killall lua
+./thing.sh
+clear
+yazi
+clkear
+clear
+exit
+ls
+lua
+clear
+ls
+chmod +x init.lua
+ls
+./init.lua
+chmod -x init.lua
+ls
+lua init.lua
+exit
+tmux
+exit
+clear
+ls
+exit
+tmux
+z ags-lua
+ls
+clear
+ls
+ls
+nv
+v
+./thing.sh
+clear
+ls
+cd example
+ls
+cd (ls -a|get 0|get name)
+cd ..
+def cd-index { |index| cd (ls -a | get $index | get name) }<\n>
+clear
+def only_int []: int -> int { $in }; 42 | only_int]
+only_int
+only_int 7
+only_int -7
+clear
+7|only_int
+clear
+def lsi [index:int] {ls -a|get $index|get name}
+lsi
+ls -a
+lsi 0
+cd lsi 0
+cd (lsi 0<\n>)
+celear
+clear
+cd ..
+ls
+def lsi [index:int] {cd (ls -a|get $index|get name)}
+def cdlsi [index:int] {cd (ls -a|get $index|get name)}
+cdlsi 3
+ls
+cdlsi 1
+lsi 0
+cd ..
+ls
+clear
+ls
+cdlsi 0
+clear
+lls
+ls
+cd example
+ls
+cd simple0bar
+cd (lsi 0)
+cd (ls -a|get 3|get name)
+ls
+lua init.lua
+ls
+cd (ls -a|get 4|get name)
+ls
+lua init.lua
+ls
+cd ..
+lua init.lua
+clear
+exit
+nv
+ls
+./thing.sh
+clear
+./thing.sh
+nvim
+cd ..
+ls
+grep -h "lay"
+clear
+grep -r -i 'overlay'
+ls
+cd ..
+grep -r -i 'overlay' /simple-bar
+grep -r -i 'overlay' /simple-bar/
+ls
+grep -r -i 'overlay' (ls|get 3|get name))
+grep -r -i 'overlay' (ls|get 3|get name)
+ls
+grep -r -i 'overlay' *
+bash -c 'grep -r -i 'overlay' *'
+bash
+bash -c 'grep -r -i 'overlay' *'
+bash
+clear
+grep -ri 'overlay' *
+bash
+grep -ri 'o' *
+grep -ri 'over' *
+bash
+clear
+ls
+cd media-player
+ls
+lua init.lua
+ls
+nvim
+systemctl logout
+logout
+pkill -KILL -u $USER<\n>
+clear
+ls
+cd .config
+z ags-lua
+clear
+ls
+z ags-lua
+clear
+ags
+ags bundle
+ls
+ags bundle init.lua
+ags bundle init.lua luaBar
+bundle init.lua lua 
+ags bundle init.lua lua 
+ags bundle init.lua
+ags bundle init.lua bar 
+luabundle
+npm install luabundle
+ls
+yazi
+ls
+npm install -g luabundle
+sudo npm install -g luabundle
+clear
+luabundle bundle init.lua
+luabundle
+npm install -g luabundle
+sudo npm install -g luabundle
+exit
+luabundle
+npm luabundle
+yay -S luabundle
+clear
+sudo npm install -g luabundle
+luabundle
+npm list -g
+nvim .bashrc
+luabundle
+exit
+luabundle
+config nu
+exit
+nu config
+exit
+nvim
+config nu
+npm init
+clear
+config env
+exit
+clear
+z
+clear
+z ags-lua
+cd ~
+confgi env
+clear
+where npm
+exit
+config env
+clear
+config env
+clear
+exit
+exit
+clear
+ls
+bash\
+bash
+clear
+ls
+npm
+clear
+npm i -g luabundle
+sudo npm i -g luabundle
+crates
+crate
+cargo install luabundle
+ls
+luabundle
+clear
+cargo install --list
+cargo run
+cargo run luabundle
+clear
+luabundle
+clear
+exit
+luabundle
+clear
+export PATH="$HOME/.cargo/bin:$PATH"<\n>
+bash
+exit
+clear
+z ags-lua
+ls
+lu
+luabundle
+clear
+ls
+bash
+clear
+luabundler
+ls
+yazi
+luabundler
+luabundler bundle
+luabundler bundle bundle.lua -o input.lua -m modules/
+luabundler bundle bundle.lua -o input.lua 
+clear
+exit
+ls
+lua init.lua
+pkill -KILL -u $USER<\n>
+z ags-lua
+lks
+ls
+clear
+def
+ls
+tmuc
+ls
+clear
+ls
+cd example
+ls
+cd (ls -a|get 0|get name)
+ls
+lua init.lua
+clear
+./thing.sh
+clear
+./thing.sh
+clear
+nvim
+ls
+lua init.lua
+clear
+./thing.sh
+clear
+nvim
+ls
+cd ..
+clear
+ls
+cd simple-bar
+ls
+lua init.lua
+clear
+ls
+nvim
+ls
+cd lib.lua
+nvim
+cd ..
+ls
+cd notifications
+ls
+notify-send
+notify-send "test" "some text"
+lua init.lua
+nvim
+exit
+exit
+brightnessctl
+brightnessctl get
+brightnessctl set 10
+brightnessctl get
+brightnessctl set 100
+./thing.sh
+clea
+clear
+./thing.sh
+clear
+./thing.sh
+clear
+clear
+ls
+cd example
+ls
+cd 1
+cd media-player
+clear
+ls
+lua init.lua
+z .config
+ls
+cd hypr
+ls
+nvimn
+killall hyprpanel
+$(whoami)
+ls
+z ags-lua
+ls
+vm
+nv
+clear
+flatpak install --user https://sober.vinegarhq.org/sober.flatpakref
+z hypr
+z .config
+ls
+cd hypr
+ls
+nvim
+z ags-lua
+cle4ar
+ls
+cd example
+ls
+cd media-player
+ls
+lua init.lua
+nv
+clear
+exit
+playerctl
+clear
+playerctl
+exit
+playerctl metadata
+ls
+cd example
+ls
+cd media-player
+ls
+./thing.sh
+clear
+./thing.sh
+clear
+bash
+exit
+nv
+exit
+./thing.sh
+hyprpanel
+exit
+nvim
+exit
+tmux
+exit
+luarocks install luabundler
+sudo luarocks install luabundler
+yazi
+yay -S 7z
+yay -S 7zip
+clear
+yazi
+cd Downloads
+ls
+cd (ls -a|get 2|get name)
+ls
+make && make local
+clear
+bash
+clear
+z ags-lua
+clear
+luabundler
+ls
+luabundler bundler
+luabundler bundle
+luabundler bundle /
+cd ..
+luabundler bundle /ags-lua
+luabundler bundle -p /ags-lua
+ls
+cd ags-lua
+ls
+luabundler bundle -p init.lua
+ls
+luabundler bundle -p 'init.lua'
+luabundler bundle -p "init.lua"
+ls
+./thing.sh
+ls
+nvim
+./thing.sh
+nvim
+./thing.sh
+clear
+ls
+playerctl metadata
+nvim
+clear
+./thing.sh
+nvim
+./thing.sh
+exit
+cd ..
+ls
+bash
+ls
+clear
+z ags-lua
+ls
+nv
+ls
+touch mediaParser.lua
+ls
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+ls
+playerctl metadata
+clear
+playerctl metadata
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+ls
+z ags-lua
+ls
+tmix
+clear
+ls
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+clear
+lua mediaParser.lua
+bash -c 'playerctl metadata'
+lua mediaParser.lua
+exit
+lua mediaParser.lua
+nv
+clear
+ls
+exit
+clear
+ls
+./thing.sh
+clear
+./thing.sh
+ls
+lua init.lua
+clear
+lua init.lua
+./thing.sh
+playerctl
+playerctl status
+./thing.sh
+playerctl status
+exit
+playerctl status
+playerctl
+lua mediaParser.lua
+playerctl
+lua mediaParser.lua
+clear
+playerctl
+./thing.sh
+lua
+clear
+./thing.sh
+playerctl metadata
+./thing.sh
+clear
+./thing.sh
+clear
+./thing.sh
+clear
+luabundler
+luabundler help
+luabundler bundle init.lua
+luabundler bundle --help
+luarocks install luastatic
+sudo luarocks install luastatic
+luastatic
+luastatic init.lua -o testo
+clear
+sudo luarocks install srlua
+cd /usr
+fzf
+cd bin.lua
+cd bin/lua
+sudo cd bin/lua
+clear
+ls
+cd bin
+cd lua
+ls
+fzf
+clear
+cd ..
+ls
+fzf
+cd bin
+cd astal
+cd ..
+fzf
+cd share/lua/5.4
+ls
+cd astal
+ls
+nvim init.lua
+clear
+ls
+nv
+clear
+ls
+rm (ls -a|get 2|get name)
+ls
+clear
+luastatic init.lua -o testo
+luastatic init.lua -o testo  -llua
+ls
+./testo
+clear
+ls
+z hypr
+z .config
+clear
+ls
+z hypr
+ls
+./testo
+nv
+clear
+nvim
+clear
+nvim
+luastatic init.lua -o testo  -llua
+z hypr
+z .config/hypr
+ls
+bash -c '(~/.config/ags-lua/testo)'
+z ags-lua
+nv
+./testo
+clear
+exit
+ls
+nv
+luastatic init.lua -o testo  -llua
+clear
+bash -c '(~/.config/ags-lua/testo)'
+z .config/hypr
+ls
+nvim
+clear
+nvim
+exit
