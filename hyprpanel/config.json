@@ -1,0 +1,23 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.size": "1.1rem",
+  "theme.font.weight": 700,
+  "theme.bar.floating": false,
+  "bar.autoHide": "fullscreen",
+  "theme.bar.location": "top",
+  "theme.bar.buttons.enableBorders": true,
+  "theme.bar.border.location": "none",
+  "theme.bar.buttons.radius": "0.9em",
+  "theme.bar.layer": "top",
+  "theme.font.name": "Ubuntu Nerd Font",
+  "theme.font.style": "italic",
+  "theme.font.label": "Nimbus Mono PS Bold Italic",
+  "wallpaper.image": "/home/paa/Pictures/Back/ROG_FLOW_X13_product_wallpaper_1920x1200.jpg",
+  "wallpaper.pywal": false,
+  "theme.bar.background": "#1a5fb4",
+  "theme.bar.opacity": 0,
+  "theme.bar.buttons.monochrome": true,
+  "theme.bar.buttons.borderSize": "0.15em",
+  "theme.bar.outer_spacing": "1.0em",
+  "theme.bar.buttons.y_margins": "0.1em"
+}
