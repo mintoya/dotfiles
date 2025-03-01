@@ -100,7 +100,7 @@ alias zi = __zoxide_zi
 #
 # Note: zoxide only supports Nushell v0.89.0+.
 alias nv = nvim
-alias fastfetch = fastfetch --config examples/13
+alias ffetch = fastfetch --config examples/13
 alias lgit = lazygit
 alias reminder = echo "buttercup, lobster"
 def fzl [
@@ -121,4 +121,4 @@ def fzl [
 }
 
 use '/home/paa/.config/broot/launcher/nushell/br' *
-fastfetch
+ffetch

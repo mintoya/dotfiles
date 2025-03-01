@@ -3600,3 +3600,158 @@ exit
 clear
 ls
 cd ..
+yazi
+z remotegit
+lazygit
+ls
+cd..
+cd ..
+yazi
+z remotegit
+lazygit
+ls
+cd ~
+spf
+clear
+btop
+exit
+fasfetch
+fastfetch
+clear
+fastfetch
+fzl
+ls
+ls -a
+nvim .bashrc
+broot
+z matugen
+ls
+nvim
+exit
+z matugen
+ls
+z templates
+z back
+matugen image omen.jpeg
+z ghostty
+ls
+z ghostty
+z back
+matugen image omen.jpeg
+clear
+ls
+fastfetch
+config nu
+exit
+fastfetch
+ffetch
+fastfetch
+z hypr|nvim
+z hypr
+ls
+nm-aoolet
+nm-applet
+clear
+exit
+nvim
+clear
+yay -S rose-pine-hyprcursor
+nvim
+z hypr
+nvim
+clear
+z .local
+z
+z .local
+ls
+z share
+z icons
+ls
+mkdir icons
+cd icons
+ls
+# Installs both Rosé Pine and Rosé Pine Dawn<\n>yay -S rose-pine-cursor
+yazi
+z share
+ls
+cd incons
+z icons
+clear
+ls
+tar xvf (ls|get 0|get neme)) -C ~/.local/share/icons
+tar xvf (ls|get 0|get neme) -C ~/.local/share/icons
+tar xvf (ls|get 0|get name) -C ~/.local/share/icons
+ls
+mkdir theme
+mkdir theme/icons
+ls
+cd theme
+ls
+yazi
+clear
+z .config
+ls
+cd gtk-3.0
+ls
+nvim
+find /usr/share/icons ~/.local/share/icons ~/.icons -type d -name "cursors"
+clear
+bash
+z hypr
+nvim
+z hypr
+nvim
+yay -S rose-pine-hyprcursor rose-pine-cursor
+nwg-look
+nvim
+exit
+tmux
+exit
+z waybar
+cd .config/waybar
+ls
+rm -rf *
+git clone https://github.com/Alexxami/hyprgruvbox
+ls
+clear
+yazi
+clear
+waybar
+clear
+ls
+nvim
+clear
+ls
+clear
+ls
+ls
+z 
+ls
+z back
+matugen image sunsetMountains.jpeg
+ls
+matugen image sunsetMountains.jpg
+matugen image omen.jpeg
+exit
+ls
+clear
+nvim
+clear
+ls
+exit
+yazi
+clear
+z hypr
+nvim
+clear
+exit
+cava
+clear
+ls
+sl
+ls
+clear
+cava
+clear
+cd .config
+ls
