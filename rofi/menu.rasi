@@ -15,7 +15,7 @@ window {
     transparency: "real";
     border: 3px;
     border-color: transparent;
-    background-color: @background;
+    background-color: @inverse-primary;
     border-radius: 20px;
     padding: 0px 20px 0px 0px;
     font: @font;
@@ -36,9 +36,9 @@ inputbar {
 
 prompt {
     enabled: false;
-    background-color: @selected;
+    background-color: @primary;
     padding: 5px;
-    text-color: @background;
+    text-color: @inverse-primary;
     border-radius: 5px;
     text-align: center;
     margin: 0px;
@@ -54,7 +54,7 @@ textbox-prompt-colon {
 entry {
     padding: 0px 5px 8px 5px;
     margin: 15px 0px 0px 15px;
-    text-color: @selected;
+    text-color: @primary;
     background-color: transparent;
     text-align: center;
     line-height: 30px;
@@ -78,7 +78,7 @@ element {
     border-radius: 0px;
     font: @font;
     background-color: transparent;
-    text-color: @selected;
+    text-color: @primary;
 }
 
 element-icon {
@@ -88,8 +88,8 @@ element-icon {
 }
 
 element selected {
-    background-color: @selected;
+    background-color: @primary;
     border-radius: 15px;
-    text-color: @background;
+    text-color: @inverse-primary;
     font: @font;
 }

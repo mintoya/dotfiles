@@ -12,10 +12,9 @@
   "theme.font.name": "Ubuntu Nerd Font",
   "theme.font.style": "italic",
   "theme.font.label": "Nimbus Mono PS Bold Italic",
-  "wallpaper.image": "/home/paa/Pictures/Back/Kath.png",
-  "wallpaper.pywal": true,
+  "wallpaper.image": "/home/paa/Pictures/Back/omen.jpeg",
   "theme.bar.opacity": 0,
-  "theme.bar.buttons.monochrome": true,
+  "theme.bar.buttons.monochrome": false,
   "theme.bar.buttons.borderSize": "0.1em",
   "theme.bar.outer_spacing": "1.0em",
   "theme.bar.buttons.y_margins": "0.5em",
@@ -27,7 +26,10 @@
   "menus.dashboard.shortcuts.left.shortcut4.icon": "",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen twilight",
   "theme.bar.menus.border.radius": "0.7em",
-  "theme.bar.buttons.borderColor": "#9595ff",
-  "theme.bar.buttons.text": "#9595ff",
-  "theme.bar.buttons.icon": "#8c8cff"
+  "theme.matugen": true,
+  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.contrast": 1,
+  "theme.matugen_settings.variation": "standard_2",
+  "theme.matugen_settings.scheme_type": "content",
+  "menus.power.lowBatteryNotification": true
 }

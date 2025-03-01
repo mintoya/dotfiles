@@ -1,11 +1,8 @@
-theme = catppuccin-mocha
-# theme = GruvboxDark
-font-family = Meslo LGS Nerd Font Mono
-font-family = Iosevka
-# font-family = CozetteHiDpi
-font-size = 10
+theme = matugen
+font-size = 12
 
 background-opacity = 0.95
 gtk-titlebar = false
 # custom-shader = /home/chris/bloom.glsl
-#custom-shader = /home/chris/crt.glsl
+# custom-shader = /home/chris/crt.glsl
+confirm-close-surface = false

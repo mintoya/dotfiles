@@ -1678,3 +1678,1925 @@ nvim
 clear
 nvim
 exit
+yazi
+z remotegit
+ls
+lazygit
+ls
+git add *
+lazygit
+exit
+clear
+z hypr
+ls
+nvim
+clear
+ls
+cd ..
+ls
+cd ags-lua
+clear
+ls
+lua init.lua
+ls
+nvim
+exit
+./thing.sh
+clear
+ls
+hyprctl
+hyprctl reload
+exec 
+hyprctl restart
+clear
+hyprctl restart<\n>
+cd ags-lua
+z ags-lua
+ls
+luastatic init.lua -o testo  -llua
+clear
+killall testo
+./testo
+nvim
+z hypr
+ls
+nvim
+z ags-lua
+ls
+cd example
+ls
+cd notifications
+ls
+nvim
+lua init.lua
+cd ..
+ls
+cd ..
+clear
+ls
+luastatic init.lua -o testo.sh  -llua
+nvim testo.sh
+clear
+ls
+rm testo.sh
+nvim
+nvim 
+killall testo
+lua init.lua
+luastatic init.lua -o testo.sh  -llua
+./testo
+nohup
+nohup ./testo
+nohup ./testo & disown
+nohup testo & disown
+nohup ./testo &
+screen
+bash
+exit
+z hypr
+nvim
+z ags-lua
+ls
+rm nohup.out
+clear
+exit
+flatpak run com.github.Matoking.protontricks
+flatpak install com.github.Matoking.protontricks
+clear
+z ags-lua
+z hypr
+nvi
+nv
+clear
+hyprpaper
+exit
+fastfetch
+exit
+cmatrix
+yay -S cmatrix
+clear
+cmatrix
+clear
+z hypr
+nvim
+ls
+cd Downloads
+ls
+rm (ls|get 7|get name)r
+rm (ls|get 7|get name)
+clear
+ls
+rm (ls|get 1|get name)
+ls
+clear
+yazi
+cd Downloads
+ls
+./(ls|get 0|get name) &
+z hypr
+hyprctl list
+hyprctl 
+hyprctl clients
+z hypr
+hyprctl clients
+clear
+exit
+nvim
+clear
+yay -S hyprshot
+z ags-lua
+lua init.lua
+killall testo
+z ags-lua
+lua init.lua
+clear
+ls
+ls
+hyprbattery
+z hypr
+ls
+nc
+nv
+clear
+exit
+acpi
+upower
+clear
+upower -i /org/freedesktop/UPower/devices/battery_BAT0<\n>
+upower -h
+upower -i
+upower -i /org/freedesktop/UPower/devices/battery_BAT0<\n>
+upower -e
+clear
+upower -e
+upower -i /org/freedesktop/UPower/devices/line_power_AC0
+ls
+exit
+nvim
+exit
+./thing.sh
+clear
+ls
+z hypr
+clear
+ls
+z ags-lua
+./thing.sh
+clear
+yay -S krita
+btop
+exit
+z .config
+ls
+cd rofi
+ls
+clear
+ls
+clear
+ls
+z hypr
+clear
+ls
+exit
+nvim
+clear
+nvim
+exit
+ls
+rm *
+ls
+touch config
+touch menu.rasi
+touch andrea.rasi
+ls
+nvim
+ls
+nvim 
+clear
+rm *
+clear
+git clone https://github.com/denysvitali/rofi-config
+ls
+rm *
+rm -rf *
+cd ..
+git clone https://github.com/denysvitali/rofi-config rofi
+cd rofi
+ls
+nvim
+clear
+ls
+nvim
+ls
+rm -rf *
+touch config.rasi
+nvim
+cleaer
+z hypr
+clear
+ls
+nvim
+clear
+ls
+;q
+clear
+exit
+clear
+nvim
+ls
+nvim
+exit
+tmux
+exit
+ls
+git clone https://github.com/owl4ce/dotfiles/tree/ng/.config/rofi temp
+git clone https://github.com/owl4ce/dotfiles temp
+cd temp
+yazi
+ls
+nvim
+clear
+rm -rf *
+clear
+cd ~
+clear
+z rofi
+ls
+nvim
+z ~
+git clone https://github.com/mohlerm/doftiles
+git clone https://github.com/mohlerm/dotfiles/ temp
+rm -rf temp
+git clone https://github.com/mohlerm/dotfiles/ temp
+cd temp
+ls
+cd .config
+ls
+cd rofi
+ls
+yazi
+cd 
+clear
+git clone https://github.com/Matt-FTW/dotfiles/
+git clone https://github.com/Matt-FTW/dotfiles/ temp
+yazi
+rofi
+rofi -show
+rofi -h
+rofi
+rofi -show drun
+rofi
+rofi -show ssh
+z rofi
+ls
+nvim
+z hypr
+nvim
+clear
+nvim
+nvim
+clear
+yazi
+cd remotegity
+cd remotegit
+ls
+cd ..
+cd remotegit
+ls
+nvim
+clear
+exit
+clear
+exit
+yay -Syu
+exit
+yay -S nvtop
+clear
+btop
+nvtop
+clear
+ls
+cd github
+ls
+cd ags-test
+ls
+cd ..
+rm ags-tsy
+rm ags-tesy
+rm ags-tesu
+rm ags-test
+clear
+ls
+rm -rf edex-ui
+ls
+cd ..
+ls
+cd cfil
+clear
+bash spotx.sh
+nvim
+cd .config/nvim
+lazygit
+git config user.name
+git config user.name paa@arch
+git config user.email hfm598@gmail.com
+lazygit
+git pull
+git stash
+lazygit
+nvim
+ls
+yazi
+git config pull.rebase false
+git pull
+lazygit
+nvim
+z hypr
+nvim
+clear
+nvim
+waybar
+clear
+jerrt
+jerry
+clear
+pip
+clear
+pip install mov-cli
+pipx install mov-cli
+pipx esurepath
+pipx ensurepath
+clear
+exit
+mov-cli
+bash 
+mov-cli
+bash 
+pipx ensurepath
+source ~/.bashrc
+mov-cli -s films 
+clear
+exit
+bash
+bash
+exit
+clear
+mov-cli
+yay -S film-central
+pipx install film-central
+mov-cli -e
+yay -Syu
+mov-cli -s films mr.robot
+pipx uninstall film-central
+pipx install film-central
+pipx install film-central --include -deps
+pipx install film-central --include-deps
+mov-cli -s films mr.robot
+pip install mov-cli-youtube
+pipx install mov-cli-youtube
+pipx install mov-cli-youtube --include-deps
+mov-cli -s films mr.robot
+mov-cli -e
+clear
+mov-cli -s films mr.robot
+yay -R mov-cli
+pipx install mov-cli --include-deps
+clear
+mov-cli -s films mr.robot
+clear
+mov-cli -s films mr.robot
+clear
+mov-cli -s films mr.robot
+clear
+mov-cli -s films mr.robot
+exit
+mov-cli -e
+exit
+bash
+exit
+z hypr
+nvim
+hyprctl
+hyprctl|grep "workspace"
+hyprctl activeworkspace
+hyprctl workspaces
+mkdir temp
+cd temp
+la -a
+ls -a
+rm *
+ls -a
+rm * -a
+rm -a
+clear
+ls
+cd ..
+clear
+sudo rm -rf temp
+cd temp
+mkdir temp
+ls
+cd temp
+ls
+ls a-
+ls -a
+clear
+touch workspaceData.lua
+ls
+nvim
+q
+;q
+q
+alias q = exit
+q
+config nu
+q
+alias q = exit
+z ags-lua
+ls
+luastatic
+killall testo
+clear
+lua init.lua
+ls
+z ags-lua
+clear
+ls
+killall testo
+lua init.lua
+nvim
+lua init.lua
+mkdir utils
+ls
+mv utils.lua utils
+ls
+cd utlis
+ls
+cd utils
+ls
+exit
+clear
+ls
+lua init.lua
+hyprctl workspaces
+clear
+cd utils
+ls
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+celar
+clear
+lua utils.lua
+z ags-lua
+clear
+ls
+cd utils
+ls
+lua utils.lua
+cd utils
+clear
+cd utils
+lua utils.lua
+exit
+clear
+lua utils.lua
+lua
+clear
+lua utils.lua
+clear
+hyprctl
+hyprctl workspace
+clear
+yay -Syu
+exti
+lua
+ls
+z ags-lua
+cd utils
+lua
+ls
+nvim
+lua
+nvim
+lua
+nvim
+clear
+ls
+nvim
+lua
+clear
+cd ..
+luastatic init.lua -o testo.sh  -llua
+killall testo
+ls
+rm testo.sh
+luastatic init.lua -o testo  -llua
+testo
+z ags-lua
+clear
+ls
+./testo
+clear
+ls
+z hypr
+ls
+nvim
+bash -c '~/.config/ags-lua/testo'<\n>
+luastatic
+luastatic init.lua -I/utils -o testo  -llua
+clear
+luastatic init.lua -I/utils/ -o testo  -llua
+luastatic init.lua -I/utils -o testo  -llua
+clear
+bash -c '~/.config/ags-lua/testo'<\n>
+z ags-lua
+cd utils
+clear
+lua
+clear
+nvim
+clear
+lua
+bash
+clear
+lua
+z ags-lua/utils
+ls
+hyprctl workspace
+hyprctl
+hyprctl|grep "workspace"
+lua
+clear
+lua
+z ags-lua/utils
+nvi
+hyprctl workspaces
+lua utils.lua
+ls
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+lua utils.lua
+clear
+celar
+clear
+lua utils.lua
+clear
+lua utils.lua
+nv
+clear
+exit
+clear
+exit
+exit
+clear
+exit
+clear
+z utils
+cd ..
+nvim
+clear
+killall testo
+ls
+killall thing.sh
+clear
+ls
+hyprctl workspaces
+hyprctl
+hyprctl -j  workspaces
+hyprctl -j  activeworkspaces
+hyprctl -j  activeworkspace
+luarocks install json
+sudo luarocks install json
+exit
+clear
+ls
+cd utils
+ls
+touch json.lua
+nvim
+exit
+ls
+cd utils
+ls
+nvimn
+hyprctl -j  activeworkspace
+hyprctl -j workspace
+hyprctl -j workspaces
+./thing.sh
+celar
+clear
+./thing.sh
+exit
+clear
+killall lua
+exit
+clear
+./thing.sh
+clear
+hyprctl -j workspaces
+./thing.sh
+clear
+nv
+clear
+nvim
+exit
+exit
+exit
+./thing.sh
+clear
+luastatic init.lua -o testo  -llua
+./testo
+clear
+z ags-lua
+clear
+killall testo
+clear
+./thing.sh
+exit
+hyprctl -j workspaces
+hyprctl -j activeworkspaces
+hyprctl -j activeworkspace
+hyprctl -j activeworkspaces
+hyprctl -j workspaces
+z ags-lua
+hyprctl -j workspaces
+bash
+clear
+hyprctl -j workspaces
+nvim
+nv
+clear
+ls
+killall testo
+./thing.sh
+clear
+ls
+./thing.sh
+luastatic init.lua -o testo  -llua
+./testo
+clear
+yay -S zen-twilight-bin
+yay -S asusctl supergfxctl
+yay -Su asusctl supergfxctl
+asusctl
+asusctl -s
+supergfxctl
+supergfxctl -s
+supergfxctl -P
+clear
+exit
+sudo curl -sL github.com/justchokingaround/jerry/raw/main/jerry.sh -o /usr/local/bin/jerry &&<\n>sudo chmod +x /usr/local/bin/jerry
+bash
+buttercup
+$env.PATH = ($env.PATH | split-row -sep ':' | append "~/.npm-global/bin" | join-by ':')<\n>
+$env.PATH = ($env.PATH | split -sep ':' | append "~/.npm-global/bin" | join-by ':')<\n>
+config env
+exit
+tmux
+config env
+config nu
+clear
+z
+z ags-lua
+exit
+tmux
+clear
+exit
+npm
+npm -g
+npm help
+buttercup
+config nu
+clear
+exit
+tmux
+yay -S rufus
+yazi
+ls
+cd .config
+ls
+z hypr
+exit
+nv
+clear
+killall testo
+clear
+ls
+z ags-lua
+ls
+nvim]
+nv
+ls
+luastatic init.lua -o testo  -llua
+exit
+./thing.sh
+clear
+ls
+./testo
+exit
+tmux
+exit
+killall testo
+clear
+z ags-lua
+ls
+nv init.lua
+clear
+ls
+nv
+luastatic init.lua -o testo  -llua
+clear
+exit
+./thing.sh
+testo
+hyprctl
+hyprctl output
+hyprctl output remove test
+hyprctl output create headless test
+hyprctl output remove test
+ls
+btop
+hyprctl
+hyprctl rollinglog 
+hyprctl rollinglog -f
+hyprctl rollinglog -f -j
+clear
+hyprctl rollinglog -j
+hyprctl rollinglog -j -f
+hyprctl rollinglog -j
+hyprctl rollinglog
+hyprctl rollinglog -j -f
+yay -Syu
+clear
+yay -S zen-twilight-bin
+yay -Syu
+fastfetch
+cd /.var
+cd .var
+ls
+cd app
+ls
+cd (ls -a|get 0|get name)
+ls
+ls -a
+cd .zen
+ls
+cd (ls -a|get 1|get name)
+ls
+cd chrome
+ls
+touch userChrome.css
+nvim
+exit
+z hypr
+ls
+nvim
+clear
+exit
+nvim
+clear
+exit
+nvim
+clear
+nvim
+clear
+ls
+exit
+buttercup
+celar
+clear
+fastfetch
+lobster
+yay -S lobster
+yay -S wezter
+yay -S wezterm
+yay -R wezterm
+yay -S wezterm-git
+clear
+ls
+clear
+cd .config
+ls
+clear
+nvim .wezterm.lua
+ln -s ~/.config/.wezterm.lua ~/.wezterm.lua<\n>
+exit
+nvim .wezterm.lua
+clear
+ls
+exit
+d
+clear
+celar
+exit
+ls
+ls -a
+exit
+wezterm
+xeyes
+yay -S xeyes
+yay -S xorg-xeyes
+clear
+xeyes
+lobster
+yay -S lobster
+yay -S lobster-git
+lobster
+ffmpek
+ffmpeg
+clear
+hypr reload
+hyprctl reload
+z hypr
+nvim
+clear
+cava
+yay -S cava
+z hypr 
+nv
+exit
+yazi
+clear
+nvim
+clear
+yay -Syu
+yay -Su zen-browser-twilight-git
+yay -Sy zen-browser-twilight-git
+yay
+yay -h
+yay -h|grep list
+yay -l|grep zen
+yay -l|grep twilight
+yat -U
+yay -h|grep update
+yay -h|grep upg
+ya -S zen-twilight-git
+yay -S zen-twilight-git
+yay -S zen-twilight-bin
+sudo pacman -Syy rofi-wayland networkmanager python3 pinentry swaync --needed
+clear
+git clone https://github.com/Blazzzeee/network_manager_ui.git<\n>cd network_manager_ui<\n>./install.sh
+network_manager
+nvim
+clear
+network_manager
+exit
+ls
+exit
+clear
+ls
+cd ..
+ls
+cd home
+ls
+cd jeff
+sudo cd jeff
+sudo -s cd jeff
+ls
+yay -S w3m
+w3m
+w3m google.com
+clear
+ls
+sudo rm -rf jeff/*
+ls
+cd jeff
+exit
+yay -Syu
+yay -S wezterm-git
+yay -Syu
+asldkfjkasldjf
+;
+aksjdflkasjdf
+alskdfj
+lksdjaflk
+ljksdalkdfjklsjdf
+hello world
+clear
+clc
+exit
+adb
+yay -S android-tools
+adb
+adb devices
+adb
+adb detatch
+adb kill-server
+clear
+adb devices
+exit
+z .config/ghostty
+ls
+nvim
+exit
+z .config/ghostty
+yay -S discord
+sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
+hyprbar
+hyprpanel
+clear
+z hyprpanel
+cd .config/hyprpanel
+ls
+nvim
+hyprpanel
+cd ..
+cd hypr
+nvim
+hyprpaper
+clear
+hyprpanel settings
+hyprpanel explain
+hyprpanel lw
+clear
+z hyprpanel
+hyprpanel 
+hyprpanel explain
+hyprpanel r
+exit
+nvim
+cd ..
+nvim starship.toml
+yazi
+clear
+cd remotegit
+lazygit
+clear
+cd ..
+yazi
+cd remotegit
+lazygit
+ls
+rm -rf ags-lua
+ls
+lazygti
+lazygit
+exit
+hyprctl
+hyprctl|grep notification
+hypprctl notify
+hyprctl notify
+hyprctl|grep noti
+hyprctl notify
+hyprctl notify hello world
+hyprctl notify 
+hyprctl notify -1 10000 "rgb(ff1ea3)" "Hello everyone!"
+hyprctl notify [ICON] [TIME_MS] [COLOR] [MESSAGE]
+hyprctl notify -1 1000 "rgb(ffffff)" hello
+zhypr
+z hypr
+nvim
+clear
+zen-twilight
+cd ..
+ls
+cd /home
+ls
+cd jeff
+touch test
+clear
+sudo touch test
+ls
+nvim test
+ls
+sudo nvim test
+yazi
+hyprlock
+yay -Syu
+adb devices
+clear
+adb shell
+clear
+ping 1.1.1.1
+network_manager
+ping 1.1.1.1
+clear
+ping 1.1.1.1
+cleawr
+clear
+ping 1.1.1.1
+clear
+jerry
+clear
+fastanime --preview --manga --fzf anilist
+clear
+ls
+cd Pictures
+ls
+chafa (ls|get 0|get name)
+clear
+chafa (ls|get 0|get name)
+ls
+cd Back
+ls
+chafa (ls|get 0|get name)
+clear
+chafa (ls|get 0|get name)
+chafa (ls|get 1|get name)
+chafa (ls|get 2|get name)
+ls
+exit
+ls
+yazi
+nvim
+clear
+z hypr
+ls
+nvim
+clear
+nvim
+clear
+ls
+cd ..
+cd hyprpanel
+ls
+nvim
+clear
+exit
+clear
+nvim
+cd .zen
+lks
+ls
+lsd
+clear
+ls
+yay -S superfile
+spf
+clear
+ls 
+alias lsd = cd $(find * -type d | fzf)
+cd $(find * -type d | fzf)<\n>
+bash cd $(find * -type d | fzf)<\n>
+bash "cd $(find * -type d | fzf)"
+bash -c "cd $(find * -type d | fzf)"
+ls
+cd (ls|get 0|get name)
+ls
+cd chrome
+ls
+nvim userChrome.css
+exit
+fzf -h
+fzf -h|cd
+fzf -h|grep cd
+fzf -h|grep direc
+fzf -i
+clear
+ls
+ls -a
+w3m
+clear
+spf
+clear
+exit
+spf
+exit
+exit
+tmux
+echo "h"
+clear
+cd ..
+ls
+sudo yazi
+z rofi
+ls
+nvim 
+sudo nvim
+ls
+sudo nvim colors.rasi
+clear
+ls
+nvima hypr
+nv
+clear
+cd hypr
+z hypr
+ls
+nvim
+z hyprpanel
+ls
+hyprpanel r
+exit
+hyprpanel r
+exit
+nvim
+z hypr
+nvim
+clear
+exit
+sudo pacman -Syu
+yay -Syu
+z rofi
+ls
+nvim
+z rofi
+ls
+nvim config.rasi
+cd ..
+sudo chown -R $USER:$USER /rofi
+bash
+clear
+ls
+z rofi
+ls
+nvim
+clear
+z hypr
+z Downloads
+cd ..
+z Pictures
+ls
+z Back
+spf
+exit
+pico
+picom
+exit
+ls
+nvim colors.rasi
+exit
+nvim
+exit
+nvim
+ls
+yazi
+z remotegit
+lazygit
+exit
+tmux
+clear
+exit
+yay -Rns emacs
+clear
+yay -s zen-browser
+clear
+exit
+nwg-look
+exit
+z nushell
+cd .config/nushell
+ls
+nvim
+exit
+fastfetch
+clear
+nvim
+z nushell
+ls
+nvim
+exit
+z nushell
+nvim
+ls
+nvim
+w3m https://nushell.sh/book/configuration.html#remove-welcome-message
+clear
+nvim
+clear
+exit
+z remotegit
+git pull
+yazi
+clear
+s
+clear
+exit
+clear
+pipes
+yay -S pipes
+yay -s pipes
+yay -S pipes.sh
+clear
+pipes
+cava
+cava -h
+yay -S yu
+yay -Syu
+exit
+nvm
+yay -S nvm
+clear
+cd Github
+ls
+mkdir Github
+rm -rf Github
+rm -rf temp
+nvim
+cd github
+ls
+git clone https://github.com/zen-browser/rices?tab=readme-ov-file
+ls
+git clone https://github.com/zen-browser/rices
+ls
+cd rices
+clear
+ls
+nvm use 22
+nvm
+exit
+nvm
+yay -S nvm
+nv
+clear
+nvm
+npm
+clear
+yay -Rns nvm
+clear
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+clear
+exit
+nvm
+clear
+bash
+clear
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm
+bash
+clear
+z rices
+npm install
+npm run start
+clear
+exit
+lsd
+"cd $(find * -type d | fzf)"|bash
+cd ~
+"cd $(find * -type d | fzf)"|bash
+fzf
+fzf|nvim
+clear
+fzf
+cd .zen
+nvim
+fastboot
+ping 1.1.1.1
+yay -S fastboot
+exit
+find
+clear
+ls|find
+ls|find .config
+ls|where name =~ lua\
+ls|where name ~= lua
+ls|where name =~ lua
+clear
+ls|fzf
+clear
+fzf
+clear
+fzf|cowsay
+cowsay
+clear
+yay -S cowsay
+clear
+fzf|cowsay
+fzf|cd
+cclear
+clear
+find . -type d -print |fzf |cd
+find . -type d -print
+clear
+bash "find . -type d -print |fzf |cd<\n>"
+bash "find . -type d -print |fzf |cd"
+bash
+ls
+exit
+fzf
+clear
+ls
+bash
+exit
+bash
+exit
+bgjjbvbjj
+clear
+ls| get name join "\n"|^fzf
+ls| get name| str join "\n"|^fzf
+ls| get name| str join "\n"|^fzf|cd
+cd (ls| get name| str join "\n"|^fzf)
+cd ..
+ls
+clear
+ls
+exit
+ls
+cd (ls| get name| str join "\n"|^fzf)
+ls
+cd..
+cd 
+ls
+clear
+sl
+ls
+cd (ls| get name| str join "\n"|^fzf)
+ls
+cd (ls| get name| str join "\n"|^fzf)
+clear
+z nushell
+ls
+nvim
+reminder
+clear
+ls
+nvim config.nu
+clear
+yay -S warp
+clear
+yay -Rns warp
+clear
+exit
+nvim (ls| get name| str join "\n"|^fzf)
+clear
+def
+def []
+def[]
+clear
+def fzl [] {(ls|get name|str join "/n"|fzf)}
+nvim fzl
+clear
+fzf
+clear
+fzl
+nvim fzl
+nvim (fzl)
+ls
+nvim (fzl)
+clear
+ls
+cd ..
+nvim (fzl)
+def fzl [] {ls|get name|str join "n"|fzf}
+def fzl [] {ls|get name|str join "\n"|fzf}
+nvim fzl
+fzl
+nvim (fzl)
+clear
+ls
+clear
+ls
+def fzl [] {ls|get name|str join "\n"|fzf}
+ls
+cd nushell
+ls
+nvim (fzl)
+clear
+exit
+z nushell
+cd .config/nushell
+clear
+ls
+exit
+nvim
+clear
+fz
+fzl
+exit
+fz
+fzl
+exit
+fzl
+clear
+fzl
+clear
+fzl
+nvim
+exit
+fzl
+$env.directory_editor = "yazi"
+fzl
+clear
+nvim env.nu
+nvim
+clear
+exit
+fzl
+fzl -e nvim
+clear
+fzl
+exit
+fzl -e nv
+fzl -e nvim
+exit
+fzl -e nvim
+exit
+nvim
+clear
+exit
+ls
+find
+clear
+find -h
+watch
+clear
+ls
+clear
+watch paruy
+yay -Syu
+pipes.sh
+cd .config/fastfetch
+clear
+yay -S matugen
+clear
+z .config/hyprpanel
+ls
+nvim
+hyprpanel r
+matugen
+matugen -j
+matugen image -j
+clear
+matugen
+matugen color
+clear
+matugen
+z 
+cd Pictures
+ls
+matugen image (ls|get 0|get name) -j
+matugen image (ls|get 0|get name)
+chafa (ls|get 0|get name)
+chafa (ls|get 1|get name)
+chafa (ls|get 2|get name)
+ls
+cd back
+cd Back
+ls
+chafa (ls|get 2|get name)
+chafa (ls|get 0|get name)
+spf
+yazi
+chafa (ls|get 1|get name)
+matugen image (ls|get 1|get name)
+ls
+cd 
+z hyprpanel
+ls
+fzl 
+celar
+clear
+exit
+celar
+clear
+cd .
+cd ..
+ls
+cd ..
+ls
+cd share
+clear
+ls
+sudo mkdir shared
+ls
+cd shared
+ls
+cd ..
+sudo chown -R paa:jeff /shared
+ls
+cd usr
+ls
+cd ..
+clear
+ls
+cd shaerd
+clear
+cd shared
+mkdir test
+ls
+touch list
+ls
+fzl
+clear
+ls
+cd ..
+ls
+cd ..
+ls
+rm -rf shared
+sudo rm -rf shared
+clear
+ls
+exit
+ls 
+cleasr
+ls
+cd ..
+ls
+yay -S broot
+broot
+br
+clear
+bash
+clear
+ls
+br
+broot
+clear
+ls
+cd jeff
+sudo cd jeff
+cd paa
+clear
+ls
+cd ..
+ls
+cd bin
+ls
+cd ..
+cdlar
+clear
+ls
+cd var
+ls
+cd ..
+clear
+swww
+z .config/hyprpanel
+ls
+nvim
+hyprpanel r
+nvim
+clear
+matugen config
+matugen
+ls
+touch colors.conf
+ls
+rm colors.conf
+cd ..
+ls
+matugen
+cd matugen
+mkdir matugen
+cd matugen
+ls
+touch config.toml
+clear
+exit
+clear
+ls
+z pictures
+ls
+z back
+ls
+matugen image omen.jpeg
+waybar
+clear
+ls
+matugen image omen.jpeg
+nvim
+clear
+nvim
+matugen image omen.jpeg
+z back
+matugen image omen.jpeg
+ls
+yay -Rns matugen
+yay -s matugen
+clear
+exit
+z matugen
+clear
+ls
+git clone https://github.com/InioX/matugen-themes
+yazi
+ls
+lsd
+fzl
+clear
+ls
+cd matugen-themes
+lsd
+fzl
+clear
+ls
+cd ..
+ls
+rm -rf matugen-themes
+ls
+clear
+matugen image omen.jpeg
+clear
+matugen image omen.jpeg
+cdlaer
+z back
+matugen image omen.jpeg
+celar
+exit
+nvim
+ls
+cdlear
+clear
+ls
+clear
+ls
+z back
+matugen image omen.jpeg
+clear
+matugen image omen.jpeg
+z hyor
+z hypr
+ls
+fzl
+clear
+ls
+z hypr
+ls
+nvim hyprland.conf
+clear
+exit
+nvim
+ls
+clear
+z back
+ls
+matugen image Kath.png
+hyprctl reload
+clear
+matugen image omen.jpeg
+ls
+clear
+ls
+cd ..
+z .config
+ls
+z remotegit
+clear
+nvim
+exit
+z rofi
+ls
+clear
+ls
+nvim colors.rasi
+ls
+5rm colors.rasi
+rm colors.rasi
+nvim config.rasi
+z back
+matugen image omen.jpeg
+clear
+ls
+z .config/rofi
+ls
+nvim colros.rasi
+z rofi
+ls
+z back
+matugen image omen.jpeg
+exit
+nvim
+z remotegit
+ls
+lazygit
+ls
+git pull
+ls
+cd rofi
+ls
+exit
+nvim
+exit
+nvim
+exit
+nvim config.rasi
+clear
+exit
+ollama run deepseek-r1
+clear
+exit
+ollama serve
+clear
+exit
+tmux
+exit
+clear
+z back
+ls
+matugen image Kath.png
+clear
+exit
+ls
+exit
+matugen image Kath.png
+clear
+exit
+z gtk-3.0
+z .config
+ls
+cd (ls|get 32|get name)
+cd (ls|get 31|get name)
+nvim
+clear
+z .config
+ls
+nvim
+clear
+ls
+clear
+starship
+z back\
+z back
+matugen image Kath.png
+matugen image omen.jpeg
+clear
+exit
+clear
+nvim
+clear
+z matugen
+nvim
+z ghostty
+ls
+exit
+z matugen
+ls
+nvim
+clear
+z matugen
+z back
+clear
+matugen image omen.jpeg\
+matugen image omen.jpeg
+nvim
+clear
+ls
+exit
+exit
+z matugen
+e
+clear
+ls
+z back
+matugen image omen.jpeg
+exit
+nvim
+z back
+matugen image omen.jpeg
+clear
+exit
+nvim
+exit
+nvim
+z ghostty
+ls
+z github
+clear
+ls
+git clone https://github.com/InioX/matugen
+ls
+cd matugen
+clear
+grep
+grep 'primary_fixed_dim'
+grep -r 'primary_fixed_dim'
+ls
+cd (ls|get 11|get name)
+ls
+grep -r 'primary_fixed_dim'
+cd src/chheme
+cd src
+cd scheme
+ls
+grep -r 'primary_fixed_dim'
+ls
+z ghostty
+ls
+clear
+ls
+exit
+z back
+matugen image omen.jpeg
+clear
+matugen image omen.jpeg
+clear
+matugen image omen.jpeg
+clear
+matugen image omen.jpeg
+clear
+matugen image omen.jpeg
+clear
+matugen image omen.jpeg
+z ghostty
+clear
+matugen image omen.jpeg
+nvim
+exit
+z ghostty
+nvim
+z ghostty
+clear
+exit
+nvim
+clear
+ls
+nvim
+ls
+z ghostty
+nvim
+ls
+nvim
+clear
+exit
+exit
+nvim
+z ghostty
+nvim
+clear
+exit
+nvim
+z matugen
+z rofi
+ls
+z back
+clear
+matugen image omen.jpeg
+clear
+matugen image omen.jpeg
+nvim
+exit
+exit
+nvim
+clear
+exit
+z rofi
+nvim
+clear
+exit
+z back
+ls
+matugen image bpw.jpg
+clear
+ls
+exit
+ls
+clear
+ls
+yazi
+matugen image bpr.avif
+ffmpeg -i bpr.avif bpr.jpg
+ls
+yazi
+matugen image bpr.jpg
+matuge
+matugen
+z hyprpanel
+nvim
+clear
+matugen
+matugen --verbose --show-colors --confrast 1 -j image bpr.jpg
+matugen -m dark --verbose --show-colors --confrast 1 -j image bpr.jpg
+matugen -m dark --verbose --show-colors --contrast 1 -j image bpr.jpg
+clear
+fastfetch
+cd ..
+ls
+cd fastfetch
+mkdir fastfetch
+ls
+cd fastfetch
+clear
+ls
+touch config.jsonc
+nvim
+fastfetch
+bash
+# -----------------------------------------------------<\n># AUTOSTART<\n># -----------------------------------------------------<\n><\n># -----------------------------------------------------<\n># Fastfetch<\n># -----------------------------------------------------<\n>if [[ $(tty) == *"pts"* ]]; then<\n>    fastfetch --config examples/13<\n>else<\n>    echo<\n>    if [ -f /bin/qtile ]; then<\n>        echo "Start Qtile X11 with command Qtile"<\n>    fi<\n>    if [ -f /bin/hyprctl ]; then<\n>        echo "Start Hyprland with command Hyprland"<\n>    fi<\n>fi
+clear
+ls
+fastfetch --config examples/13
+z nushell
+nvim
+exit
+fastfetch
+z nushell
+nvim
+exit
+z ghostty
+nvim
+clear
+exit
+clear
+ls
+cd ..

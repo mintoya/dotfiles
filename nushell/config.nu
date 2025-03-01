@@ -3,9 +3,6 @@
 # See https://www.nushell.sh/book/configuration.html
 # See `help config nu` for more options
 
-$env.config.shell_integration.osc133 = false
-$env.config.buffer_editor = "nvim"
-
 export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     STARSHIP_SESSION_KEY: (random chars -l 16)
     PROMPT_MULTILINE_INDICATOR: (
@@ -87,6 +84,7 @@ def --env --wrapped __zoxide_zi [...rest:string] {
 #
 
 alias z = __zoxide_z
+alias q = exit
 alias zi = __zoxide_zi
 
 # =============================================================================
@@ -102,4 +100,25 @@ alias zi = __zoxide_zi
 #
 # Note: zoxide only supports Nushell v0.89.0+.
 alias nv = nvim
+alias fastfetch = fastfetch --config examples/13
 alias lgit = lazygit
+alias reminder = echo "buttercup, lobster"
+def fzl [
+  --editor (-e): string  # Optional editor parameter
+] {
+  let pth = (ls | get name | str join "\n" | fzf)
+  let ptht = ($pth | path type)
+  let ed = if ($editor == null) {
+    if ($ptht == "dir") {
+      $env.directory_editor
+    } else {
+      $env.config.buffer_editor
+    }
+  } else {
+    $editor
+  }
+  ^$ed $pth
+}
+
+use '/home/paa/.config/broot/launcher/nushell/br' *
+fastfetch

@@ -16,3 +16,8 @@
 #
 # You can remove these comments if you want or leave
 # them for future reference.
+$env.PATH = ($env.PATH | prepend "~/.npm-global/bin")
+$env.config.show_banner = false
+$env.config.shell_integration.osc133 = false
+$env.config.buffer_editor = "nvim"
+$env.directory_editor = "yazi"
