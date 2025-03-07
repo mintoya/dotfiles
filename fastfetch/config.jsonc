@@ -4,11 +4,13 @@
   "logo": {
       "source":"~/.config/fastfetch/owl.txt" ,
       "padding": {
-      "top": 1
+      "top": 0,
+      "bottom":0
       }
   },
+  "logo-position" : "top",
   "display": {
-        "separator": " "
+        "separator": "  "
   },
   "modules": [
     {
