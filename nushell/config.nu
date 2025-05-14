@@ -100,9 +100,16 @@ alias zi = __zoxide_zi
 #
 # Note: zoxide only supports Nushell v0.89.0+.
 alias nv = nvim
+alias e = yazi
 alias ffetch = fastfetch --config examples/13
 alias lgit = lazygit
-alias reminder = echo "buttercup, lobster"
+alias restart = shutdown -r now
+alias reminder = echo "
+buttercup, lobster, kew,
+when mgmt key is missing, command is : nmcli connection delete name
+or
+nmcli device wifi connect "<ssid>" -- ask
+"
 def fzl [
   --editor (-e): string  # Optional editor parameter
 ] {
@@ -120,5 +127,8 @@ def fzl [
   ^$ed $pth
 }
 
+def gh [part: string] { $"https://github.com/($part)" }
+
+
 use '/home/paa/.config/broot/launcher/nushell/br' *
-ffetch
+fastfetch
