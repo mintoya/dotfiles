@@ -1,0 +1,93 @@
+@import "matugen.css";
+@import "Nebula/Nebula.css";
+:root {
+  --tab-selected-pinned-color: var(--matugen-secondary);
+  --tab-selected-color: var(--matugen-secondary);
+  --zen-main-browser-background:color-mix(in srgb, var(--matugen-background), transparent 70%) !important;
+  --zen-main-browser-background-toolbar: var(--zen-main-browser-background) ;
+  --zen-colors-border-contrast: var(--matugen-secondary) !important;
+  --sidebar-width: 200px!important;
+  --zen-themed-toolbar-bg-transparent:linear-gradient(
+    120deg,
+      rgba(100, 100, 255, .05) 10%,
+      color-mix(in srgb, var(--matugen-background), transparent 80%) 50%,
+      rgba(0, 0, 255, .05) 100%
+    )!important;
+}
+
+#titlebar{
+  min-width:120px!important;
+}
+body:has([zen-compact-mode="true"]) #titlebar {
+  background:var(--zen-themed-toolbar-bg-transparent)!important;
+  backdrop-filter: brightness(.2) blur(32px) saturate(1500%) !important; /* Smooth blur effect */
+}
+.zen-workspace-tabs-section .tabbrowser-tab .tab-stack .tab-background {
+  &[selected] {
+    border: .1rem solid var(--tab-selected-color) !important;
+  }
+}
+tab-group[split-view-group]
+.tabbrowser-tab .tab-stack .tab-background
+{
+  border-radius: .7rem!important;
+}
+
+tab-group[split-view-group]
+tab{
+  margin: 5px!important;
+}
+
+tab-group[split-view-group]
+.tab-label-container
+{
+    visibility: collapse!important;
+}
+tab-group[split-view-group]
+.tab-content
+{
+  align-items:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+.titlebar-button{
+  width: 5px!important;
+  height: 5px!important;
+  margin: 5px 2px !important;
+  padding: 10px 10px!important;
+  border-radius: 5px;
+}
+.titlebar-buttonbox{
+  margin-right: 5px;
+}
+.titlebar-buttonbox-container[zen-has-hover]{
+  opacity: 80%;
+}
+.titlebar-buttonbox-container{
+  order: -1!important;
+  opacity: 25%;
+  .titlebar-close{
+    order: 0!important;
+  }
+  .titlebar-max{
+    order:1!important;
+  }
+  .titlebar-min{
+    order:2!important;
+  }
+  .titlebar-restore{
+    order:1!important;
+  }
+}
+
+
+
+
+@-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
+  html {
+    border: none !important;
+    border-radius: 1rem !important;
+  }
+}
