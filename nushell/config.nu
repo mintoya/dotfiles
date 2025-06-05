@@ -127,8 +127,4 @@ def fzl [
   ^$ed $pth
 }
 
-def gh [part: string] { $"https://github.com/($part)" }
-
-
-use '/home/paa/.config/broot/launcher/nushell/br' *
 fastfetch
