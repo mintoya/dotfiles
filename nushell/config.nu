@@ -99,7 +99,22 @@ alias zi = __zoxide_zi
 #   source ~/.zoxide.nu
 #
 # Note: zoxide only supports Nushell v0.89.0+.
-alias nv = nvim
+
+
+
+def --env y [...args] {
+	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+	yazi ...$args --cwd-file $tmp
+	let cwd = (open $tmp)
+	if $cwd != "" and $cwd != $env.PWD {
+		cd $cwd
+	}
+	rm -fp $tmp
+}
+
+
+
+alias vi = nvim
 alias e = yazi
 alias ffetch = fastfetch --config examples/13
 alias lgit = lazygit

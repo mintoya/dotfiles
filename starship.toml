@@ -6,15 +6,15 @@ palette = 'colors'
 
 [palettes.colors]
 mustard = '#af8700' # example
-color1 = '#c0c1ff'
-color2 = '#292a60'
-color3 = '#c7c5d1'
-color4 = '#201f23'
-color5 = '#292a60'
-color6 = '#131317'
-color7 = '#131317'
-color8 = '#c0c1ff'
-color9 = '#f5b2e1'
+color1 = '#b5c4ff'
+color2 = '#000000'
+color3 = '#ffffff'
+color4 = '#2e3038'
+color5 = '#000000'
+color6 = '#11131a'
+color7 = '#11131a'
+color8 = '#eeefff'
+color9 = '#ffeafb'
 
 # Prompt symbols
 [character]
@@ -22,17 +22,6 @@ success_symbol = "[ ](color9 bold)"
 error_symbol = "[ ](@{error})"
 vicmd_symbol = "[](#f9e2af)"
 
-# Operating System Icon
-[os]
-format = "[](fg:color8 bg:none)[$symbol](bg:color8 fg:color5)[](fg:color8 bg:color4) "
-style = "bold"
-disabled = false
-
-# OS-specific symbols (Nerd Font icons)
-[os.symbols]
-Linux = " "   # Tux icon
-Macos = " "   # Apple icon
-Windows = " " # Windows icon
 [directory]
 format = "[](fg:color1 bg:none)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$path ](fg:color3 bg:color4)[ ](fg:color4)"
 
@@ -48,8 +37,8 @@ format = "[](fg:color8 bg:none)[ ](bg:color8 fg:color5)[](fg:color8 bg:
 
 [time]
 format = "[](fg:color8 bg:none)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $time](fg:color3 bg:color4)[](fg:color4) "
-time_format = "%R" # Hour:Minute Format
 disabled = false
+time_format = "%R" # Hour:Minute Format
 
 [python]
 format = "[](fg:color8 bg:none)[${symbol}${version}](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5)( ${virtualenv})](fg:color3 bg:color4)[](fg:color4) "
