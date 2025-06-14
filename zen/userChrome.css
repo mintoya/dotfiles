@@ -37,7 +37,7 @@
 }
 body:has([zen-compact-mode="true"]) #titlebar {
   background:var(--zen-themed-toolbar-bg-transparent)!important;
-  backdrop-filter: brightness(.2) blur(32px) saturate(200%) !important; /* Smooth blur effect */
+  backdrop-filter: blur(32px) saturate(200%) !important; /* Smooth blur effect */
 }
 .zen-workspace-tabs-section .tabbrowser-tab .tab-stack .tab-background {
   &[selected] {

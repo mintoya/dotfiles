@@ -1,18 +1,18 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
-  "theme.font.size": "1.1rem",
+  "theme.font.size": "1.0rem",
   "theme.font.weight": 900,
   "theme.bar.floating": false,
   "bar.autoHide": "fullscreen",
   "theme.bar.location": "top",
-  "theme.bar.buttons.enableBorders": true,
+  "theme.bar.buttons.enableBorders": false,
   "theme.bar.border.location": "none",
   "theme.bar.buttons.radius": "0.9em",
   "theme.bar.layer": "top",
   "theme.font.name": "Ubuntu Nerd Font",
   "theme.font.style": "italic",
   "theme.font.label": "Nimbus Mono PS Bold Italic",
-  "wallpaper.image": "/home/paa/Pictures/Back/omen.jpeg",
+  "wallpaper.image": "/home/paa/Pictures/omen2.jpg",
   "theme.bar.opacity": 0,
   "theme.bar.buttons.monochrome": false,
   "theme.bar.buttons.borderSize": "0.1em",
@@ -31,5 +31,10 @@
   "theme.matugen_settings.contrast": 1,
   "theme.matugen_settings.variation": "standard_2",
   "theme.matugen_settings.scheme_type": "content",
-  "menus.power.lowBatteryNotification": true
+  "menus.power.lowBatteryNotification": true,
+  "terminal": "ghostty",
+  "theme.bar.margin_bottom": "0em",
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }
