@@ -24,7 +24,9 @@
     }
 }
 
-
+.tab-background{
+  background-color: #0006!important;
+}
 #titlebar{
   min-width:120px!important;
 }
