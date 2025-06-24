@@ -1,16 +1,16 @@
 @import "matugen.css";
 @import "Nebula/Nebula.css";
 :root {
-  --tab-selected-pinned-color: var(--matugen-secondary);
-  --tab-selected-color: var(--matugen-secondary);
-  --zen-main-browser-background:color-mix(in srgb, var(--matugen-background), transparent 70%) !important;
+  --tab-selected-pinned-color: var(--secondary_container);
+  --tab-selected-color: var(--background);
+  --zen-main-browser-background:color-mix(in srgb, var(--background), transparent 70%) !important;
   --zen-main-browser-background-toolbar: var(--zen-main-browser-background) ;
-  --zen-colors-border-contrast: var(--matugen-secondary) !important;
+  --zen-colors-border-contrast: var(--secondary_container) !important;
   --sidebar-width: 140px!important;
   --zen-themed-toolbar-bg-transparent:linear-gradient(
     120deg,
       rgba(100, 100, 255, .05) 10%,
-      color-mix(in srgb, var(--matugen-background), transparent 80%) 50%,
+      color-mix(in srgb, var(--background), transparent 80%) 50%,
       rgba(0, 0, 255, .05) 100%
     )!important;
 }

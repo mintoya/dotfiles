@@ -26,6 +26,8 @@ alias restart = shutdown -r now
 alias reminder = echo "
 buttercup, lobster, kew,
 nmcli device wifi connect "<ssid>" -- ask
+hyprctl keyword monitor eDP-1,preferred,auto,1,transform,1 ;
+hyprctl keyword input:touchdevice:transform 1
 "
 def fzl [
   --editor (-e): string  # Optional editor parameter
@@ -44,4 +46,5 @@ def fzl [
   ^$ed $pth
 }
 
+alias q = exit
 fastfetch

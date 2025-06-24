@@ -1,4 +1,107 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
 :root {
-  --matugen-secondary: #ffaf97!important;
-  --matugen-background: #1d100d!important;
+
+    --background:#1d100d!important;
+
+    --error:#ffece9!important;
+
+    --error_container:#ffaea4!important;
+
+    --inverse_on_surface:#000000!important;
+
+    --inverse_primary:#862500!important;
+
+    --inverse_surface:#f6ddd6!important;
+
+    --on_background:#f6ddd6!important;
+
+    --on_error:#000000!important;
+
+    --on_error_container:#000000!important;
+
+    --on_primary:#000000!important;
+
+    --on_primary_container:#000000!important;
+
+    --on_primary_fixed:#000000!important;
+
+    --on_primary_fixed_variant:#280500!important;
+
+    --on_secondary:#000000!important;
+
+    --on_secondary_container:#000000!important;
+
+    --on_secondary_fixed:#000000!important;
+
+    --on_secondary_fixed_variant:#280500!important;
+
+    --on_surface:#ffffff!important;
+
+    --on_surface_variant:#ffffff!important;
+
+    --on_tertiary:#000000!important;
+
+    --on_tertiary_container:#000000!important;
+
+    --on_tertiary_fixed:#000000!important;
+
+    --on_tertiary_fixed_variant:#161100!important;
+
+    --outline:#ffece7!important;
+
+    --outline_variant:#ddbbb2!important;
+
+    --primary:#ffece7!important;
+
+    --primary_container:#ffaf97!important;
+
+    --primary_fixed:#ffdbd0!important;
+
+    --primary_fixed_dim:#ffb59e!important;
+
+    --scrim:#000000!important;
+
+    --secondary:#ffece7!important;
+
+    --secondary_container:#ffaf97!important;
+
+    --secondary_fixed:#ffdbd0!important;
+
+    --secondary_fixed_dim:#ffb59e!important;
+
+    --shadow:#000000!important;
+
+    --source_color:#e05728!important;
+
+    --surface:#1d100d!important;
+
+    --surface_bright:#5e4c47!important;
+
+    --surface_container:#3c2d28!important;
+
+    --surface_container_high:#483833!important;
+
+    --surface_container_highest:#54433e!important;
+
+    --surface_container_low:#2a1c18!important;
+
+    --surface_container_lowest:#000000!important;
+
+    --surface_dim:#1d100d!important;
+
+    --surface_tint:#ffb59e!important;
+
+    --surface_variant:#59413a!important;
+
+    --tertiary:#ffefc3!important;
+
+    --tertiary_container:#e1c049!important;
+
+    --tertiary_fixed:#ffe17a!important;
+
+    --tertiary_fixed_dim:#e5c44c!important;
+
 }
