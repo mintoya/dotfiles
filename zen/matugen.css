@@ -10,7 +10,7 @@
 
     --error_container:#ffaea4!important;
 
-    --inverse_on_surface:#000000!important;
+    --inverse_on_surface:ffaea4!important;
 
     --inverse_primary:#862500!important;
 
@@ -18,23 +18,23 @@
 
     --on_background:#f6ddd6!important;
 
-    --on_error:#000000!important;
+    --on_error:ffaea4!important;
 
-    --on_error_container:#000000!important;
+    --on_error_container:ffaea4!important;
 
-    --on_primary:#000000!important;
+    --on_primary:ffaea4!important;
 
-    --on_primary_container:#000000!important;
+    --on_primary_container:ffaea4!important;
 
-    --on_primary_fixed:#000000!important;
+    --on_primary_fixed:ffaea4!important;
 
     --on_primary_fixed_variant:#280500!important;
 
-    --on_secondary:#000000!important;
+    --on_secondary:ffaea4!important;
 
-    --on_secondary_container:#000000!important;
+    --on_secondary_container:ffaea4!important;
 
-    --on_secondary_fixed:#000000!important;
+    --on_secondary_fixed:ffaea4!important;
 
     --on_secondary_fixed_variant:#280500!important;
 
@@ -42,11 +42,11 @@
 
     --on_surface_variant:#ffffff!important;
 
-    --on_tertiary:#000000!important;
+    --on_tertiary:ffaea4!important;
 
-    --on_tertiary_container:#000000!important;
+    --on_tertiary_container:ffaea4!important;
 
-    --on_tertiary_fixed:#000000!important;
+    --on_tertiary_fixed:ffaea4!important;
 
     --on_tertiary_fixed_variant:#161100!important;
 
@@ -62,7 +62,7 @@
 
     --primary_fixed_dim:#ffb59e!important;
 
-    --scrim:#000000!important;
+    --scrim:ffaea4!important;
 
     --secondary:#ffece7!important;
 
@@ -72,7 +72,7 @@
 
     --secondary_fixed_dim:#ffb59e!important;
 
-    --shadow:#000000!important;
+    --shadow:ffaea4!important;
 
     --source_color:#e05728!important;
 
@@ -88,7 +88,7 @@
 
     --surface_container_low:#2a1c18!important;
 
-    --surface_container_lowest:#000000!important;
+    --surface_container_lowest:ffaea4!important;
 
     --surface_dim:#1d100d!important;
 
