@@ -1,16 +1,16 @@
 @import "matugen.css";
-@import "Nebula/Nebula.css";
+@import "Zen-Nebula/Nebula/Nebula.css";
 :root {
-  --tab-selected-pinned-color: var(--matugen-secondary);
-  --tab-selected-color: var(--matugen-secondary);
-  --zen-main-browser-background:color-mix(in srgb, var(--matugen-background), transparent 70%) !important;
+  --tab-selected-pinned-color: var(--secondary_container)!important;
+  --tab-selected-color: var(--secondary_container);
+  --zen-main-browser-background:color-mix(in srgb, var(--background), transparent 70%) !important;
   --zen-main-browser-background-toolbar: var(--zen-main-browser-background) ;
-  --zen-colors-border-contrast: var(--matugen-secondary) !important;
+  --zen-colors-border-contrast: var(--secondary_container) !important;
   --sidebar-width: 140px!important;
   --zen-themed-toolbar-bg-transparent:linear-gradient(
     120deg,
       rgba(100, 100, 255, .05) 10%,
-      color-mix(in srgb, var(--matugen-background), transparent 80%) 50%,
+      color-mix(in srgb, var(--background), transparent 80%) 50%,
       rgba(0, 0, 255, .05) 100%
     )!important;
 }
@@ -18,13 +18,15 @@
 .zen-essentials-container .tabbrowser-tab {
       @media (-moz-pref("zen.theme.essentials-favicon-bg")) {
       .tab-background::after {
-        left:-50%  !important;
-        top: -50% !important;
+        left:-40%  !important;
+        top: -40% !important;
       }
     }
 }
 
-
+.tab-background{
+  background-color: #0006;
+}
 #titlebar{
   min-width:120px!important;
 }
@@ -41,7 +43,7 @@ body:has([zen-compact-mode="true"]) #titlebar {
 }
 .zen-workspace-tabs-section .tabbrowser-tab .tab-stack .tab-background {
   &[selected] {
-    border: .1rem solid var(--tab-selected-color) !important;
+    border: .15rem solid var(--tab-selected-color) !important;
   }
 }
 

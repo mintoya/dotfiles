@@ -1,0 +1,6 @@
+[2m2025-06-16T03:57:15.903446Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command 'c:/Users/paa/.config/glaze/a.exe'.
+[2m2025-06-16T04:05:30.305823Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command '../a.exe'.
+[2m2025-06-16T04:06:56.940806Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command '%USERPROFILE%/.glazr/a.exe'.
+[2m2025-06-16T04:09:22.865580Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command '%userprofile%/.glazr/a.exe'.
+[2m2025-06-16T04:10:32.759231Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command '%userprofile%\\.glazr\\a.exe'.
+[2m2025-06-16T04:10:46.963929Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command '%userprofile%\\.glazr\\a.exe'.
