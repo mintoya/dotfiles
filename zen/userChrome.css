@@ -1,6 +1,26 @@
 @import "matugen.css";
 @import "zen-nebula/Nebula/Nebula.css";
+/* modules import */
+@import "zen-nebula/Nebula/modules/General-UI.css";
+@import "zen-nebula/Nebula/modules/Sidebar.css";
+@import "zen-nebula/Nebula/modules/Topbar-buttons.css";
+@import "zen-nebula/Nebula/modules/URLbar.css";
+@import "zen-nebula/Nebula/modules/Pinned-extensions.css";
+@import "zen-nebula/Nebula/modules/Tabstyles.css";
+@import "zen-nebula/Nebula/modules/Essentials.css";
+/* @import "zen-nebula/Nebula/modules/Sound-icon.css"; */
+@import "zen-nebula/Nebula/modules/Toolbar.css";
+@import "zen-nebula/Nebula/modules/Miniplayer.css";
+@import "zen-nebula/Nebula/modules/BetterPiP.css";
+/* @import "zen-nebula/Nebula/modules/Animations(tabs).css"; */
+@import "zen-nebula/Nebula/modules/Tabfolders.css";
+@import "zen-nebula/Nebula/modules/Workspace-buttons.css";
+
+/* config import */
+@import "zen-nebula/Nebula/Nebula-config.css";
+
 :root {
+  --nebula-sidebar-width: 10em !important; 
   --tab-selected-pinned-color: var(--secondary_container)!important;
   --tab-selected-color: var(--secondary_container);
   --zen-main-browser-background:color-mix(in srgb, var(--background), transparent 70%) !important;
