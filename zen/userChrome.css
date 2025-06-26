@@ -1,5 +1,5 @@
 @import "matugen.css";
-@import "Zen-Nebula/Nebula/Nebula.css";
+@import "zen-nebula/Nebula/Nebula.css";
 :root {
   --tab-selected-pinned-color: var(--secondary_container)!important;
   --tab-selected-color: var(--secondary_container);

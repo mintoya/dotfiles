@@ -12,7 +12,6 @@ element-text, element-icon, mode-switcher {
 }
 
 window {
-    // transparency: "real";
     border: 3px;
     border-color: @secondary-container;
     background-color: @inverse-primary;

@@ -1,15 +1,15 @@
-background = #1d100d
+background = #12131c
 foreground = #ffffff
 cursor-color = #ffffff
 cursor-text = #ffffff
 selection-foreground = #000000
-selection-background = #ffb59e
+selection-background = #bec2ff
 
-palette = 0=#54433e
+palette = 0=#464650
 palette = 1=#ac8a8c
 palette = 2=#8aac8b
 palette = 3=#aca98a
-palette = 4=#ffece7
+palette = 4=#f0eeff
 palette = 5=#ac8aac
 palette = 6=#8aacab
 palette = 7=#f0f0f0
