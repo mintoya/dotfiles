@@ -46,5 +46,12 @@ def fzl [
   ^$ed $pth
 }
 
+def set-background [
+  --path (-p): string
+] {
+  matugen --contrast 1 -m dark image $path
+  caelestia wallpaper -f $path
+}
+
 alias q = exit
 fastfetch

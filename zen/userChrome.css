@@ -20,7 +20,7 @@
 @import "zen-nebula/Nebula/Nebula-config.css";
 
 :root {
-  --nebula-sidebar-width: 10em !important; 
+  --nebula-sidebar-width: 12em !important; 
   --tab-selected-pinned-color: var(--secondary_container)!important;
   --tab-selected-color: var(--secondary_container);
   --zen-main-browser-background:color-mix(in srgb, var(--background), transparent 70%) !important;
