@@ -49,10 +49,14 @@ def fzl [
 def set-background [
   --path (-p): string
 ] {
-  let absPath = ($path|path expand)
-  matugen --contrast 1 -m dark image $absPath
-  caelestia wallpaper -f $absPath
-  caelestia scheme set -n dynamic -m dark
+    let absPath = ($path|path expand)
+    matugen --contrast 1 -m dark image $absPath -c ("~/.config/matugen/config.toml"|path expand)
+    if (not ($nu.os-info.name|str contains "windows")) {
+      caelestia wallpaper -f $absPath
+      caelestia scheme set -n dynamic -m dark
+    } else {
+      echo "not running caelestia commands"
+    }
 }
 
 alias q = exit

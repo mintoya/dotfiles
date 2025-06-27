@@ -4,7 +4,7 @@
 */
 :root {
 
-    --background:#1a1110!important;
+    --background:#141318!important;
 
     --error:#ffece9!important;
 
@@ -12,11 +12,11 @@
 
     --inverse_on_surface:#000000!important;
 
-    --inverse_primary:#74352a!important;
+    --inverse_primary:#494078!important;
 
-    --inverse_surface:#f1dfdb!important;
+    --inverse_surface:#e5e1e9!important;
 
-    --on_background:#f1dfdb!important;
+    --on_background:#e5e1e9!important;
 
     --on_error:#000000!important;
 
@@ -28,7 +28,7 @@
 
     --on_primary_fixed:#000000!important;
 
-    --on_primary_fixed_variant:#2c0200!important;
+    --on_primary_fixed_variant:#11043f!important;
 
     --on_secondary:#000000!important;
 
@@ -36,7 +36,7 @@
 
     --on_secondary_fixed:#000000!important;
 
-    --on_secondary_fixed_variant:#200b07!important;
+    --on_secondary_fixed_variant:#110f20!important;
 
     --on_surface:#ffffff!important;
 
@@ -48,60 +48,60 @@
 
     --on_tertiary_fixed:#000000!important;
 
-    --on_tertiary_fixed_variant:#181000!important;
+    --on_tertiary_fixed_variant:#240616!important;
 
-    --outline:#ffece8!important;
+    --outline:#f3eef9!important;
 
-    --outline_variant:#d4beba!important;
+    --outline_variant:#c5c1cc!important;
 
-    --primary:#ffece8!important;
+    --primary:#f3edff!important;
 
-    --primary_container:#ffae9f!important;
+    --primary_container:#c5bbfc!important;
 
-    --primary_fixed:#ffdad4!important;
+    --primary_fixed:#e5deff!important;
 
-    --primary_fixed_dim:#ffb4a6!important;
+    --primary_fixed_dim:#c9beff!important;
 
     --scrim:#000000!important;
 
-    --secondary:#ffece8!important;
+    --secondary:#f3edff!important;
 
-    --secondary_container:#e3b9b1!important;
+    --secondary_container:#c5bfd8!important;
 
-    --secondary_fixed:#ffdad4!important;
+    --secondary_fixed:#e5dff9!important;
 
-    --secondary_fixed_dim:#e7bdb5!important;
+    --secondary_fixed_dim:#c9c3dc!important;
 
     --shadow:#000000!important;
 
-    --source_color:#d9351d!important;
+    --source_color:#4e23d8!important;
 
-    --surface:#1a1110!important;
+    --surface:#141318!important;
 
-    --surface_bright:#5a4d4b!important;
+    --surface_bright:#514f56!important;
 
-    --surface_container:#392e2c!important;
+    --surface_container:#312f36!important;
 
-    --surface_container_high:#443937!important;
+    --surface_container_high:#3c3a41!important;
 
-    --surface_container_highest:#504442!important;
+    --surface_container_highest:#48464c!important;
 
-    --surface_container_low:#271d1c!important;
+    --surface_container_low:#201f25!important;
 
     --surface_container_lowest:#000000!important;
 
-    --surface_dim:#1a1110!important;
+    --surface_dim:#141318!important;
 
-    --surface_tint:#ffb4a6!important;
+    --surface_tint:#c9beff!important;
 
-    --surface_variant:#534340!important;
+    --surface_variant:#48454e!important;
 
-    --tertiary:#ffeece!important;
+    --tertiary:#ffebf1!important;
 
-    --tertiary_container:#d9c089!important;
+    --tertiary_container:#e9b4c9!important;
 
-    --tertiary_fixed:#fae0a6!important;
+    --tertiary_fixed:#ffd8e6!important;
 
-    --tertiary_fixed_dim:#ddc48c!important;
+    --tertiary_fixed_dim:#edb8cd!important;
 
 }
