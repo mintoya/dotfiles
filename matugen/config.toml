@@ -4,7 +4,7 @@
 [config.wallpaper]
 command = "swww"
 arguments = ["img", "--transition-type", "center"]
-set = true
+set = false
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'

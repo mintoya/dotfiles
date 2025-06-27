@@ -49,8 +49,10 @@ def fzl [
 def set-background [
   --path (-p): string
 ] {
-  matugen --contrast 1 -m dark image $path
-  caelestia wallpaper -f $path
+  let absPath = ($path|path expand)
+  matugen --contrast 1 -m dark image $absPath
+  caelestia wallpaper -f $absPath
+  caelestia scheme set -n dynamic -m dark
 }
 
 alias q = exit
