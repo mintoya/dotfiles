@@ -20,4 +20,5 @@ $env.PATH = ($env.PATH | prepend "~/.npm-global/bin")
 $env.config.show_banner = false
 $env.config.shell_integration.osc133 = false
 $env.config.buffer_editor = "nvim"
+$env.EDITOR = "nvim"
 $env.directory_editor = "yazi"

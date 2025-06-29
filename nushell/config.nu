@@ -18,33 +18,16 @@ def --env y [...args] {
 
 
 
-alias vi = nvim
-alias e = yazi
-alias ffetch = fastfetch --config examples/13
-alias lgit = lazygit
 alias restart = shutdown -r now
+
 alias reminder = echo "
 buttercup, lobster, kew,
 nmcli device wifi connect "<ssid>" -- ask
+nmcli device disconnect wlp1s0
+nmcli device connect wlp1s0
 hyprctl keyword monitor eDP-1,preferred,auto,1,transform,1 ;
 hyprctl keyword input:touchdevice:transform 1
 "
-def fzl [
-  --editor (-e): string  # Optional editor parameter
-] {
-  let pth = (ls | get name | str join "\n" | fzf)
-  let ptht = ($pth | path type)
-  let ed = if ($editor == null) {
-    if ($ptht == "dir") {
-      $env.directory_editor
-    } else {
-      $env.config.buffer_editor
-    }
-  } else {
-    $editor
-  }
-  ^$ed $pth
-}
 
 def set-background [
   --path (-p): string
@@ -59,5 +42,7 @@ def set-background [
     }
 }
 
+alias vi = nvim
 alias q = exit
+alias c = clear
 fastfetch
