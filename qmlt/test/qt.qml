@@ -36,17 +36,28 @@ PanelWindow {
         implicitWidth: panel.rW
         color: "transparent"
 
+        MouseArea {
+            anchors.fill: parent
+            hoverEnabled: true
+            onEntered: {
+                panel.rW = 80;
+            }
+            onExited: {
+                panel.rW = 40;
+            }
+        }
+
         Button {
             id: myButton
 
             width: 30
             text: "Click Me"
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: parent.left
-            anchors.leftMargin: 10
+            // anchors.verticalCenter: parent.verticalCenter
+            // anchors.left: parent.left
+            // anchors.leftMargin: 10
+            anchors.centerIn: parent
             onClicked: {
-                console.log("Button was clicked!");
-                panel.cR = (panel.cR + 25) % 100 + 25;
+                panel.cR = (panel.cR + 25) % 200 + 25;
             }
         }
 
@@ -188,6 +199,14 @@ PanelWindow {
     Behavior on cR {
         NumberAnimation {
             duration: 300
+            easing.type: Easing.InOutQuad
+        }
+
+    }
+
+    Behavior on rW {
+        NumberAnimation {
+            duration: 20
             easing.type: Easing.InOutQuad
         }
 
