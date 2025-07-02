@@ -7,11 +7,17 @@ Rectangle {
     id: root
 
     property string buttonColors: "#46464f"
-    property int buttonWidths: 10
-    property int buttonHeiths: 10
+    property int buttonWidths: 15
+    property int buttonHeiths: 15
     property int buttonRadii: 10
-    property int active: 0
+    property int active: 1
     property int tbMargins: 20
+    property int ny: 0
+
+    function sigCall(newYPosition) {
+        root.ny = newYPosition + rowsContainer.y + root.tbMargins;
+        print(root.ny);
+    }
 
     color: "#1f1f25"
     width: parent.width * 0.75
@@ -24,50 +30,69 @@ Rectangle {
         topMargin: 10
     }
 
-    Column {
-        id: rowsContainer
+    Item {
+        id: rowsContainerContainer
 
-        spacing: 30
-        topPadding: tbMargins
+        Rectangle {
+            id: activeCircle
+
+            width: buttonWidths + 6
+            height: buttonHeiths + 6
+            radius: 5
+            color: "#00ff00"
+            anchors.horizontalCenter: parent.horizontalCenter
+            y: root.ny - 33
+            z: -1 // Make sure it appears behind the buttons
+        }
 
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: parent.top
         }
 
-        Rectangle {
-            color: root.buttonColors
-            width: root.buttonWidths
-            height: root.buttonHeiths
-            radius: root.buttonRadii
+        Column {
+            id: rowsContainer
+
+            spacing: 15
+            topPadding: tbMargins
+
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                top: parent.top
+            }
+
+            WorkSpaceButton {
+                color: root.buttonColors
+                actualWidth: root.buttonWidths
+                actualHeight: root.buttonHeiths
+                radius: root.buttonRadii
+                onChangeY: root.sigCall(newYPosition)
+            }
+
+            WorkSpaceButton {
+                color: root.buttonColors
+                actualWidth: root.buttonWidths
+                actualHeight: root.buttonHeiths
+                radius: root.buttonRadii
+                onChangeY: root.sigCall(newYPosition)
+            }
+
+            WorkSpaceButton {
+                color: root.buttonColors
+                actualWidth: root.buttonWidths
+                actualHeight: root.buttonHeiths
+                radius: root.buttonRadii
+                onChangeY: root.sigCall(newYPosition)
+            }
+
         }
 
-        Rectangle {
-            color: root.buttonColors
-            width: root.buttonWidths
-            height: root.buttonHeiths * 2
-            radius: root.buttonRadii
-        }
+    }
 
-        Rectangle {
-            color: root.buttonColors
-            width: root.buttonWidths
-            height: root.buttonHeiths
-            radius: root.buttonRadii
-        }
-
-        Rectangle {
-            color: root.buttonColors
-            width: root.buttonWidths
-            height: root.buttonHeiths
-            radius: root.buttonRadii
-        }
-
-        Rectangle {
-            color: root.buttonColors
-            width: root.buttonWidths
-            height: root.buttonHeiths
-            radius: root.buttonRadii
+    Behavior on ny {
+        NumberAnimation {
+            duration: 100
+            easing.type: Easing.InOutQuad
         }
 
     }

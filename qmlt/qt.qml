@@ -6,13 +6,14 @@ import Quickshell
 PanelWindow {
     id: panel
 
-    property int lW: 2
+    property int lW: 5
     property int rW: 40
-    property int tW: 2
-    property int bW: 2
+    property int tW: 5
+    property int bW: 5
     property int cR: 30
     property int rww: 40
     property string bgColor: "#131318"
+    property int ny: 0
 
     color: "transparent"
     Component.onCompleted: {
@@ -34,8 +35,18 @@ PanelWindow {
     }
 
     PanelWindow {
+        // MouseArea {
+        //     anchors.fill: parent
+        //     hoverEnabled: true
+        //     onEntered: {
+        //         rightSide.implicitWidth = panel.rww;
+        //         panel.rW = 80;
+        //     }
+        //     onExited: {
+        //         rightSide.implicitWidth = panel.rww;
+        //         panel.rW = 40;
+        //     }
         // }
-        // WorkSpaces {
 
         id: rightSide
 
@@ -43,19 +54,6 @@ PanelWindow {
         color: "transparent"
 
         WorkSpaces {
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            hoverEnabled: true
-            onEntered: {
-                rightSide.implicitWidth = panel.rww;
-                panel.rW = 80;
-            }
-            onExited: {
-                rightSide.implicitWidth = panel.rww;
-                panel.rW = 40;
-            }
         }
 
         anchors {
@@ -99,9 +97,6 @@ PanelWindow {
 
     Shape {
         id: tlShape
-
-        width: panel.cR
-        height: panel.cR
 
         anchors {
             top: panel.top
@@ -149,8 +144,8 @@ PanelWindow {
             PathArc {
                 x: width - panel.rW
                 y: panel.tW + panel.cR
-                radiusX: tlShape.width
-                radiusY: tlShape.height
+                radiusX: panel.cR
+                radiusY: panel.cR
             }
 
             PathLine {
@@ -161,8 +156,8 @@ PanelWindow {
             PathArc {
                 x: width - panel.rW - panel.cR
                 y: height - panel.bW
-                radiusX: tlShape.width
-                radiusY: tlShape.height
+                radiusX: panel.cR
+                radiusY: panel.cR
             }
 
             PathLine {
@@ -173,8 +168,8 @@ PanelWindow {
             PathArc {
                 x: panel.lW
                 y: height - panel.bW - panel.cR
-                radiusX: tlShape.width
-                radiusY: tlShape.height
+                radiusX: panel.cR
+                radiusY: panel.cR
             }
 
             PathLine {
@@ -185,12 +180,16 @@ PanelWindow {
             PathArc {
                 x: panel.lW + panel.cR
                 y: panel.tW
-                radiusX: tlShape.width
-                radiusY: tlShape.height
+                radiusX: panel.cR
+                radiusY: panel.cR
             }
 
         }
 
+    }
+
+    mask: Region {
+        item: rightSide
     }
 
     Behavior on rW {
@@ -199,10 +198,6 @@ PanelWindow {
             easing.type: Easing.InOutQuad
         }
 
-    }
-
-    mask: Region {
-        item: tlShape
     }
 
 }
