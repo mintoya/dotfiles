@@ -6,12 +6,13 @@ import Quickshell
 PanelWindow {
     id: panel
 
-    property int lW: 10
-    property int rW: 50
-    property int tW: 5
-    property int bW: 5
+    property int lW: 2
+    property int rW: 40
+    property int tW: 2
+    property int bW: 2
     property int cR: 30
-    property string bgColor: "#121318"
+    property int rww: 40
+    property string bgColor: "#131318"
 
     color: "transparent"
     Component.onCompleted: {
@@ -33,31 +34,27 @@ PanelWindow {
     }
 
     PanelWindow {
+        // }
+        // WorkSpaces {
+
+        id: rightSide
+
         implicitWidth: panel.rW
         color: "transparent"
+
+        WorkSpaces {
+        }
 
         MouseArea {
             anchors.fill: parent
             hoverEnabled: true
             onEntered: {
+                rightSide.implicitWidth = panel.rww;
                 panel.rW = 80;
             }
             onExited: {
+                rightSide.implicitWidth = panel.rww;
                 panel.rW = 40;
-            }
-        }
-
-        Button {
-            id: myButton
-
-            width: 30
-            text: "Click Me"
-            // anchors.verticalCenter: parent.verticalCenter
-            // anchors.left: parent.left
-            // anchors.leftMargin: 10
-            anchors.centerIn: parent
-            onClicked: {
-                panel.cR = (panel.cR + 25) % 200 + 25;
             }
         }
 
@@ -196,17 +193,9 @@ PanelWindow {
 
     }
 
-    Behavior on cR {
-        NumberAnimation {
-            duration: 300
-            easing.type: Easing.InOutQuad
-        }
-
-    }
-
     Behavior on rW {
         NumberAnimation {
-            duration: 20
+            duration: 300
             easing.type: Easing.InOutQuad
         }
 
