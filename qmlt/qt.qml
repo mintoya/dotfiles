@@ -2,6 +2,8 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Shapes
 import Quickshell
+import "workspaces"
+import "workspaces/WorkSpaces"
 
 PanelWindow {
     id: panel

@@ -9,8 +9,6 @@ Rectangle {
     property int actualWidth
     property int actualHeight
 
-    signal changeY(int newYPosition)
-
     width: actualWidth
     height: actualHeight
 
@@ -21,10 +19,6 @@ Rectangle {
     MouseArea {
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: {
-            console.log(root.x, root.y);
-            changeY(root.mapToItem(null, 0, 0).y);
-        }
     }
 
 }
