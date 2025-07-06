@@ -9,12 +9,16 @@ Rectangle {
     id: root
 
     property string buttonColors: "#46464f"
-    property int buttonWidths: 20
-    property int buttonHeiths: 20
+    property int buttonWidths: 0
+    property int buttonHeiths: 0
     property int buttonRadii: 10
     property int active: 1
     property int tbMargins: 15
 
+    Component.onCompleted: {
+        root.buttonWidths = 20;
+        root.buttonHeiths = 20;
+    }
     implicitHeight: rowsContainer.implicitHeight + tbMargins
     color: "#1f1f25"
     width: parent.width * 0.65
@@ -23,11 +27,13 @@ Rectangle {
     Item {
         id: rowsContainerContainer
 
-        anchors {
-            horizontalCenter: parent.horizontalCenter
+        WorkCanvas {
+            anchors.horizontalCenter: parent.horizontalCenter
         }
 
-        WorkCanvas {
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            fill: parent
         }
 
         Column {
@@ -35,10 +41,7 @@ Rectangle {
 
             topPadding: tbMargins
             spacing: 25
-
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-            }
+            anchors.horizontalCenter: parent.horizontalCenter
 
             Repeater {
                 id: repeater1
