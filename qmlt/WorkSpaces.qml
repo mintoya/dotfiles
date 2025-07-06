@@ -33,8 +33,8 @@ Rectangle {
         Column {
             id: rowsContainer
 
-            topPadding: tbMargins
-            spacing: 25
+            topPadding: 10
+            spacing: 10
 
             anchors {
                 horizontalCenter: parent.horizontalCenter
@@ -63,13 +63,6 @@ Rectangle {
 
             }
 
-        }
-
-    }
-
-    Behavior on active {
-        NumberAnimation {
-            duration: 50
         }
 
     }
