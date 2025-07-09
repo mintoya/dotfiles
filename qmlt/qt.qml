@@ -4,6 +4,11 @@ import QtQuick.Shapes
 import Quickshell
 
 PanelWindow {
+    // Component.onCompleted: {
+    //     if (this.WlrLayershell)
+    //         this.WlrLayershell.layer = WlrLayer.Bottom;
+    // }
+
     id: panel
 
     property int lW: Style.leftWidth
@@ -14,11 +19,6 @@ PanelWindow {
     property string bgColor: Style.backgroundColor
 
     color: "transparent"
-    Component.onCompleted: {
-        if (this.WlrLayershell)
-            this.WlrLayershell.layer = WlrLayer.Bottom;
-
-    }
 
     Shape {
         id: tlShape
@@ -183,18 +183,6 @@ PanelWindow {
     }
 
     PanelWindow {
-        implicitHeight: panel.tW
-        color: "transparent"
-
-        anchors {
-            left: true
-            top: true
-            right: true
-        }
-
-    }
-
-    PanelWindow {
         id: rightSide
 
         implicitWidth: panel.rW
@@ -202,8 +190,9 @@ PanelWindow {
 
         WorkSpaces {
             anchors {
-                horizontalCenter: parent.horizontalCenter
                 top: parent.top
+                topMargin: panel.tW
+                horizontalCenter: parent.horizontalCenter
             }
 
         }
@@ -222,6 +211,18 @@ PanelWindow {
             right: true
             top: true
             bottom: true
+        }
+
+    }
+
+    PanelWindow {
+        implicitHeight: panel.tW
+        color: "transparent"
+
+        anchors {
+            left: true
+            top: true
+            right: true
         }
 
     }
