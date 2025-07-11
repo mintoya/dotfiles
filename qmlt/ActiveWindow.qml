@@ -1,9 +1,7 @@
 import QtQuick 2.0
-import QtQuick
 import QtQuick.Shapes
 import Quickshell
 import Quickshell.Io
-pragma Singleton
 pragma Singleton
 
 Singleton {

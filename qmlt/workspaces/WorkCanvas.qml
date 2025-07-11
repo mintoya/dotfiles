@@ -1,17 +1,57 @@
-import QtQuick 2.0
-import QtQuick.Shapes
+import QtQuick 2.15
 
 Rectangle {
-    // anchors.top: parent.top
-    // anchors.topMargin: 100
-    radius: 10
+    id: ball
+
     width: 30
+    height: 30
+    radius: 15
     color: "red"
+    anchors.horizontalCenter: parent.horizontalCenter
+    transformOrigin: Item.Center
+    onYChanged: {
+        transformid.yScale = 1.2;
+        transformid.xScale = 0.7;
+        resetScaleTimer.start(); // wait 300ms then reset scale
+    }
+
+    Timer {
+        id: resetScaleTimer
+
+        interval: 100 // milliseconds to wait before scaling back
+        repeat: false
+        onTriggered: {
+            transformid.yScale = 1;
+            transformid.xScale = 1;
+        }
+    }
+
+    transform: Scale {
+        id: transformid
+
+        origin.x: ball.width / 2
+        origin.y: ball.height / 2
+
+        Behavior on xScale {
+            NumberAnimation {
+                duration: 10
+            }
+
+        }
+
+        Behavior on yScale {
+            NumberAnimation {
+                duration: 10
+            }
+
+        }
+
+    }
 
     Behavior on y {
         NumberAnimation {
-            duration: 50
-            easing: Easing.InQuad
+            duration: 100
+            easing.type: Easing.InOutQuad
         }
 
     }
