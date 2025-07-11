@@ -12,4 +12,5 @@ QtObject {
     // property string borderColor: "#bfc1d9"
     property string borderColor: "transparent"
     property int borderWidth: 2
+    property int workspaceButtonSize: 10
 }

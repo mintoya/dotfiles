@@ -186,7 +186,7 @@ PanelWindow {
     PanelWindow {
         id: rightSide
 
-        implicitWidth: panel.rW
+        width: panel.rW
         color: "transparent"
 
         WorkSpaces {
@@ -198,9 +198,17 @@ PanelWindow {
 
         }
 
-        CurrentWindow {
-            anchors {
-                centerIn: parent
+        Text {
+            id: title
+
+            anchors.centerIn: parent
+            color: "#46464f"
+            text: ActiveWindow.title
+            rotation: 90
+            anchors.topMargin: 0
+
+            font {
+                pixelSize: 18
             }
 
         }

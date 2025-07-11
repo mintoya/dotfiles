@@ -3,7 +3,7 @@ import QtQuick 2.15
 Rectangle {
     id: ball
 
-    width: 30
+    width: parent.width
     height: 30
     radius: 15
     color: "red"
@@ -11,7 +11,7 @@ Rectangle {
     transformOrigin: Item.Center
     onYChanged: {
         transformid.yScale = 1.2;
-        transformid.xScale = 0.7;
+        transformid.xScale = 0.8;
         resetScaleTimer.start(); // wait 300ms then reset scale
     }
 
@@ -34,14 +34,14 @@ Rectangle {
 
         Behavior on xScale {
             NumberAnimation {
-                duration: 10
+                duration: 40
             }
 
         }
 
         Behavior on yScale {
             NumberAnimation {
-                duration: 10
+                duration: 40
             }
 
         }
@@ -51,7 +51,7 @@ Rectangle {
     Behavior on y {
         NumberAnimation {
             duration: 100
-            easing.type: Easing.InOutQuad
+            easing.type: Easing.InOutCubic
         }
 
     }

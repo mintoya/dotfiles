@@ -10,6 +10,11 @@ Singleton {
     property string title
     property int workspaceId
 
+    function setWorkspace(id) {
+        workspaceProc.command = ["hyprctl", "dispatch", "workspace", id.toString()];
+        workspaceProc.running = true;
+    }
+
     Process {
         id: dateProc
 
@@ -27,6 +32,12 @@ Singleton {
             }
         }
 
+    }
+
+    Process {
+        id: workspaceProc
+
+        running: false
     }
 
     Timer {

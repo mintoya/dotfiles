@@ -5,19 +5,19 @@ import QtQuick.Shapes
 import Quickshell
 
 Rectangle {
+    // Component.onCompleted: {
+    //     root.buttonWidths = 20;
+    //     root.buttonHeiths = 20;
+    // }
+    // might keep padding from vreaking
+
     id: root
 
     property string buttonColors: "#46464f"
-    property int buttonWidths: 0
-    property int buttonHeiths: 0
-    property int buttonRadii: 10
+    property int buttonRadii: 99
     property int active: (ActiveWindow.workspaceId - 1) % 5
     property int tbMargins: 15
 
-    Component.onCompleted: {
-        root.buttonWidths = 20;
-        root.buttonHeiths = 20;
-    }
     implicitHeight: rowsContainer.implicitHeight + tbMargins
     color: "#1f1f25"
     width: parent.width * 0.65
@@ -29,8 +29,8 @@ Rectangle {
         WorkCanvas {
             id: wcan
 
-            height: repeater1.itemAt(active).height + 10
-            y: repeater1.itemAt(active).y - 5
+            height: repeater1.itemAt(active).height + 20
+            y: repeater1.itemAt(active).y - 10
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
@@ -52,20 +52,16 @@ Rectangle {
                 model: 5
 
                 WorkSpaceButton {
-                    // MouseArea {
-                    //     anchors.fill: parent
-                    //     onPressed: {
-                    //         console.log("hello from ", index, parent.y);
-                    //         wcan.y = parent.y;
-                    //         console.log(wcan.y);
-                    //         root.active = index;
-                    //     }
-                    // }
-
                     color: index === root.active ? "#c5bfd8" : root.buttonColors
-                    actualWidth: root.buttonWidths
-                    actualHeight: root.buttonHeiths
                     radius: root.buttonRadii
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onPressed: {
+                            ActiveWindow.setWorkspace(index + 1);
+                        }
+                    }
+
                 }
 
             }
