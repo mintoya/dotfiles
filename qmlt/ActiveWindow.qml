@@ -10,16 +10,22 @@ Singleton {
     id: root
 
     property string title
+    property int workspaceId
 
     Process {
         id: dateProc
 
-        command: ["nu", "-c 'hyprctl activewindow -j|from json|get title'"]
+        command: ["nu", "-c 'hyprctl activeworkspace -j'"]
         running: true
 
         stdout: StdioCollector {
             onStreamFinished: {
-                root.title = (this.text);
+                let state = JSON.parse(this.text);
+                root.title = state.lastwindowtitle;
+                root.workspaceId = state.id;
+                if (root.title == "")
+                    root.title = "desktop";
+
             }
         }
 

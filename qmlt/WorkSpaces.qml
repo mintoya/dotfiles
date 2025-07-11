@@ -12,7 +12,7 @@ Rectangle {
     property int buttonWidths: 0
     property int buttonHeiths: 0
     property int buttonRadii: 10
-    property int active: 1
+    property int active: (ActiveWindow.workspaceId - 1) % 5
     property int tbMargins: 15
 
     Component.onCompleted: {
@@ -28,6 +28,10 @@ Rectangle {
         id: rowsContainerContainer
 
         WorkCanvas {
+            id: wcan
+
+            height: repeater1.itemAt(active).height + 10
+            y: repeater1.itemAt(active).y - 5
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
@@ -49,19 +53,20 @@ Rectangle {
                 model: 5
 
                 WorkSpaceButton {
+                    // MouseArea {
+                    //     anchors.fill: parent
+                    //     onPressed: {
+                    //         console.log("hello from ", index, parent.y);
+                    //         wcan.y = parent.y;
+                    //         console.log(wcan.y);
+                    //         root.active = index;
+                    //     }
+                    // }
+
                     color: index === root.active ? "#c5bfd8" : root.buttonColors
                     actualWidth: root.buttonWidths
                     actualHeight: root.buttonHeiths
                     radius: root.buttonRadii
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onPressed: {
-                            console.log("hello from ", index);
-                            root.active = index;
-                        }
-                    }
-
                 }
 
             }
