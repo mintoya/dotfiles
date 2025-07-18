@@ -1,8 +1,8 @@
 * {
-    width: 600;
+    width: 400;
     font: "JetBrainsMono Nerd Font 14";
 }
-@import                          "./colors.rasi"
+@import "./colors.rasi"
 element-text, element-icon, mode-switcher {
     background-color: transparent;
     text-color: inherit;
@@ -51,10 +51,13 @@ textbox-prompt-colon {
 }
 
 entry {
-    padding: 0px 5px 8px 5px;
+    padding: 8px 5px 8px 20px;
     margin: 15px 0px 0px 15px;
     text-color: @secondary-container;
     background-color: transparent;
+    border-color:@on-surface;
+    border-radius: 15px;
+    border:3px;
     text-align: center;
     line-height: 30px;
     font: @font;
@@ -64,11 +67,11 @@ listview {
     border: 0px;
     padding: 4px 0px 13px;
     margin: 0px 0px 0px 20px;
+    width:100%;
     columns: 1;
     background-color: transparent;
-    fixed-height: false;
+    fixed-height: true;
     lines: 7;
-    border-radius: 0px;
     font: @font;
 }
 
@@ -84,6 +87,7 @@ element-icon {
     enabled: true;
     size: 25px;
     font: @font;
+    border-radius: 15px;
 }
 
 element selected {
