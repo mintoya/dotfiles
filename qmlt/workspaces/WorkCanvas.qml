@@ -6,7 +6,7 @@ Rectangle {
     width: parent.width
     height: 30
     radius: 15
-    color: "red"
+    color: "#c5bfd8"
     anchors.horizontalCenter: parent.horizontalCenter
     transformOrigin: Item.Center
     onYChanged: {

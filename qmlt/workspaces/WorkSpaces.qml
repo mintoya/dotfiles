@@ -14,12 +14,14 @@ Rectangle {
     id: root
 
     property string buttonColors: "#46464f"
+    property string altButtonCOlors: "#c5bfd8"
     property int buttonRadii: 99
     property int active: (ActiveWindow.workspaceId - 1) % 5
     property int tbMargins: 15
 
     implicitHeight: rowsContainer.implicitHeight + tbMargins
-    color: "#1f1f25"
+    color: "transparent"
+    // color: "#1f1f25"
     width: parent.width * 0.65
     radius: width / 2
 
@@ -52,7 +54,8 @@ Rectangle {
                 model: 5
 
                 WorkSpaceButton {
-                    color: index === root.active ? "#c5bfd8" : root.buttonColors
+                    color: index === root.active ? root.altButtonCOlors : root.buttonColors
+                    // color: "transparent"
                     radius: root.buttonRadii
 
                     MouseArea {
