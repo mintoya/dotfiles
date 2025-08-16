@@ -2,9 +2,9 @@ theme = matugen
 font-size = 10
 font-family = "Operator Mono"
 
-background-opacity = 0.6
 gtk-titlebar = false
 #custom-shader = /home/paa/Github/ghostty-shaders/bettercrt.glsl
 #custom-shader = /home/paa/Github/ghostty-shaders/bloom.glsl
 custom-shader  = /home/paa/.config/ghostty/shaders/cursor_smear.glsl
 confirm-close-surface = false
+background-opacity = 0.8
