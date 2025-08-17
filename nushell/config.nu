@@ -44,5 +44,7 @@ def set-background [
 
 alias vi = nvim
 alias q = exit
+alias md = mkdir
+alias rd = rm -rf
 alias c = clear
 fastfetch
