@@ -185,13 +185,13 @@ PanelWindow {
         Text {
             id: title
             anchors.centerIn: parent
-            color: "#46464f"
-            text: ActiveWindow.title
+            color: Style.inactiveColor
+            text: ActiveWindow.workspaceData.lastwindowtitle > 20
+      ? ActiveWindow.workspaceData.lastwindowtitle.substring(0, 20) + "…"
+      : ActiveWindow.workspaceData.lastwindowtitle
             elide: Text.ElideRight
             wrapMode: Text.NoWrap
-            width: 300
             rotation: 90
-            anchors.topMargin: 0
 
             font {
               italic :true

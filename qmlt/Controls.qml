@@ -13,7 +13,7 @@ Column {
         bottomMargin: 15
         horizontalCenter: parent.horizontalCenter
     }
-     property int batteryLevel: 65
+     property int batteryLevel: 100
 
     function batteryIcon() {
         if (batteryLevel > 80)  return "󰁹"; // full
@@ -27,7 +27,7 @@ Column {
         model: [
           { icon : function(){return ""},},
           { icon : function(){return ""},},
-          { icon : function(){return "󰁹"},},
+          { icon : function(){return root.batteryIcon()},},
         ]
 
         delegate: Button {

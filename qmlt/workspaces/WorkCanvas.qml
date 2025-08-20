@@ -6,7 +6,6 @@ Rectangle {
     width: parent.width
     height: 30
     radius: 15
-    color: Style.fgColor
     anchors.horizontalCenter: parent.horizontalCenter
     transformOrigin: Item.Center
     onYChanged: {
@@ -50,7 +49,7 @@ Rectangle {
 
     Behavior on y {
         NumberAnimation {
-            duration: 100
+            duration: 80
             easing.type: Easing.InOutCubic
         }
 
