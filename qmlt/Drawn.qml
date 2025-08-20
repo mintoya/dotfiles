@@ -20,7 +20,7 @@ PanelWindow {
             strokeWidth: 2
             // strokeColor: "#bfc1d9"
             strokeColor: "transparent"
-            fillColor: Style.backgroundColor
+            fillColor: Style.bgColor
             startX: 0
             startY: 0
 
@@ -184,14 +184,17 @@ PanelWindow {
 
         Text {
             id: title
-
             anchors.centerIn: parent
             color: "#46464f"
             text: ActiveWindow.title
+            elide: Text.ElideRight
+            wrapMode: Text.NoWrap
+            width: 300
             rotation: 90
             anchors.topMargin: 0
 
             font {
+              italic :true
                 pixelSize: 18
             }
 

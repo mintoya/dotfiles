@@ -6,7 +6,7 @@ Rectangle {
     width: parent.width
     height: 30
     radius: 15
-    color: "#c5bfd8"
+    color: Style.fgColor
     anchors.horizontalCenter: parent.horizontalCenter
     transformOrigin: Item.Center
     onYChanged: {
