@@ -7,18 +7,19 @@ pragma Singleton
 Singleton {
     id: root
 
-    property string title
-    property int workspaceId
     property var workspaces:[]
     property var workspaceData:[]
 
     Process {
-        id: workspaceProc
+        id: workerProc
         running: false
     }
+    function runProc(cmd){
+      workerProc.command = cmd;
+      workerProc.running = true;
+    }
     function setWorkspace(id) {
-        workspaceProc.command = ["hyprctl", "dispatch", "workspace", id.toString()];
-        workspaceProc.running = true;
+      runProc(["hyprctl", "dispatch", "workspace", id.toString()]);
     }
 
     Process {
@@ -31,11 +32,6 @@ Singleton {
             onStreamFinished: {
                 let state = JSON.parse(this.text);
                 root.workspaceData = state
-                // root.title = state.lastwindowtitle;
-                // root.workspaceId = state.id;
-                // if (root.title == "")
-                //     root.title = "desktop";
-
             }
         }
 
@@ -51,10 +47,6 @@ Singleton {
             onStreamFinished: {
               let state = JSON.parse(this.text);
               root.workspaces = state;
-              for (let i = 0; i < state.length; i++) {
-                  let ws = state[i];
-                  console.log("Workspace ID:", ws.id, "Name/Title:", ws.name, "Active:", ws.id === root.workspaceId);
-              }
             }
         }
 
@@ -64,10 +56,7 @@ Singleton {
         interval: 100
         running: true
         repeat: true
-        onTriggered: {
-          activeWorkspaceProc.running = true
-          // ,workspacesProc.running=true 
-        }
+        onTriggered: { activeWorkspaceProc.running = true ,workspacesProc.running=true }
     }
 
 }

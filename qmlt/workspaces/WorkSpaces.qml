@@ -15,7 +15,7 @@ Rectangle {
 
     property int buttonRadii: 99
     property int active: ActiveWindow.workspaceData.id !== undefined 
-                      ? (ActiveWindow.workspaceData.id - 1) % 5 
+                      ? (ActiveWindow.workspaceData.id - 1)
                       : 5   // default to 0
 
     property int tbMargins: 15
@@ -31,10 +31,10 @@ Rectangle {
 
         WorkCanvas {
             id: wcan
-
-            height: repeater1.itemAt(active).height + 20
-            y: repeater1.itemAt(active).y - 10
+            height: repeater1.itemAt(active % 5).height + 20
+            y: repeater1.itemAt(active % 5).y - 10
             anchors.horizontalCenter: parent.horizontalCenter
+            color: Style.fgColor
         }
 
         anchors {
@@ -51,20 +51,22 @@ Rectangle {
 
             Repeater {
                 id: repeater1
-
                 model: 5
 
                 WorkSpaceButton {
-                    color: ActiveWindow.workspaces.some(ws => ws.id===index+1) ? Style.fgColor : Style.inactiveColor
-                    // color: "transparent"
-                    radius: root.buttonRadii
+                  color: 
+                  ActiveWindow.workspaces.some(ws => ws.id===( (active/5<1)? index+1:index+6 ))
+                    ?Style.fgColor 
+                    :Style.inactiveColor
 
-                    MouseArea {
-                        anchors.fill: parent
-                        onPressed: {
-                            ActiveWindow.setWorkspace(index + 1);
-                        }
-                    }
+                  radius: root.buttonRadii
+
+                  MouseArea {
+                      anchors.fill: parent
+                      hoverEnabled:true
+                      // onEntered:{ parent.height*=2; }
+                      onPressed: { ActiveWindow.setWorkspace(index + 1); }
+                  }
 
                 }
 

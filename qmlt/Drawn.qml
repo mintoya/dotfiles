@@ -166,6 +166,12 @@ PanelWindow {
 
     }
 
+    mask: Region {
+        x: rightSide.x
+        y: rightSide.y
+        height: rightSide.height
+        width: rightSide.width
+    }
     Rectangle {
         id: rightSide
 
@@ -218,7 +224,5 @@ PanelWindow {
         bottom: true
     }
 
-    mask: Region {
-    }
 
 }

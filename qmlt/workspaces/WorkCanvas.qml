@@ -7,7 +7,7 @@ Rectangle {
     height: 30
     radius: 15
     anchors.horizontalCenter: parent.horizontalCenter
-    transformOrigin: Item.Center
+    // transformOrigin: Item.Center
     onYChanged: {
         transformid.yScale = 1.2;
         transformid.xScale = 0.8;
