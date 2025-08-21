@@ -6,6 +6,8 @@ import Quickshell.Io
 Column {
     id: root
     property var batteryData:[]
+    property var wifiData:[]
+    property var bluetoothData:[]
     Process{
       id : batteryProc
       command: [ "sh","-c","upower -i /org/freedesktop/UPower/devices/battery_BAT0|jc --upower"]
@@ -16,11 +18,31 @@ Column {
             }
         }
     }
+    Process{
+      id : wifiProc
+      command: [ "sh","-c","nmcli device|jc --nmcli"]
+      running:false
+        stdout: StdioCollector {
+            onStreamFinished: {
+              root.wifiData = JSON.parse( this.text ).find(wc => wc.type==="wifi")
+            }
+        }
+    }
+    Process{
+      id : bluetoothProc
+      command: [ "sh","-c","jc bluetoothctl show"]
+      running:false
+        stdout: StdioCollector {
+            onStreamFinished: {
+              root.bluetoothData = JSON.parse( this.text )[0]
+            }
+        }
+    }
     Timer {
         interval: 100
         running: true
         repeat: true
-        onTriggered: { batteryProc.running = true }
+        onTriggered: { batteryProc.running = true, bluetoothProc.running = true,wifiProc.running=true }
     }
 
     width: parent.width * 0.75
@@ -50,9 +72,18 @@ Column {
     Repeater {
 
         model: [
-          { icon : function(){return ""},},
-          { icon : function(){return ""},},
-          { icon : function(){return root.batteryIcon()},},
+          { 
+            icon : function(){return ""},
+            color : function(){return root.wifiData.state !== "connected"?(Style.inactiveColor):(Style.fgColor)}
+          },
+          { 
+            icon : function(){return ""},
+            color : function(){return root.bluetoothData.powered === "yes"?(Style.fgColor):(Style.inactiveColor)},
+          },
+          { 
+            icon : function(){return root.batteryIcon()},
+            color : function(){return Style.fgColor}
+          },
         ]
 
         delegate: Button {
@@ -63,7 +94,7 @@ Column {
                 height: parent.height
 
                 Text {
-                    color: Style.fgColor
+                    color: modelData.color()
                     text: modelData.icon()
                     font.pixelSize: root.width * 0.65
                     anchors.centerIn: parent
