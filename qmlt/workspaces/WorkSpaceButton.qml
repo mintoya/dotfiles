@@ -18,18 +18,6 @@ Rectangle {
         horizontalCenter: parent.horizontalCenter
     }
 
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
-        onEntered: {
-            root.height = root.actualHeight * 2;
-            root.width = root.actualWidth * 1.2;
-        }
-        onExited: {
-            root.height = root.actualHeight;
-            root.width = root.actualWidth;
-        }
-    }
 
     Behavior on height {
         NumberAnimation {

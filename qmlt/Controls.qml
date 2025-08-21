@@ -2,12 +2,18 @@ import QtQuick 2.0
 import QtQuick.Controls
 import QtQuick.Shapes
 import Quickshell.Io
+import Quickshell 
+
 
 Column {
     id: root
     property var batteryData:[]
     property var wifiData:[]
     property var bluetoothData:[]
+
+    function launch(cmd): void {
+      Quickshell.execDetached(["sh", "-c", `app2unit -- ${cmd}`]);
+    }
     Process{
       id : batteryProc
       command: [ "sh","-c","upower -i /org/freedesktop/UPower/devices/battery_BAT0|jc --upower"]
@@ -47,7 +53,7 @@ Column {
 
     width: parent.width * 0.75
     height: 100
-    spacing: 30
+    spacing: 20
 
     anchors {
         bottom: parent.bottom
@@ -74,20 +80,26 @@ Column {
         model: [
           { 
             icon : function(){return ""},
-            color : function(){return root.wifiData.state !== "connected"?(Style.inactiveColor):(Style.fgColor)}
+            color : function(){return root.wifiData.state !== "connected"?(Style.inactiveColor):(Style.fgColor)},
+            pressed : function(){launch("hyprctl dispatch exec '[float] nm-connection-editor'");}
           },
           { 
             icon : function(){return ""},
             color : function(){return root.bluetoothData.powered === "yes"?(Style.fgColor):(Style.inactiveColor)},
+            pressed : function(){launch("hyprctl dispatch exec '[float] blueman-manager'");}
           },
           { 
             icon : function(){return root.batteryIcon()},
-            color : function(){return Style.fgColor}
+            color : function(){return Style.fgColor},
+            pressed: function(){}
           },
         ]
 
         delegate: Button {
             anchors.horizontalCenter: parent.horizontalCenter
+            onClicked:modelData.pressed()
+            width:root.width
+            height:root.width*.65
             background: Rectangle {
                 color: "transparent"
                 width: parent.width
