@@ -43,3 +43,7 @@ output_path = '~/.config/zen/matugen.css'
 [templates.nvim]
 input_path = '~/.config/matugen/templates/nvim-colors.lua'
 output_path = '~/.config/nvim/lua/matugen-colors.lua'
+
+[templates.qml]
+input_path = '~/.config/matugen/templates/Colors.qml'
+output_path = '~/dotfiles/qmlt/Colors.qml'
