@@ -4,9 +4,14 @@ import QtQuick.Controls
 import QtQuick.Shapes
 import Quickshell
 import "workspaces"
+import "vbbar"
 
 PanelWindow {
     id: panel
+
+    function getDate() {
+        return ;
+    }
 
     color: "transparent"
 
@@ -166,14 +171,28 @@ PanelWindow {
 
     }
 
-    mask: Region {
-        x: rightSide.x
-        y: rightSide.y
-        height: rightSide.height
-        width: rightSide.width
-    }
     Rectangle {
         id: rightSide
+
+        function windowTitle() {
+            var maxLen = 50;
+            var valid = true;
+            var se = " ...";
+            var title = ActiveWindow.workspaceData.lastwindowtitle;
+            if (!title) {
+                title = "";
+                valid = false;
+            }
+            if (title.length > maxLen) {
+                title = title.substring(0, maxLen - se.length);
+                title += se;
+            }
+            var a = {
+            };
+            a.title = title;
+            a.valid = valid;
+            return a;
+        }
 
         width: Style.rightWidth
         color: "transparent"
@@ -190,29 +209,58 @@ PanelWindow {
 
         Text {
             id: title
+
             anchors.centerIn: parent
-            color: Style.inactiveColor
-            text: ActiveWindow.workspaceData.lastwindowtitle > 20
-      ? ActiveWindow.workspaceData.lastwindowtitle.substring(0, 20) + "…"
-      : ActiveWindow.workspaceData.lastwindowtitle
+            color: Style.fgColor
+            text: rightSide.windowTitle().title
             elide: Text.ElideRight
             wrapMode: Text.NoWrap
-            rotation: 90
+            rotation: (rightSide.windowTitle().valid) ? 90 : 0
 
             font {
-              italic :true
-                pixelSize: 18
+                italic: true
+                pixelSize: Style.rightWidth - 15
             }
 
         }
 
-        Controls {
-        }
+
+
+            TimeRect {
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    bottom: trayish.top
+                    bottomMargin: 20
+                }
+            }
+
+            Controls {
+                id: trayish
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    bottom:parent.bottom
+                    bottomMargin: 10
+                }
+
+            }
+
+        
 
         anchors {
             top: parent.top
             right: parent.right
             bottom: parent.bottom
+        }
+
+    }
+
+    VBbar {
+        id: volumebrightness
+
+        anchors {
+            left: parent.left
+            bottom: parent.bottom
+            bottomMargin: Style.cornerRadius * 2
         }
 
     }
@@ -224,5 +272,21 @@ PanelWindow {
         bottom: true
     }
 
+    mask: Region {
+        Region {
+            x: rightSide.x
+            y: rightSide.y
+            width: rightSide.width
+            height: rightSide.height
+        }
+
+        Region {
+            x: volumebrightness.x
+            y: volumebrightness.y
+            width: volumebrightness.width
+            height: volumebrightness.height
+        }
+
+    }
 
 }

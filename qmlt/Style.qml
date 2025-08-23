@@ -5,7 +5,8 @@ QtObject {
     property string fgColor: "#c5bfd8"
     property string bgColor: "#131318"
     property string inactiveColor: "#46464f"
-    property int rightWidth: 35
+    property string secondaryColor:   "#e3e2e9"
+    property int rightWidth: 30
     property int leftWidth: 5
     property int topWidth: 5
     property int bottomWidth: 5
@@ -14,4 +15,5 @@ QtObject {
     property string borderColor: "transparent"
     property int borderWidth: 2
     property int workspaceButtonSize: 10
+    property bool secondsEnabled: true 
 }

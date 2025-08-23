@@ -1,9 +1,9 @@
 import QtQuick 2.0
+import QtQml 2.0
 import QtQuick.Controls
 import QtQuick.Shapes
 import Quickshell.Io
 import Quickshell 
-
 
 Column {
     id: root
@@ -30,7 +30,12 @@ Column {
       running:false
         stdout: StdioCollector {
             onStreamFinished: {
-              root.wifiData = JSON.parse( this.text ).find(wc => wc.type==="wifi")
+              var data = JSON.parse( this.text ).find(wc => wc.type==="wifi") 
+              if(!data){
+                root.wifiData  = false
+              } else{ 
+                root.wifiData =  data
+              }
             }
         }
     }
@@ -45,34 +50,32 @@ Column {
         }
     }
     Timer {
-        interval: 100
+        interval: 1000
         running: true
         repeat: true
         onTriggered: { batteryProc.running = true, bluetoothProc.running = true,wifiProc.running=true }
     }
 
     width: parent.width * 0.75
-    height: 100
     spacing: 20
 
-    anchors {
-        bottom: parent.bottom
-        bottomMargin: 15
-        horizontalCenter: parent.horizontalCenter
-    }
-
     function batteryIcon() {
-        var batteryLevel = batteryData.detail.percentage
-        if (batteryLevel > 90)  return "󰁹"
-        if (batteryLevel > 80)  return "󰂂" 
-        if (batteryLevel > 70)  return "󰂁" 
-        if (batteryLevel > 60)  return "󰂀" 
-        if (batteryLevel > 50)  return "󰁿" 
-        if (batteryLevel > 40)  return "󰁾" 
-        if (batteryLevel > 30)  return "󰁽" 
-        if (batteryLevel > 20)  return "󰁼" 
-        if (batteryLevel > 10)  return "󰁻" 
-        return "󰂎"; 
+      var batteryLevel = batteryData.detail.percentage
+      var icon = ""
+      if (batteryLevel > 90)  {icon =  "󰁹"}
+      else if (batteryLevel > 80)  {icon =  "󰂂"} 
+      else if (batteryLevel > 70)  {icon =  "󰂁"} 
+      else if (batteryLevel > 60)  {icon =  "󰂀"} 
+      else if (batteryLevel > 50)  {icon =  "󰁿"} 
+      else if (batteryLevel > 40)  {icon =  "󰁾"} 
+      else if (batteryLevel > 30)  {icon =  "󰁽"} 
+      else if (batteryLevel > 20)  {icon =  "󰁼"} 
+      else if (batteryLevel > 10)  {icon =  "󰁻"}
+      else{ icon =  "󰂎"}
+      if (batteryData.detail.state === "charging"){
+        icon+=" 󱐋"
+      }
+      return icon
     }
 
     Repeater {
@@ -81,7 +84,7 @@ Column {
           { 
             icon : function(){return ""},
             color : function(){return root.wifiData.state !== "connected"?(Style.inactiveColor):(Style.fgColor)},
-            pressed : function(){launch("hyprctl dispatch exec '[float] nm-connection-editor'");}
+            pressed : function(){launch("hyprctl dispatch exec '[float] nmgui'");}
           },
           { 
             icon : function(){return ""},
