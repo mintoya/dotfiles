@@ -10,14 +10,16 @@ QtObject {
     property string bgColor: Colors.surface_dim
     property string inactiveColor: Colors.surface_bright
     property string secondaryColor: Colors.surface_tint
-    property int rightWidth: 40
+    property int rightWidth: 30
+
+
+
     property int leftWidth: 10
     property int topWidth: 10
     property int bottomWidth: 10
     property int cornerRadius: 35
-    // property string backgroundColor: "transparent"
-    property string borderColor: "transparent"
+    property string borderColor: "transparent" //doesnt work
     property int borderWidth: 2
     property int workspaceButtonSize: 10
-    property bool secondsEnabled: false
+    property bool secondsEnabled: true
 }

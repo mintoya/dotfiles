@@ -211,7 +211,7 @@ PanelWindow {
             id: title
 
             anchors.centerIn: parent
-            color: Style.fgColor
+            color: Style.secondaryColor
             text: rightSide.windowTitle().title
             elide: Text.ElideRight
             wrapMode: Text.NoWrap
@@ -219,7 +219,7 @@ PanelWindow {
 
             font {
                 italic: true
-                pixelSize: Style.rightWidth - 15
+                pixelSize: (Style.rightWidth - 15<20)?(Style.rightWidth-15):(20)
             }
 
         }

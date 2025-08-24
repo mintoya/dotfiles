@@ -12,7 +12,7 @@ Rectangle {
 
     property int cornerRadius: 25
     property int customRadius: root.cornerRadius
-    property int animationDuration: 200
+    property int animationDuration: 100
     property int maxWidth: Style.rightWidth * 1.5
 
 
@@ -56,7 +56,7 @@ Rectangle {
 
         ShapePath {
             strokeWidth: 2
-            strokeColor: "transparent"
+            strokeColor: Style.borderColor
             fillColor: Style.bgColor
             startX: Style.leftWidth
             startY: -1 * root.customRadius

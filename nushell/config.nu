@@ -22,9 +22,6 @@ alias restart = shutdown -r now
 
 alias reminder = echo "
 buttercup, lobster, kew,
-nmcli device wifi connect "<ssid>" -- ask
-nmcli device disconnect wlp1s0
-nmcli device connect wlp1s0
 hyprctl keyword monitor eDP-1,preferred,auto,1,transform,1 ;
 hyprctl keyword input:touchdevice:transform 1
 "
@@ -34,12 +31,6 @@ def set-background [
 ] {
     let absPath = ($path|path expand)
     matugen --contrast 1 -m dark image $absPath -c ("~/.config/matugen/config.toml"|path expand)
-    if (not ($nu.os-info.name|str contains "windows")) {
-      caelestia wallpaper -f $absPath
-      caelestia scheme set -n dynamic -m dark
-    } else {
-      echo "not running caelestia commands"
-    }
 }
 
 alias vi = nvim
