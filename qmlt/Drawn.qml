@@ -264,6 +264,14 @@ PanelWindow {
         }
 
     }
+    Power{
+      id:powerButtons
+        anchors {
+            left: parent.left
+            top: parent.top
+            topMargin: Style.cornerRadius * 2
+        }
+    }
 
     anchors {
         top: true
@@ -285,6 +293,12 @@ PanelWindow {
             y: volumebrightness.y
             width: volumebrightness.width
             height: volumebrightness.height
+        }
+        Region {
+            x: powerButtons.x
+            y: powerButtons.y
+            width: powerButtons.width
+            height: powerButtons.height
         }
 
     }

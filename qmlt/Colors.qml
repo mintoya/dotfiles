@@ -4,7 +4,7 @@ import QtQuick
 QtObject {
 
     
-    property string background: "#121318"
+    property string background: "#1a110f"
     
     property string error: "#ffece9"
     
@@ -12,11 +12,11 @@ QtObject {
     
     property string inverse_on_surface: "#000000"
     
-    property string inverse_primary: "#35457a"
+    property string inverse_primary: "#733622"
     
-    property string inverse_surface: "#e3e1e9"
+    property string inverse_surface: "#f1dfda"
     
-    property string on_background: "#e3e1e9"
+    property string on_background: "#f1dfda"
     
     property string on_error: "#000000"
     
@@ -28,7 +28,7 @@ QtObject {
     
     property string on_primary_fixed: "#000000"
     
-    property string on_primary_fixed_variant: "#000d36"
+    property string on_primary_fixed_variant: "#280500"
     
     property string on_secondary: "#000000"
     
@@ -36,7 +36,7 @@ QtObject {
     
     property string on_secondary_fixed: "#000000"
     
-    property string on_secondary_fixed_variant: "#0b1021"
+    property string on_secondary_fixed_variant: "#200b05"
     
     property string on_surface: "#ffffff"
     
@@ -48,61 +48,61 @@ QtObject {
     
     property string on_tertiary_fixed: "#000000"
     
-    property string on_tertiary_fixed_variant: "#20071f"
+    property string on_tertiary_fixed_variant: "#161100"
     
-    property string outline: "#efeffa"
+    property string outline: "#ffece7"
     
-    property string outline_variant: "#c2c2cc"
+    property string outline_variant: "#d4beb8"
     
-    property string primary: "#eeefff"
+    property string primary: "#ffece7"
     
-    property string primary_container: "#b0c0fd"
+    property string primary_container: "#ffaf97"
     
-    property string primary_fixed: "#dce1ff"
+    property string primary_fixed: "#ffdbd0"
     
-    property string primary_fixed_dim: "#b5c4ff"
+    property string primary_fixed_dim: "#ffb59e"
     
     property string scrim: "#000000"
     
-    property string secondary: "#eeefff"
+    property string secondary: "#ffece7"
     
-    property string secondary_container: "#bdc1d9"
+    property string secondary_container: "#e3b9ad"
     
-    property string secondary_fixed: "#dde1f9"
+    property string secondary_fixed: "#ffdbd0"
     
-    property string secondary_fixed_dim: "#c1c5dd"
+    property string secondary_fixed_dim: "#e7bdb1"
     
     property string shadow: "#000000"
     
-    property string source_color: "#517af3"
+    property string source_color: "#e05728"
     
-    property string surface: "#121318"
+    property string surface: "#1a110f"
     
-    property string surface_bright: "#4f5056"
+    property string surface_bright: "#5a4d4a"
     
-    property string surface_container: "#2f3036"
+    property string surface_container: "#392e2b"
     
-    property string surface_container_high: "#3a3b41"
+    property string surface_container_high: "#443936"
     
-    property string surface_container_highest: "#46464c"
+    property string surface_container_highest: "#504441"
     
-    property string surface_container_low: "#1e1f25"
+    property string surface_container_low: "#271d1b"
     
     property string surface_container_lowest: "#000000"
     
-    property string surface_dim: "#121318"
+    property string surface_dim: "#1a110f"
     
-    property string surface_tint: "#b5c4ff"
+    property string surface_tint: "#ffb59e"
     
-    property string surface_variant: "#45464f"
+    property string surface_variant: "#53433f"
     
-    property string tertiary: "#ffeaf8"
+    property string tertiary: "#ffefc1"
     
-    property string tertiary_container: "#deb7d7"
+    property string tertiary_container: "#d3c28a"
     
-    property string tertiary_fixed: "#ffd7f7"
+    property string tertiary_fixed: "#f4e2a7"
     
-    property string tertiary_fixed_dim: "#e3badb"
+    property string tertiary_fixed_dim: "#d7c68d"
     
 
 }

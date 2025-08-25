@@ -4,8 +4,6 @@ import QtQuick.Controls
 import QtQuick.Shapes
 import Quickshell
 
-import "../"
-
 Rectangle {
     id: root
 
@@ -13,7 +11,6 @@ Rectangle {
     property int customRadius: root.cornerRadius
     property int animationDuration: 100
     property int maxWidth: Style.rightWidth * 1.5
-
 
     width: Style.leftWidth
     color: "transparent"
@@ -30,7 +27,6 @@ Rectangle {
                 width: root.maxWidth
                 customRadius: root.cornerRadius
             }
-
         }
     ]
     transitions: [
@@ -46,7 +42,6 @@ Rectangle {
                 duration: root.animationDuration
                 easing.type: Easing.OutQuad
             }
-
         }
     ]
 
@@ -105,9 +100,7 @@ Rectangle {
                 radiusX: root.customRadius
                 radiusY: root.customRadius
             }
-
         }
-
     }
 
     Column {
@@ -120,98 +113,52 @@ Rectangle {
         anchors.rightMargin: root.maxWidth / 2 - container.innerWidth / 2
         spacing: 20
 
+    function launch(cmd) {
+      console.log(cmd);
+        Quickshell.execDetached(["sh", "-c", cmd]);
+    }
         Repeater {
-            model: [{
-                "icon": "",
-                "type": "volume",
-                "set": function(val) {
-                    VbServices.setVolume(val);
+            model: [
+                {
+                    "icon": "⏻",
+                    "onpress": function(){container.launch(`sh -c 'shutdown now'`);}
                 },
-                "get": function() {
-                    // return 50;
-                    return VbServices.getVolume();
-                }
-            }, {
-                "icon": "󰃞",
-                "type": "brightness",
-                "set": function(val) {
-                  console.log(val);
-                    VbServices.setBrightness(val);
+                {
+                    "icon": "",
+                    "onpress": function(){container.launch(`sh -c 'shutdown -r now'`);}
                 },
-                "get": function() {
-                    return VbServices.getBrightness();
+                {
+                    "icon": "",
+                    "onpress": function(){ container.launch(`sh -c 'loginctl terminate-user "$(whoami)"'`);}
                 }
-            }]
+            ]
 
             delegate: Rectangle {
                 id: base
 
-                property var selfModel: modelData
-                property int percent: modelData.get()
 
                 width: container.innerWidth
-                height: 200
-                color: Style.inactiveColor
+                height: 50
+                color: Style.fgColor
                 radius: root.cornerRadius
-
-                MouseArea {
-                    id: ma
-
-                    function range(max, min, val) {
-                        return (val < min) ? (min) : ((val > max) ? (max) : (val));
-                    }
-
-                    anchors.fill: parent
-                    onPositionChanged: {
-                        if (pressed) {
-                            var val = ma.range(100, 0, 100 - ma.mouseY);
-                            base.percent = val;
-                        }
-                    }
-                    onReleased: {
-                        var val = ma.range(100, 0, 100 - ma.mouseY);
-                        modelData.set(val);
-                        base.percent = val;
-                    }
+                MouseArea{
+                  onPressed:{
+                    modelData.onpress()
+                  }
+                  anchors.fill:parent
                 }
-
-                Rectangle {
-                    id: inner
-
-                    anchors.bottom: parent.bottom
-                    anchors.bottomMargin: -1
-                    color: Style.fgColor
-                    width: parent.width
-                    radius: parent.radius
-                    height: (parent.percent / 100) * (parent.height - 2 * inner.width/2) + 2 * inner.width/2 + 2
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: modelData.icon
-                        // anchors.horizontalCenter: parent.horizontalCenter
-                        color: Style.bgColor
-                        font.pixelSize: inner.width - 10
-                    }
-
+                Text {
+                  anchors.centerIn:parent
+                  id: icon
+                  text: modelData.icon
+                  font.pixelSize: 19
                 }
 
             }
-
         }
-
     }
-
     HoverHandler {
         id: hoverHandler
 
-        onHoveredChanged: {
-            if (hovered) {
-                for (let i = 0; i < container.children.length; i++) {
-                    let item = container.children[i];
-                    item.percent = item.selfModel.get();
-                }
-            }
-        }
     }
-
 }

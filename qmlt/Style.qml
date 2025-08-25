@@ -23,5 +23,5 @@ QtObject {
     property string borderColor: "transparent" //doesnt work
     property int borderWidth: 2
     property int workspaceButtonSize: 10
-    property bool secondsEnabled: true
+    property bool secondsEnabled: false
 }
