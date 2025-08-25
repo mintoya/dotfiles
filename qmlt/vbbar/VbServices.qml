@@ -7,7 +7,7 @@ pragma Singleton
 Singleton {
     id: root
     function launch(cmd) {
-        Quickshell.execDetached(["sh", "-c", `app2unit -- ${cmd}`]);
+        Quickshell.execDetached(["sh", "-c", cmd]);
     }
 
 
