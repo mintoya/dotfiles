@@ -14,6 +14,20 @@ Singleton {
     property real volume: 0
     property int brightness: 0
 
+    property int maxBrightness: 100
+
+    Process {
+        command: ["sh","-c","brightnessctl max"]
+        running: true
+        stdout: StdioCollector {
+            onStreamFinished: {
+              root.maxBrightness = parseInt(this.text);
+            }
+        }
+
+    }
+
+
     function getVolume(){
       return root.volume*100;
     }
@@ -23,11 +37,11 @@ Singleton {
     }
 
     function getBrightness(){
-      return root.brightness;
+      return root.brightness/root.maxBrightness*100;
     }
     function setBrightness(percentInt){
       console.log(percentInt);
-      root.launch("brightnessctl set " + percentInt);
+      root.launch("brightnessctl set " + percentInt/100*maxBrightness);
     }
 
 
