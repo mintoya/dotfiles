@@ -14,7 +14,6 @@ Rectangle {
     property int animationDuration: 100
     property int maxWidth: Style.rightWidth * 1.5
 
-
     width: Style.leftWidth
     color: "transparent"
     implicitHeight: container.implicitHeight + 40
@@ -30,7 +29,6 @@ Rectangle {
                 width: root.maxWidth
                 customRadius: root.cornerRadius
             }
-
         }
     ]
     transitions: [
@@ -46,7 +44,6 @@ Rectangle {
                 duration: root.animationDuration
                 easing.type: Easing.OutQuad
             }
-
         }
     ]
 
@@ -105,9 +102,7 @@ Rectangle {
                 radiusX: root.customRadius
                 radiusY: root.customRadius
             }
-
         }
-
     }
 
     Column {
@@ -121,27 +116,29 @@ Rectangle {
         spacing: 20
 
         Repeater {
-            model: [{
-                "icon": "",
-                "type": "volume",
-                "set": function(val) {
-                    VbServices.setVolume(val);
+            model: [
+                {
+                    "icon": "",
+                    "type": "volume",
+                    "set": function (val) {
+                        VbServices.setVolume(val);
+                    },
+                    "get": function () {
+                        // return 50;
+                        return VbServices.getVolume();
+                    }
                 },
-                "get": function() {
-                    // return 50;
-                    return VbServices.getVolume();
+                {
+                    "icon": "󰃞",
+                    "type": "brightness",
+                    "set": function (val) {
+                        VbServices.setBrightness(val);
+                    },
+                    "get": function () {
+                        return VbServices.getBrightness();
+                    }
                 }
-            }, {
-                "icon": "󰃞",
-                "type": "brightness",
-                "set": function(val) {
-                  console.log(val);
-                    VbServices.setBrightness(val);
-                },
-                "get": function() {
-                    return VbServices.getBrightness();
-                }
-            }]
+            ]
 
             delegate: Rectangle {
                 id: base
@@ -159,6 +156,15 @@ Rectangle {
 
                     function range(max, min, val) {
                         return (val < min) ? (min) : ((val > max) ? (max) : (val));
+                    }
+                    scrollGestureEnabled: true
+                    onWheel: {
+                        if (wheel.angleDelta.y < 0) {
+                            base.percent = ma.range(100, 0, base.percent - 10);
+                        } else {
+                            base.percent = ma.range(100, 0, base.percent + 10);
+                        }
+                        modelData.set(base.percent);
                     }
 
                     anchors.fill: parent
@@ -183,7 +189,7 @@ Rectangle {
                     color: Style.fgColor
                     width: parent.width
                     radius: parent.radius
-                    height: (parent.percent / 100) * (parent.height - 2 * inner.width/2) + 2 * inner.width/2 + 2
+                    height: (parent.percent / 100) * (parent.height - 2 * inner.width / 2) + 2 * inner.width / 2 + 2
 
                     Text {
                         anchors.centerIn: parent
@@ -192,13 +198,14 @@ Rectangle {
                         color: Style.bgColor
                         font.pixelSize: inner.width - 10
                     }
-
+                    Behavior on height {
+                        NumberAnimation {
+                            duration: 80
+                        }
+                    }
                 }
-
             }
-
         }
-
     }
 
     HoverHandler {
@@ -213,5 +220,4 @@ Rectangle {
             }
         }
     }
-
 }
