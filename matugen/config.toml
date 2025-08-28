@@ -30,7 +30,11 @@ output_path = '~/.config/starship.toml'
 [templates.ghostty]
 input_path = '~/.config/matugen/templates/ghostty-colors'
 output_path = '~/.config/ghostty/themes/matugen'
+post_hook = 'bash -c `kill -s sigusr2 $(nu -c "ps |where name =~ ghostty|get pid|get 0")`'
 
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-color.conf'
+output_path = '~/.config/kitty/kitty.conf'
 
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-theme.toml'

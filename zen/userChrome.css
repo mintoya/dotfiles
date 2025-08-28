@@ -1,5 +1,5 @@
 @import "matugen.css";
-@import "zen-nebula/Nebula/Nebula.css";
+
 /* modules import */
 @import "zen-nebula/Nebula/modules/General-UI.css";
 @import "zen-nebula/Nebula/modules/Sidebar.css";
@@ -12,27 +12,20 @@
 @import "zen-nebula/Nebula/modules/Toolbar.css";
 @import "zen-nebula/Nebula/modules/Miniplayer.css";
 @import "zen-nebula/Nebula/modules/BetterPiP.css";
-/* @import "zen-nebula/Nebula/modules/Animations(tabs).css"; */
+@import "zen-nebula/Nebula/modules/Animations(tabs).css";
 @import "zen-nebula/Nebula/modules/Tabfolders.css";
 @import "zen-nebula/Nebula/modules/Workspace-buttons.css";
 
 /* config import */
 @import "zen-nebula/Nebula/Nebula-config.css";
 
+
 :root {
-  --nebula-sidebar-width: 12em !important; 
   --tab-selected-pinned-color: var(--secondary_container)!important;
   --tab-selected-color: var(--secondary_container);
   --zen-main-browser-background:color-mix(in srgb, var(--background), transparent 70%) !important;
   --zen-main-browser-background-toolbar: var(--zen-main-browser-background) ;
   --zen-colors-border-contrast: var(--secondary_container) !important;
-  --sidebar-width: 140px!important;
-  --zen-themed-toolbar-bg-transparent:linear-gradient(
-    120deg,
-      rgba(100, 100, 255, .05) 10%,
-      color-mix(in srgb, var(--background), transparent 80%) 50%,
-      rgba(0, 0, 255, .05) 100%
-    )!important;
 }
 
 .zen-essentials-container .tabbrowser-tab {
@@ -44,18 +37,15 @@
     }
 }
 
-.tab-background{
-  background-color: #0006;
-}
 #titlebar{
   min-width:120px!important;
 }
 .tabbrowser-tab[selected=true] .tab-background{
-  background: radial-gradient(
-    var(--zen-primary-color),
-    color-mix(in srgb, var(--zen-primary-color) 30%, transparent),
-    transparent
-  );
+  /* background: radial-gradient( */
+  /*   var(--zen-primary-color), */
+  /*   color-mix(in srgb, var(--zen-primary-color) 30%, transparent), */
+  /*   transparent */
+  /* ); */
 }
 body:has([zen-compact-mode="true"]) #titlebar {
   background:var(--zen-themed-toolbar-bg-transparent)!important;
