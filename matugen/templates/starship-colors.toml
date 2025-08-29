@@ -1,6 +1,5 @@
 format = '''
-$directory$git_branch$rust$python$time
-$character'''
+$directory$git_branch$character'''
 
 palette = 'colors'
 
@@ -18,8 +17,10 @@ color9 = '{{colors.tertiary.default.hex}}'
 
 # Prompt symbols
 [character]
-success_symbol = "[ ](color9 bold)"
-error_symbol = "[ ](@{error})"
+# success_symbol = "[ ](color9 bold)"
+# error_symbol = "[ ](@{error})"
+success_symbol = "[](fg:color4 bg:none)[  ](fg:color1 bg:color4 bold)[](fg:color4 bg:none)"
+error_symbol   = "[](fg:color4 bg:none)[ ](fg:color9 bg:color4 bold)[ ](fg:color1 bg:color4 bold)[](fg:color4 bg:none)"
 vicmd_symbol = "[](#f9e2af)"
 
 [directory]
@@ -45,3 +46,4 @@ format = "[](fg:color8 bg:none)[${symbol}${version}](bg:color8 fg:color5)[
 symbol = '🐍'
 # pyenv_version_name = true
 pyenv_prefix = 'venv'
+
