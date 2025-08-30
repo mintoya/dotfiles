@@ -28,16 +28,20 @@ Singleton {
     }
 
 
-    function getVolume(){
-      return root.volume*100;
-    }
     function setVolume(percentInt){
       console.log(percentInt);
       root.launch( "wpctl set-volume @DEFAULT_AUDIO_SINK@ " + percentInt/100);
     }
 
     function getBrightness(){
+      brightnessProcess.running = true ;
+      while(! root.brightnessProcess.running){}
       return root.brightness/root.maxBrightness*100;
+    }
+    function getVolume(){
+      volumeProcess.running=true;
+      while(! root.volumeProcess.running){}
+      return root.volume*100;
     }
     function setBrightness(percentInt){
       console.log(percentInt);
@@ -77,11 +81,11 @@ Singleton {
     }
 
 
-    Timer {
-        interval: 1000
-        running: true
-        repeat: true
-        onTriggered: { brightnessProcess.running = true ,volumeProcess.running=true }
-    }
+    // Timer {
+    //     interval: 1000
+    //     running: true
+    //     repeat: true
+    //     onTriggered: { brightnessProcess.running = true ,volumeProcess.running=true }
+    // }
 
 }

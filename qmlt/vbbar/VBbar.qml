@@ -198,11 +198,11 @@ Rectangle {
                         color: Style.bgColor
                         font.pixelSize: inner.width - 10
                     }
-                    Behavior on height {
-                        NumberAnimation {
-                            duration: 80
-                        }
-                    }
+                    // Behavior on height {
+                    //     NumberAnimation {
+                    //         duration: 80
+                    //     }
+                    // }
                 }
             }
         }
