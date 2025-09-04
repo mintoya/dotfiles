@@ -158,13 +158,20 @@ Rectangle {
                         return (val < min) ? (min) : ((val > max) ? (max) : (val));
                     }
                     scrollGestureEnabled: true
+                    
+                    Timer {
+                        id: scrollCommitTimer
+                        interval: 200
+                        repeat: false
+                        onTriggered: modelData.set(base.percent)
+                    }
                     onWheel: {
                         if (wheel.angleDelta.y < 0) {
                             base.percent = ma.range(100, 0, base.percent - 10);
                         } else {
                             base.percent = ma.range(100, 0, base.percent + 10);
                         }
-                        modelData.set(base.percent);
+                        scrollCommitTimer.restart();
                     }
 
                     anchors.fill: parent
