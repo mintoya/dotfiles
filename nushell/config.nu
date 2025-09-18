@@ -17,7 +17,6 @@ def --env y [...args] {
 }
 
 
-
 alias restart = shutdown -r now
 
 alias reminder = echo "
@@ -32,6 +31,39 @@ def set-background [
     let absPath = ($path|path expand)
     matugen --contrast 1 -m dark image $absPath -c ("~/.config/matugen/config.toml"|path expand)
 }
+# completion 
+
+let fish_completer = {|spans|
+    fish --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
+    | from tsv --flexible --noheaders --no-infer
+    | rename value description
+    | update value {|row|
+      let value = $row.value
+      let need_quote = ['\' ',' '[' ']' '(' ')' ' ' '\t' "'" '"' "`"] | any {$in in $value}
+      if ($need_quote and ($value | path exists)) {
+        let expanded_path = if ($value starts-with ~) {$value | path expand --no-symlink} else {$value}
+        $'"($expanded_path | str replace --all "\"" "\\\"")"'
+      } else {$value}
+    }
+}
+
+let carapace_completer = {|spans: list<string>|
+    carapace $spans.0 nushell ...$spans
+    | from json
+    | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }
+}
+
+$env.config = {
+    # ...
+    completions: {
+        external: {
+            enable: true
+            completer: $fish_completer 
+        }
+    }
+    # ...
+}
+# completion
 
 alias vi = nvim
 alias q = exit

@@ -29,13 +29,6 @@ Rectangle {
     Item {
         id: rowsContainerContainer
 
-        WorkCanvas {
-            id: wcan
-            height: repeater1.itemAt(active % 5).height + 20
-            y: repeater1.itemAt(active % 5).y - 10
-            anchors.horizontalCenter: parent.horizontalCenter
-            color: Style.fgColor
-        }
 
         anchors {
             horizontalCenter: parent.horizontalCenter
@@ -72,6 +65,13 @@ Rectangle {
 
             }
 
+        }
+        WorkCanvas {
+            id: wcan
+            height: repeater1.itemAt(active % 5).height + 20
+            y: repeater1.itemAt(active % 5).y - 10
+            anchors.horizontalCenter: parent.horizontalCenter
+            color: Style.fgColor
         }
 
     }
