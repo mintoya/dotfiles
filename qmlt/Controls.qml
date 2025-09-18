@@ -106,7 +106,7 @@ Column {
                     return root.wifiData.state !== "connected" ? (Style.inactiveColor) : (Style.fgColor);
                 },
                 pressed: function () {
-                    launch("hyprctl dispatch exec '[float] nmgui'");
+                    launch("hyprctl dispatch exec '[float] better-control'");
                 },
             },
             {
@@ -117,7 +117,7 @@ Column {
                     return root.bluetoothData.powered === "yes" ? (Style.fgColor) : (Style.inactiveColor);
                 },
                 pressed: function () {
-                    launch("hyprctl dispatch exec '[float] blueman-manager'");
+                    launch("hyprctl dispatch exec '[float] better-control'");
                 }
             },
             {

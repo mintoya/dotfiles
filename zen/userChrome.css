@@ -23,7 +23,7 @@
 :root {
   --tab-selected-pinned-color: var(--secondary_container)!important;
   --tab-selected-color: var(--secondary_container);
-  --zen-main-browser-background:color-mix(in srgb, var(--background), transparent 70%) !important;
+  --zen-main-browser-background:color-mix(in srgb, var(--background), transparent 0%) !important;
   --zen-main-browser-background-toolbar: var(--zen-main-browser-background) ;
   --zen-colors-border-contrast: var(--secondary_container) !important;
 }
