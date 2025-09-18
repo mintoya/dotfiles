@@ -3,7 +3,7 @@ general:
   # script or launching another application.
   # Example: The below command launches Zebar.
   # startup_commands: ['shell-exec zebar']
-  startup_commands: ['shell-exec --hide-window %userprofile%\\.glzr\\a.exe']
+  startup_commands: ['shell-exec --hide-window %userprofile%\\.glzr\\a.exe', 'shell-exec tacky-borders.exe']
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
   # shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
@@ -252,7 +252,7 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-  - commands: ['shell-exec C:/Program Files/WezTerm/wezterm-gui.exe']
+  - commands: ['shell-exec --hide-window wezterm start']
     bindings: ['alt+enter']
   # Focus the next/previous active workspace defined in `workspaces` config.
   - commands: ['focus --next-active-workspace']
