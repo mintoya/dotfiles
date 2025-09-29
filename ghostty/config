@@ -1,5 +1,5 @@
 theme = matugen
-font-size = 20
+font-size = 16
 font-family = "Iosevka Term"
 
 gtk-titlebar = false
@@ -7,5 +7,5 @@ gtk-titlebar = false
 #custom-shader = /home/paa/Github/ghostty-shaders/bloom.glsl
 custom-shader  = /home/paa/.config/ghostty/shaders/cursor_smear.glsl
 confirm-close-surface = false
-background-opacity = 0.8
+background-opacity = 0.9
 
