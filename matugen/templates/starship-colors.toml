@@ -23,8 +23,9 @@ success_symbol = "[](fg:color4 bg:none)[ ](fg:color1 bg:color4 bold)[](
 error_symbol   = "[](fg:color4 bg:none)[ ](fg:red bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
 vicmd_symbol = "[](#f9e2af)"
 
+
 [directory]
-format = "[](fg:color1 bg:none)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$path ](fg:color3 bg:color4)[ ](fg:color4)"
+format = "[](fg:color1 bg:none)[ ](bg:color1 fg:color4)[ ](fg:color1 bg:color4)[$path ](fg:color3 bg:color4)[ ](fg:color4)"
 
 [directory.substitutions]
 "Documents" = "󰈙 "

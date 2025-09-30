@@ -1,2 +1,2 @@
 use ../ensure-install.nu *
-ensure-installed matugen
+ensure-installed matugen swww
