@@ -6,9 +6,9 @@ export def ensure-installed [...pkgs: string] {
       } catch { 
         error make {msg: $"failed to install ($pkg)"}
       }
-      ^yay -S --noconfirm $pkg
+      print $"(ansi reset)($pkg) \t- (ansi green)installed(ansi reset)"
     } else {
-      print $"($pkg) already installed"
+      print $"(ansi reset)($pkg) \t- (ansi yellow)skipped(ansi reset)"
     }
   }
 }
