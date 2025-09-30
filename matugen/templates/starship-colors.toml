@@ -1,10 +1,11 @@
 format = '''
-$directory$git_branch$character'''
+$directory$git_branch
+$character
+'''
 
 palette = 'colors'
 
 [palettes.colors]
-mustard = '#af8700' # example
 color1 = '{{colors.primary_fixed_dim.default.hex}}'
 color2 = '{{colors.on_primary.default.hex}}'
 color3 = '{{colors.on_surface_variant.default.hex}}'
@@ -17,15 +18,15 @@ color9 = '{{colors.tertiary.default.hex}}'
 
 # Prompt symbols
 [character]
-# success_symbol = "[ ](color9 bold)"
-# error_symbol = "[ ](@{error})"
-success_symbol = "[](fg:color4 bg:none)[ ](fg:color1 bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
-error_symbol   = "[](fg:color4 bg:none)[ ](fg:red bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
-vicmd_symbol = "[](#f9e2af)"
+success_symbol = "[  ](color1 )"
+error_symbol = "[  ](red)"
+# success_symbol = "[](fg:color4 bg:none)[ ](fg:color1 bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
+# error_symbol   = "[](fg:color4 bg:none)[ ](fg:red bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
+# vicmd_symbol = "[](#f9e2af)"
 
 
 [directory]
-format = "[](fg:color1 bg:none)[ ](bg:color1 fg:color4)[ ](fg:color1 bg:color4)[$path ](fg:color3 bg:color4)[ ](fg:color4)"
+format = "[](fg:color1 bg:none)[ ](bg:color1 fg:color4)[ ](fg:color1 bg:none)[$path ](fg:color3 bg:none)"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -47,4 +48,5 @@ format = "[](fg:color8 bg:none)[${symbol}${version}](bg:color8 fg:color5)[
 symbol = '🐍'
 # pyenv_version_name = true
 pyenv_prefix = 'venv'
+
 

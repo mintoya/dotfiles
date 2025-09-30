@@ -7,53 +7,54 @@ arguments = ["img", "--transition-type", "center"]
 set = true
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+input_path = './templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
 [templates.gtk3]
-input_path = '~/.config/matugen/templates/gtk-colors2.css'
+# input_path = './templates/gtk-colors2.css'
+input_path = './templates/gtk-colors.css'
 output_path = '~/.config/gtk-3.0/colors.css'
-post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark'
 
 [templates.gtk4]
-input_path = '~/.config/matugen/templates/gtk-colors2.css'
+input_path = './templates/gtk-colors2.css'
 output_path = '~/.config/gtk-4.0/colors.css'
 
 
 [templates.rofi]
-input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+input_path = '.templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'
 
 [templates.starship]
-input_path = '~/.config/matugen/templates/starship-colors.toml'
+input_path = './templates/starship-colors.toml'
 output_path = '~/.config/starship.toml'
 
 [templates.ghostty]
-input_path = '~/.config/matugen/templates/ghostty-colors'
+input_path = '~./templates/ghostty-colors'
 output_path = '~/.config/ghostty/themes/matugen'
 post_hook = 'bash -c `kill -s sigusr2 $(nu -c "ps |where name =~ ghostty|get pid|get 0")`'
 
 [templates.kitty]
-input_path = '~/.config/matugen/templates/kitty-color.conf'
+input_path = './templates/kitty-color.conf'
 output_path = '~/.config/kitty/kitty.conf'
 
 [templates.yazi]
-input_path = '~/.config/matugen/templates/yazi-theme.toml'
+input_path = '~./templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
 
 [templates.zen]
-input_path = '~/.config/matugen/templates/colors.css'
+input_path = './templates/colors.css'
 output_path = '~/dotfiles/zen/matugen.css'
 
 [templates.nvim]
-input_path = '~/.config/matugen/templates/nvim-colors.lua'
+input_path = './templates/nvim-colors.lua'
 output_path = '~/.config/nvim/lua/matugen-colors.lua'
 
 [templates.qml]
-input_path = '~/.config/matugen/templates/Colors.qml'
+input_path = './templates/Colors.qml'
 output_path = '~/dotfiles/qmlt/Colors.qml'
 
 [templates.tacky]
-input_path = '~/.config/matugen/templates/tacky-borders.yaml'
+input_path = '~./templates/tacky-borders.yaml'
 output_path = '~/.config/tacky-borders/config.yaml'
