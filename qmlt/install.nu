@@ -1,2 +1,2 @@
 use ../ensure-install.nu *
-ensure-installed brightnessctl better-control
+ensure-installed brightnessctl better-control jc
