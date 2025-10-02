@@ -5,16 +5,8 @@
 
 source ./starship.nu
 source ./zoxide.nu
+source ./yazi.nu
 
-def --env y [...args] {
-	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
-	yazi ...$args --cwd-file $tmp
-	let cwd = (open $tmp)
-	if $cwd != "" and $cwd != $env.PWD {
-		cd $cwd
-	}
-	rm -fp $tmp
-}
 
 
 alias restart = shutdown -r now
@@ -58,7 +50,7 @@ $env.config = {
     completions: {
         external: {
             enable: true
-            completer: $fish_completer 
+            completer: $carapace_completer 
         }
     }
     # ...
