@@ -3,7 +3,7 @@ import QtQuick 2.15
 Rectangle {
     id: ball
 
-    width: parent.width
+    width: parent.width - 2
     height: 30
     radius: 15
     anchors.horizontalCenter: parent.horizontalCenter

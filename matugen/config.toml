@@ -23,7 +23,7 @@ output_path = '~/.config/gtk-4.0/colors.css'
 
 
 [templates.rofi]
-input_path = '.templates/rofi-colors.rasi'
+input_path = './templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'
 
 [templates.starship]
@@ -31,7 +31,7 @@ input_path = './templates/starship-colors.toml'
 output_path = '~/.config/starship.toml'
 
 [templates.ghostty]
-input_path = '~./templates/ghostty-colors'
+input_path = './templates/ghostty-colors'
 output_path = '~/.config/ghostty/themes/matugen'
 post_hook = 'bash -c `kill -s sigusr2 $(nu -c "ps |where name =~ ghostty|get pid|get 0")`'
 
@@ -40,7 +40,7 @@ input_path = './templates/kitty-color.conf'
 output_path = '~/.config/kitty/kitty.conf'
 
 [templates.yazi]
-input_path = '~./templates/yazi-theme.toml'
+input_path = './templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
 
 [templates.zen]
@@ -56,5 +56,5 @@ input_path = './templates/Colors.qml'
 output_path = '~/dotfiles/qmlt/Colors.qml'
 
 [templates.tacky]
-input_path = '~./templates/tacky-borders.yaml'
+input_path = './templates/tacky-borders.yaml'
 output_path = '~/.config/tacky-borders/config.yaml'
