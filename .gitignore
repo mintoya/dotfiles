@@ -16,6 +16,7 @@ qmlt/Colors.qml
 rofi/colors.rasi
 zen/matugen.css
 yazi/theme.toml
+yazi/theme*
 gtk-3.0/colors.css
 gtk-4.0/colors.css
 hypr/config.conf
