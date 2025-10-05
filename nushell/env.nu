@@ -24,3 +24,8 @@ $env.config.shell_integration.osc133 = false
 $env.config.buffer_editor = "nvim"
 $env.EDITOR = "nvim"
 $env.directory_editor = "yazi"
+$env.config.edit_mode = 'vi'
+$env.config.cursor_shape.vi_normal = 'block'
+$env.config.cursor_shape.vi_insert = 'line'
+$env.config.cursor_shape.emacs = 'line'
+
