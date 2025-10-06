@@ -18,8 +18,9 @@ color9 = '{{colors.tertiary.default.hex}}'
 
 # Prompt symbols
 [character]
-success_symbol = "[   >](color1 )"
-error_symbol   = "[   ?](red)"
+success_symbol = "[   >](fg:color1)"
+vicmd_symbol   = "[   x](fg:color1)"
+error_symbol   = "[   ?](fg:red)"
 # success_symbol = "[](fg:color4 bg:none)[ ](fg:color1 bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
 # error_symbol   = "[](fg:color4 bg:none)[ ](fg:red bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
 # vicmd_symbol = "[](#f9e2af)"

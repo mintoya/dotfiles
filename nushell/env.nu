@@ -27,5 +27,6 @@ $env.directory_editor = "yazi"
 $env.config.edit_mode = 'vi'
 $env.config.cursor_shape.vi_normal = 'block'
 $env.config.cursor_shape.vi_insert = 'line'
-$env.config.cursor_shape.emacs = 'line'
-
+$env.config.cursor_shape.emacs     = 'line'
+$env.PROMPT_INDICATOR_VI_NORMAL = 'x '
+$env.PROMPT_INDICATOR_VI_INSERT = '> '
