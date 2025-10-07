@@ -18,23 +18,25 @@ color9 = '{{colors.tertiary.default.hex}}'
 
 # Prompt symbols
 [character]
-success_symbol = "[   >](fg:color1)"
-vicmd_symbol   = "[   x](fg:color1)"
-error_symbol   = "[   ?](fg:red)"
-# success_symbol = "[](fg:color4 bg:none)[ ](fg:color1 bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
-# error_symbol   = "[](fg:color4 bg:none)[ ](fg:red bg:color4 bold)[](fg:color4 bg:color1)[](fg:color1 bg:none)"
-# vicmd_symbol = "[](#f9e2af)"
-
+# success_symbol = "[   >](color1)"
+# vicmd_symbol   = "[   x](color1)"
+# error_symbol   = "[   ?](red)"
+success_symbol = "[  ](color1)"
+vicmd_symbol   = "[  ](color1)"
+error_symbol   = "[  ](red)"
 
 [directory]
 format = "[ ](fg:color1 bg:none)[ ](bg:color1 fg:color4)[ ](fg:color1 bg:none)[$path ](fg:color3 bg:none)"
 
+
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-"Github" = " "
+"~"         = " "
+".config"   = " "
+"Documents" = "󰧮 "
+"Downloads" = " "
+"Music"     = " "
+"Pictures"  = " "
+"Github"    = " "
 
 [git_branch]
 format = "[](fg:color8 bg:none)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $branch](fg:color3 bg:color4)[](fg:color4) "
