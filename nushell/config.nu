@@ -3,9 +3,6 @@
 # See https://www.nushell.sh/book/configuration.html
 # See `help config nu` for more options
 
-source ./starship.nu
-source ./zoxide.nu
-source ./yazi.nu
 
 
 
@@ -25,41 +22,14 @@ def set-background [
 }
 # completion 
 
-let fish_completer = {|spans|
-    fish --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
-    | from tsv --flexible --noheaders --no-infer
-    | rename value description
-    | update value {|row|
-      let value = $row.value
-      let need_quote = ['\' ',' '[' ']' '(' ')' ' ' '\t' "'" '"' "`"] | any {$in in $value}
-      if ($need_quote and ($value | path exists)) {
-        let expanded_path = if ($value starts-with ~) {$value | path expand --no-symlink} else {$value}
-        $'"($expanded_path | str replace --all "\"" "\\\"")"'
-      } else {$value}
-    }
-}
-
-let carapace_completer = {|spans: list<string>|
-    carapace $spans.0 nushell ...$spans
-    | from json
-    | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }
-}
-
-$env.config = {
-    # ...
-    completions: {
-        external: {
-            enable: true
-            completer: $carapace_completer 
-        }
-    }
-    # ...
-}
-# completion
+source $"($nu.cache-dir)/carapace.nu"
+source $"($nu.cache-dir)/starsihp.nu"
+source $"($nu.cache-dir)/zoxide.nu"
+source ./yazi.nu
 
 alias vi = nvim
-alias q = exit
+alias q  = exit
 alias md = mkdir
 alias rd = rm -rf
-alias c = clear
+alias c  = clear
 fastfetch

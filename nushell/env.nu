@@ -18,6 +18,19 @@
 # them for future reference.
 $env.PATH = ($env.PATH | prepend "~/.npm-global/bin")
 $env.PATH = ($env.PATH | prepend "~/.local/bin")
+
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+
+mkdir $"($nu.cache-dir)"
+
+
+
+
+carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
+starship init nu           | save --force $"($nu.cache-dir)/starsihp.nu"
+zoxide init nushell        | save --force $"($nu.cache-dir)/zoxide.nu"
+
+
 $env.config.table.mode = 'none'
 $env.config.show_banner = false
 $env.config.shell_integration.osc133 = false
