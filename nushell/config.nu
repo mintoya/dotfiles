@@ -17,10 +17,23 @@ hyprctl keyword input:touchdevice:transform 1
 def set-background [
   --path (-p): string
 ] {
-    let absPath = ($path|path expand)
-    matugen --contrast 1 -m dark image $absPath -c ("~/.config/matugen/config.toml"|path expand)
+  let absPath = ($path|path expand)
+  matugen --contrast 1 -m dark image $absPath -c ("~/.config/matugen/config.toml"|path expand)
 }
-# completion 
+def nufzf [
+  --format(-f)  : closure
+  --preview(-p) : closure
+] {
+  let forcePreview = $preview|to nuon --serialize|from nuon
+  return (
+    $in 
+    |each {|x| let formatted = do $format $x ; $"($formatted) (($x | to nuon -r))" }
+    |str join "\n"
+    |fzf --with-nth 1 --preview=("({}|parse \"{name} {value}\").0.value|from nuon|do " + ($forcePreview) )
+    |try {(parse "{name} {data}").0.data} catch { "{}" }
+    |from nuon
+  )
+}
 
 source $"($nu.cache-dir)/carapace.nu"
 source $"($nu.cache-dir)/starsihp.nu"

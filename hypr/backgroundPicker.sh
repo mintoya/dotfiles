@@ -20,7 +20,6 @@ EOF
 
 chmod +x "$ghostScript"
 
-# Launch ghostty in floating mode and run the script
 hyprctl dispatch exec "[float] ghostty -e bash -c $ghostScript"
 
 
