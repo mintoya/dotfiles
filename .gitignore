@@ -22,3 +22,4 @@ gtk-4.0/colors.css
 hypr/config.conf
 custom.conf
 starship.toml
+nushell/plugin.msgpackz

@@ -23,15 +23,24 @@ def set-background [
 def nufzf [
   --format(-f)  : closure
   --preview(-p) : closure
+  --fzflags     : list<string> = ["multi","ansi"]
 ] {
+  let flags = $fzflags | each { "--" + $in } 
   let forcePreview = $preview|to nuon --serialize|from nuon
   return (
     $in 
-    |each {|x| let formatted = do $format $x ; $"($formatted) (($x | to nuon -r))" }
+    |each {|x| let formatted = do $format $x ; $"(($x | to nuon -r)) __;__ ($formatted)" }
     |str join "\n"
-    |fzf --with-nth 1 --preview=("({}|parse \"{name} {value}\").0.value|from nuon|do " + ($forcePreview) )
-    |try {(parse "{name} {data}").0.data} catch { "{}" }
-    |from nuon
+    |^fzf
+      ...$flags
+      --with-shell="nu -c"
+      --with-nth=2
+      --delimiter="__;__"
+      --preview=("({}|parse \"{value} __;__ {name}\").0.value|from nuon|do " + ($forcePreview) )
+    | lines 
+    | parse "{data} __;__ {name}" 
+    | get -o data 
+    |each {$in|from nuon}
   )
 }
 
