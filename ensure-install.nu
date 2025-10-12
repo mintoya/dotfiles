@@ -1,6 +1,6 @@
 export def ensure-installed [...pkgs: string] {
   for pkg in $pkgs {
-    if (yay -Q $pkg | complete).exit_code != 0 {
+    if (^yay -Q $pkg | complete).exit_code != 0 {
       try { 
         ^yay -S --noconfirm $pkg
       } catch { 

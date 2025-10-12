@@ -1,12 +1,26 @@
+if ( ( ^yay --help )|complete ).exit_code == 1 {
+  print "installing yay "
+  let yaydir = "~/yay" | path expand
+  mkdir $yaydir
+  
+  git clone "https://aur.archlinux.org/yay.git" $yaydir
+  cd yay
+  makepkg -si -D $yaydir
+}
+print "yay is installed "
 print "installing some dependencies"
+
 use ./ensure-install.nu *
-ensure-installed starship yazi zoxide ttc-iosevka
+
+ensure-installed grep
+
 $env.config.table.mode = "none" 
 $env.NU_STRICT = true
+
 print "running install scripts"
-(ls|where type == dir|get name) 
-  | each { |x| ls $x|where name =~ "install.nu" | get name } 
-  |  flatten 
-  | each { |x| print (do { nu $x }) }
+( ^find (pwd) -type f | ^grep installs.nu | lines  )
+  | each { open $in | from nuon }
+  | flatten 
+  | ensure-installed ...$in
 print "done "
 

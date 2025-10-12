@@ -1,0 +1,1 @@
+[ brightnessctl, better-control, jc ] 
