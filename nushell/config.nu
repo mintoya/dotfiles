@@ -36,7 +36,7 @@ def nufzf [
       --with-shell="nu -c"
       --with-nth=2
       --delimiter="__;__"
-      --preview=("({}|parse \"{value} __;__ {name}\").0.value|from nuon|do " + ($forcePreview) )
+      --preview=$"\({}|parse \"{value} __;__ {name}\"\).0.value|from nuon|do ($forcePreview)"
     | lines 
     | parse "{data} __;__ {name}" 
     | get -o data 
