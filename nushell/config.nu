@@ -49,9 +49,10 @@ source $"($nu.cache-dir)/starsihp.nu"
 source $"($nu.cache-dir)/zoxide.nu"
 source ./yazi.nu
 
-alias vi = nvim
+alias gs = ^lazygit
+alias vi = ^nvim
 alias q  = exit
 alias md = mkdir
 alias rd = rm -rf
 alias c  = clear
-fastfetch
+^fastfetch

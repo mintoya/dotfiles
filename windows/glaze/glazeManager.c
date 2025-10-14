@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
 char *command = "glazewm sub -e window_managed";
 void flip(void) { system("glazewm command toggle-tiling-direction"); }
+
 void handler(char *cmdOutput) {
   static char *key = "\"tilingSize\":";
   char *found = strstr(cmdOutput, key);
   if (found) {
     found += strlen(key);
     double value = strtod(found, NULL);
-    if (value <= .5) {
+    if (value <= .7) {
       flip();
     }
     printf("found %f\n", value);
