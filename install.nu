@@ -6,7 +6,7 @@ try {
   mkdir $yaydir
 
   git clone "https://aur.archlinux.org/yay.git" $yaydir
-  cd yay
+  cd $yaydir
   makepkg -si -D $yaydir
 }
 print "yay is installed "
