@@ -1,1 +1,3 @@
-ya pkg install
+{
+  scripts:["yazi","ya pkg install"]
+}

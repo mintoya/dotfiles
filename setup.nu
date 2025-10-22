@@ -1,6 +1,14 @@
-print "running setup scripts"
-(ls|where type == dir|get name) 
-  | each { |x| ls $x|where name =~ "setup.nu" | get name } 
-  |  flatten 
-  | each { |x| print (do { nu $x }) }
-print "done"
+
+export def ensure-exists [...files: string] {
+  for file in $files {
+    mkdir ( $file | path dirname )
+    ""|save -a $file
+  }
+}
+print "making required files"
+( ^find (pwd) -type f | ^grep installs.nu | lines  )
+  | each { open $in | from nuon }
+  | flatten 
+  | ensure-exists ...$in.files
+  | nu -c ...$in.commands
+  print "done "

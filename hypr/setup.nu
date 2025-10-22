@@ -1,1 +1,3 @@
-""|save -a ~/.config/hypr/custom.conf
+{
+  files: ["~/.config/hypr/custom.conf"]
+}
