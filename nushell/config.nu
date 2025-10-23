@@ -20,18 +20,26 @@ def set-background [
   let absPath = ($path|path expand)
   matugen --contrast 1 -m dark image $absPath -c ("~/.config/matugen/config.toml"|path expand)
 }
+
 def nufzf [
-  --format(-f)  : closure
-  --preview(-p) : closure
+  --format (-f) : closure 
+  --preview(-p) : closure 
   --fzflags     : list<string> = ["multi","ansi"]
-] {
+  ] {
+  let data = if ($in | is-empty) { ls } else { $in }
+  let format  = if ($format  | is-empty) { {get name} } else { $format }
+  let preview = if ($preview | is-empty) { {table} } else { $preview }
   let flags = $fzflags | each { "--" + $in } 
-  let forcePreview = $preview|to nuon --serialize|from nuon
+  let forcePreview = ($preview
+      |to nuon --serialize 
+      | from nuon)
+    #from nuon removes the quotes,
+    #acts differently in different versions of nushell?
   return (
-    $in 
+    $data
     |each {|x| let formatted = do $format $x ; $"(($x | to nuon -r)) __;__ ($formatted)" }
     |str join "\n"
-    |^fzf
+    |fzf
       ...$flags
       --with-shell="nu -c"
       --with-nth=2
@@ -44,9 +52,11 @@ def nufzf [
   )
 }
 
+
 source $"($nu.cache-dir)/carapace.nu"
 source $"($nu.cache-dir)/starsihp.nu"
 source $"($nu.cache-dir)/zoxide.nu"
+source $"($nu.cache-dir)/custom.nu"
 source ./yazi.nu
 
 alias gs = ^lazygit

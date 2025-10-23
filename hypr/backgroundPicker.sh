@@ -1,21 +1,23 @@
 #!/bin/bash
 
-# File to store chosen image
 pathFile=$(mktemp -t "yazi-cwd.XXXXXX")
 
-# Your command template
 matugenCommand="matugen --contrast 1 -m dark image"
+cwalCommand="cwal --contrast 1.1 --img"
 swwwCommand=" swww img --transition-type center"
-# Build a script that runs inside the floating terminal
+
 ghostScript=$(mktemp)
 cat > "$ghostScript" <<EOF
-#!/bin/bash
-# Run yazi to pick a file
+
+
 yazi ~/Pictures --chooser-file "$pathFile"
-# After yazi exits, run matugen with chosen file
-$matugenCommand \$(cat "$pathFile")
+
 $swwwCommand \$(cat "$pathFile")
+$cwalCommand \$(cat "$pathFile")
+$matugenCommand \$(cat "$pathFile")
+
 rm -fp $pathFile
+
 EOF
 
 chmod +x "$ghostScript"

@@ -33,7 +33,7 @@ output_path = '~/.config/starship.toml'
 [templates.ghostty]
 input_path = './templates/ghostty-colors'
 output_path = '~/.config/ghostty/themes/matugen'
-post_hook = 'bash -c `kill -s sigusr2 $(nu -c "ps |where name =~ ghostty|get pid|get 0")`'
+post_hook = 'nu -c "ps | where name == ghostty | get pid | each {kill --signal 12 $in}"'
 
 [templates.kitty]
 input_path = './templates/kitty-color.conf'
@@ -50,6 +50,7 @@ output_path = '~/dotfiles/zen/matugen.css'
 [templates.nvim]
 input_path = './templates/nvim-colors.lua'
 output_path = '~/.config/nvim/lua/matugen-colors.lua'
+post_hook = 'nu -c "ps | where name == nvim | get pid | each {kill --signal 10 $in}"'
 
 [templates.qml]
 input_path = './templates/Colors.qml'
