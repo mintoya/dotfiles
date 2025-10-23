@@ -57,6 +57,7 @@ source $"($nu.cache-dir)/carapace.nu"
 source $"($nu.cache-dir)/starsihp.nu"
 source $"($nu.cache-dir)/zoxide.nu"
 source $"($nu.cache-dir)/custom.nu"
+source $"~/.cache/cwal/colors.nu"
 source ./yazi.nu
 
 alias gs = ^lazygit
@@ -65,4 +66,4 @@ alias q  = exit
 alias md = mkdir
 alias rd = rm -rf
 alias c  = clear
-^fastfetch
+^fastfetch -c examples/11.jsonc

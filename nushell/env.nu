@@ -22,11 +22,17 @@ $env.PATH = ($env.PATH | prepend "~/.local/bin")
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 
 mkdir $"($nu.cache-dir)"
-
+def mds [ dirname:directory ] {
+  if (not ($dirname | path expand | path dirname | path exists)) {
+    mds ($dirname | path expand | path dirname)
+  }
+  do { mkdir -v ($dirname | path expand) }
+}
 def save-check [
   path : string
   input: closure
   ] {
+    mds ($path | path dirname)
     if ( not ($path | path exists) ) {
       do $input | save --force $path
     }
@@ -35,10 +41,8 @@ save-check $"($nu.cache-dir)/carapace.nu" {carapace _carapace nushell}
 save-check $"($nu.cache-dir)/starsihp.nu" {starship init nu          }
 save-check $"($nu.cache-dir)/zoxide.nu"   {zoxide init nushell       }
 save-check $"($nu.cache-dir)/custom.nu"   {""                        }
+save-check $"~/.cache/cwal/colors.nu"     {""                        }
 
-if ("~/.cache/cwal/colors.nu"|path exists) {
-  source ("~/.cache/cwal/colors.nu"|path expand)
-}
 
 $env.config.table.mode = 'none'
 $env.config.show_banner = false
