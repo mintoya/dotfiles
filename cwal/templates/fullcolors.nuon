@@ -1,0 +1,58 @@
+{
+  hex  :{
+    background:"{background.hex}"
+    foreground:"{foreground.hex}"
+    color0:"{color0.hex}"
+    color1:"{color1.hex}"
+    color2:"{color2.hex}"
+    color3:"{color3.hex}"
+    color4:"{color4.hex}"
+    color5:"{color5.hex}"
+    color6:"{color6.hex}"
+    color7:"{color7.hex}"
+    color8:"{color8.hex}"
+    color9:"{color9.hex}"
+  }
+  xhex :{
+    background:"{background.xhex}"
+    foreground:"{foreground.xhex}"
+    color0:"{color0.xhex}"
+    color1:"{color1.xhex}"
+    color2:"{color2.xhex}"
+    color3:"{color3.xhex}"
+    color4:"{color4.xhex}"
+    color5:"{color5.xhex}"
+    color6:"{color6.xhex}"
+    color7:"{color7.xhex}"
+    color8:"{color8.xhex}"
+    color9:"{color9.xhex}"
+  }
+  strip:{
+    background:"{background.strip}"
+    foreground:"{foreground.strip}"
+    color0:"{color0.strip}"
+    color1:"{color1.strip}"
+    color2:"{color2.strip}"
+    color3:"{color3.strip}"
+    color4:"{color4.strip}"
+    color5:"{color5.strip}"
+    color6:"{color6.strip}"
+    color7:"{color7.strip}"
+    color8:"{color8.strip}"
+    color9:"{color9.strip}"
+  }
+  rgba: {
+    background:{r:{background.red},g:{background.green},b:{background.blue},a:{background.alpha_dec}}
+    foreground:{r:{foreground.red},g:{foreground.green},b:{foreground.blue},a:{foreground.alpha_dec}}
+    color0:{r:{color0.red},g:{color0.green},b:{color0.blue},a:{color0.alpha_dec}}
+    color1:{r:{color1.red},g:{color1.green},b:{color1.blue},a:{color1.alpha_dec}}
+    color2:{r:{color2.red},g:{color2.green},b:{color2.blue},a:{color2.alpha_dec}}
+    color3:{r:{color3.red},g:{color3.green},b:{color3.blue},a:{color3.alpha_dec}}
+    color4:{r:{color4.red},g:{color4.green},b:{color4.blue},a:{color4.alpha_dec}}
+    color5:{r:{color5.red},g:{color5.green},b:{color5.blue},a:{color5.alpha_dec}}
+    color6:{r:{color6.red},g:{color6.green},b:{color6.blue},a:{color6.alpha_dec}}
+    color7:{r:{color7.red},g:{color7.green},b:{color7.blue},a:{color7.alpha_dec}}
+    color8:{r:{color8.red},g:{color8.green},b:{color8.blue},a:{color8.alpha_dec}}
+    color9:{r:{color9.red},g:{color9.green},b:{color9.blue},a:{color9.alpha_dec}}
+  }
+}

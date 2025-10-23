@@ -1,0 +1,60 @@
+format = '''
+$directory$git_branch
+$character
+'''
+
+palette = 'colors'
+
+[palettes.colors]
+foreground = '{foreground}'
+%nu%{}%nu%
+color0     = '{color0}'
+color1     = '{color1}'
+color2     = '{color2}'
+color3     = '{color3}'
+color4     = '{color4}'
+color5     = '{color5}'
+color6     = '{color6}'
+color7     = '{color7}'
+color8     = '{color8}'
+color9     = '{color9}'
+
+# Prompt symbols
+[character]
+# success_symbol = "[   >](color1)"
+# vicmd_symbol   = "[   x](color1)"
+# error_symbol   = "[   ?](red)"
+success_symbol = "[  ](color1)"
+vicmd_symbol   = "[  ](color1)"
+error_symbol   = "[  ](red)"
+
+[directory]
+format = "[ ](fg:color5 bg:none)[ ](bg:color5 fg:foreground)[ ](fg:color5 bg:none)[$path ](fg:foreground bg:none)"
+
+
+[directory.substitutions]
+"~"         = " "
+".config"   = " "
+"Documents" = "󰧮 "
+"Downloads" = " "
+"Music"     = " "
+"Pictures"  = " "
+"Github"    = " "
+
+[git_branch]
+format = "[](fg:color8 bg:none)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $branch](fg:color3 bg:color4)[](fg:color4) "
+
+[time]
+format = "[](fg:color8 bg:none)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $time](fg:color3 bg:color4)[](fg:color4) "
+disabled = false
+time_format = "%R" # Hour:Minute Format
+
+[python]
+format = "[](fg:color8 bg:none)[${symbol}${version}](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5)( ${virtualenv})](fg:color3 bg:color4)[](fg:color4) "
+symbol = '🐍'
+# pyenv_version_name = true
+pyenv_prefix = 'venv'
+
+
+
+
