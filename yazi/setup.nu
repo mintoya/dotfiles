@@ -1,3 +1,3 @@
 {
-  scripts:["yazi","ya pkg install"]
+  scripts:["ya pkg install"]
 }
