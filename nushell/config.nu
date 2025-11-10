@@ -27,27 +27,25 @@ def nufzf [
   --fzflags     : list<string> = ["multi","ansi"]
   ] {
   let data = if ($in | is-empty) { ls } else { $in }
-  let format  = if ($format  | is-empty) { {get name} } else { $format }
-  let preview = if ($preview | is-empty) { {table} } else { $preview }
+  let format  = if ($format  | is-empty) { {$in} } else { $format }
+  let preview = if ($preview | is-empty) { {$in} } else { $preview }
   let flags = $fzflags | each { "--" + $in } 
-  let forcePreview = ($preview
-      |to nuon --serialize 
-      | from nuon)
-    #from nuon removes the quotes,
-    #acts differently in different versions of nushell?
+  let previewCmd = $"\( {}|parse \"{value} __;__ {name}\"\).0.value|from nuon|do ( $preview |to nuon --serialize | from nuon)"
+    #from nuon removes the quotes
   return (
     $data
+    # $in
     |each {|x| let formatted = do $format $x ; $"(($x | to nuon -r)) __;__ ($formatted)" }
-    |str join "\n"
-    |fzf
+    |to text
+    |^fzf
       ...$flags
       --with-shell="nu -c"
       --with-nth=2
       --delimiter="__;__"
-      --preview=$"\({}|parse \"{value} __;__ {name}\"\).0.value|from nuon|do ($forcePreview)"
-    | lines 
-    | parse "{data} __;__ {name}" 
-    | get -o data 
+      --preview=$"($previewCmd)"
+    |lines 
+    |parse "{data} __;__ {name}" 
+    |get -o data 
     |each {$in|from nuon}
   )
 }
