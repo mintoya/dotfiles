@@ -26,9 +26,9 @@ output_path = '~/.config/gtk-4.0/colors.css'
 input_path = './templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'
 
-[templates.starship]
-input_path = './templates/starship-colors.toml'
-output_path = '~/.config/starship.toml'
+# [templates.starship]
+# input_path = './templates/starship-colors.toml'
+# output_path = '~/.config/starship.toml'
 
 [templates.ghostty]
 input_path = './templates/ghostty-colors'

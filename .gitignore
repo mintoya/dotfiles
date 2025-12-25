@@ -23,3 +23,4 @@ hypr/config.conf
 custom.conf
 starship.toml
 nushell/plugin.msgpackz
+cwal/cwal.ini

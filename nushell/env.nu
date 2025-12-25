@@ -18,6 +18,8 @@
 # them for future reference.
 $env.PATH = ($env.PATH | prepend "~/.npm-global/bin")
 $env.PATH = ($env.PATH | prepend "~/.local/bin")
+$env.PATH = ($env.PATH | prepend "~/.cargo/bin")
+$env.PATH = ($env.PATH | prepend "~/go/bin")
 
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 
@@ -54,5 +56,5 @@ $env.config.edit_mode = 'vi'
 $env.config.cursor_shape.vi_normal = 'block'
 $env.config.cursor_shape.vi_insert = 'line'
 $env.config.cursor_shape.emacs     = 'line'
-$env.PROMPT_INDICATOR_VI_NORMAL = 'x '
-$env.PROMPT_INDICATOR_VI_INSERT = '> '
+$env.PROMPT_INDICATOR_VI_NORMAL = ''
+$env.PROMPT_INDICATOR_VI_INSERT = ''

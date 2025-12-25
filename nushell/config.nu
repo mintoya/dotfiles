@@ -34,7 +34,7 @@ def nufzf [
     #from nuon removes the quotes
   return (
     $data
-    # $in
+
     |each {|x| let formatted = do $format $x ; $"(($x | to nuon -r)) __;__ ($formatted)" }
     |to text
     |^fzf
@@ -48,6 +48,11 @@ def nufzf [
     |get -o data 
     |each {$in|from nuon}
   )
+}
+def setvi [
+  folder:string
+] {
+  $env.NVIM_APPNAME = $folder
 }
 
 
@@ -64,4 +69,7 @@ alias q  = exit
 alias md = mkdir
 alias rd = rm -rf
 alias c  = clear
-^fastfetch -c examples/11.jsonc
+
+alias clea = sl -G
+# ^fastfetch -c examples/11.jsonc
+^fastfetch
