@@ -1,2 +1,2 @@
-[ hyprland, quickshell, rofi, thunar, swww, hyprcursor, hyprsunset ] 
+[ hyprland, noctalia-qs-git , thunar,  hyprsunset, nwg- look] 
 

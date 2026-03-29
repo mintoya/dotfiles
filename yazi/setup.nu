@@ -1,3 +1,4 @@
 {
-  scripts:["yazi","ya pkg install"]
+  requires:["yazi"],
+  scripts:["yazi","ya pkg install"],
 }

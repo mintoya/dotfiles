@@ -1,1 +1,1 @@
-[ matugen, swww ]
+[ matugen ]

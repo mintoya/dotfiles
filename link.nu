@@ -16,9 +16,4 @@ ls --full-paths $src
   ln -s $source $target
 }
 
-print "done installing"
-
-print "adding colorschemes"
-matugen --contrast 1 -m dark color hex "#5687ff" -c ( pwd | path join "matugen/config.toml" |path expand)
-
 print "linking"

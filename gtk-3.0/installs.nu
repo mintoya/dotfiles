@@ -1,1 +1,1 @@
-[adw-gtk-theme]
+[adw-gtk-theme,nwg-look]

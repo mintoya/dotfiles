@@ -24,3 +24,6 @@ custom.conf
 starship.toml
 nushell/plugin.msgpackz
 cwal/cwal.ini
+/ghostty/themes/noctalia
+/zen/*
+!/zen/userChrome.css
