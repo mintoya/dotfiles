@@ -1,11 +1,14 @@
 # My .files
 zen requires a symlink to work
 do this in the chrome folder
-* Bash
+run 
 `
-ln -s ~/.config/zen/matugen.css matugen.css
+    nu setup.nu
 `
-* PowerShell: 
-`
-New-Item -ItemType SymbolicLink -Path .\matugen.css -Target "$HOME\.config\zen\matugen.css"
-`
+this will 
+- install yay
+- make required files
+- move any old files or directories to file.bak
+- symlink everything to .config
+- install dependencies 
+- run post-install stuff

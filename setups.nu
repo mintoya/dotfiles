@@ -16,7 +16,7 @@ cd $return_directory
 
 def ensure-exists [...files: string] {
   for file in $files {
-    mkdir ( $file | path dirname )
+    mkdir ( $file | path expand | path dirname )
     if ($file | path exists) {
       print $"skipping ($file)"
     } else {
@@ -38,10 +38,10 @@ def ensure-installed [...pkgs: string] {
     }
   }
 }
-def run_script [...scripts:string] {
+def run_script [...scripts: string] {
   for s in $scripts {
     print $"running ($s)"
-    nu --commands $s
+    $s | ^timeout 3 nu -c $in | complete 
   }
 }
 print "making required files"

@@ -5,6 +5,9 @@
     "noctalia-qs-git",
     "thunar",
     "hyprsunset",
-    "nwg-look"
-  ] 
+    "nwg-look",
+  ],
+  scripts :[
+    "hyprctl reload"
+  ],
 }
