@@ -1,0 +1,3 @@
+{
+  requires : ["noctalia-qs-git"]
+}

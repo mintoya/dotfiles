@@ -1,28 +1,30 @@
-nu -c link.nu
+nu link.nu
 let return_directory = pwd 
 
 try {
-  ^yay --help 
+    ^yay --version | ignore
 } catch {
-  print "installing yay "
-  let yaydir = "~/yay" | path expand
-  mkdir $yaydir
-
-  git clone "https://aur.archlinux.org/yay.git" $yaydir
-  cd $yaydir
-  makepkg -si -D $yaydir
+    print "installing yay..."
+    let yaydir = (mktemp -d "yay.XXXXXX" | path expand)
+    git clone "https://aur.archlinux.org/yay.git" $yaydir
+    cd $yaydir
+    makepkg -si
 }
 
 print "yay is installed "
 cd $return_directory
 
-export def ensure-exists [...files: string] {
+def ensure-exists [...files: string] {
   for file in $files {
     mkdir ( $file | path dirname )
-    ""|save -a $file
+    if ($file | path exists) {
+      print $"skipping ($file)"
+    } else {
+      ""|save -a $file
+    }
   }
 }
-export def ensure-installed [...pkgs: string] {
+def ensure-installed [...pkgs: string] {
   for pkg in $pkgs {
     if (^yay -Q $pkg | complete).exit_code != 0 {
       try { 
@@ -36,6 +38,12 @@ export def ensure-installed [...pkgs: string] {
     }
   }
 }
+def run_script [...scripts:string] {
+  for s in $scripts {
+    print $"running ($s)"
+    nu --commands $s
+  }
+}
 print "making required files"
 let setups = ^fd . (pwd) --type file 
   | lines 
@@ -46,10 +54,16 @@ let setups = ^fd . (pwd) --type file
       files   :($in|get -o    files | where {describe | $in != nothing}| flatten),
       scripts :($in|get -o  scripts | where {describe | $in != nothing}| flatten),
     }
+print "ensuring files exist"
 ensure-exists ...(
-  $setups | get scripts
+  $setups | get files
 )
+print "installing some dependencies "
 ensure-installed ...(
   $setups | get requires
+)
+print "running post-install scripts"
+run_script ...(
+  $setups | get scripts
 )
 print "done "

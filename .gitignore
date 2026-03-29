@@ -27,3 +27,5 @@ cwal/cwal.ini
 /ghostty/themes/noctalia
 /zen/*
 !/zen/userChrome.css
+/noctalia/colors.json
+/noctalia/plugins.json
