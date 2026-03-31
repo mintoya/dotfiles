@@ -11,6 +11,13 @@ try {
     makepkg -si
 }
 
+try { 
+  ^yay -S --noconfirm fd
+} catch { 
+  error make {msg: $"failed to install fd"}
+}
+
+
 print "yay is installed "
 cd $return_directory
 

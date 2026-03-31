@@ -1,3 +1,3 @@
 {
-  requires : ["noctalia-qs-git"]
+  requires : ["noctalia-qs-git","noctalia-shell"]
 }

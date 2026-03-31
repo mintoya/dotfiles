@@ -160,14 +160,6 @@
             ],
             "right": [
                 {
-                    "defaultSettings": {
-                        "enableCross": true,
-                        "enableWindowsSelection": true,
-                        "screenshotEditor": "swappy"
-                    },
-                    "id": "plugin:screen-shot-and-record"
-                },
-                {
                     "hideWhenZero": false,
                     "hideWhenZeroUnread": false,
                     "iconColor": "none",
@@ -723,13 +715,13 @@
         ],
         "useOriginalImages": false,
         "useSolidColor": false,
-        "useWallhaven": false,
+        "useWallhaven": true,
         "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "galaxy",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
