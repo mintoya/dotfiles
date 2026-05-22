@@ -1,3 +1,6 @@
 {
-  requires :["ghostty"],
+  requires :[
+    "ghostty",
+    "ttf-iosevka"
+  ],
 }

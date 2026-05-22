@@ -104,6 +104,7 @@
                 {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": false,
                     "icon": "noctalia",
@@ -229,12 +230,13 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "monochrome",
+        "generationMethod": "content",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
         "predefinedScheme": "Noctalia (default)",
         "schedulingMode": "off",
+        "syncGsettings": true,
         "useWallpaperColors": true
     },
     "controlCenter": {
@@ -405,6 +407,7 @@
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true,
+        "smoothScrollEnabled": true,
         "telemetryEnabled": false
     },
     "hooks": {
@@ -435,6 +438,7 @@
     },
     "location": {
         "analogClockInCalendar": false,
+        "autoLocate": false,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
@@ -445,10 +449,10 @@
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
-        "weatherShowEffects": true
+        "weatherShowEffects": true,
+        "weatherTaliaMascotAlways": false
     },
     "network": {
-        "airplaneModeEnabled": false,
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
@@ -671,26 +675,28 @@
                     "#e2e2e2",
                     "#ffb4ab"
                 ],
-                "path": "/home/paa/Pictures/Wallpapers/wallhaven_q6wz6r.jpg",
+                "path": "/home/paa/Pictures/Wallpapers/wallhaven_gp85ed.jpg",
                 "useWallpaperColors": true
             },
             {
+                "appearance": "dark",
                 "colorScheme": "Noctalia (default)",
                 "darkMode": true,
-                "generationMethod": "monochrome",
+                "generationMethod": "content",
                 "paletteColors": [
-                    "#ffffff",
-                    "#c6c6c6",
-                    "#e2e2e2",
+                    "#acc7fd",
+                    "#bdc6de",
+                    "#ebb5ea",
                     "#ffb4ab"
                 ],
-                "path": "/home/paa/Pictures/Wallpapers/wallhaven_gp85ed.jpg",
+                "path": "/home/paa/Pictures/Wallpapers/wallhaven_q6wz6r.jpg",
                 "useWallpaperColors": true
             }
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": false,
+        "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
             {
                 "directory": "/home/paa/Pictures/Wallpapers",
@@ -715,13 +721,13 @@
         ],
         "useOriginalImages": false,
         "useSolidColor": false,
-        "useWallhaven": true,
+        "useWallhaven": false,
         "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "galaxy",
+        "wallhavenQuery": "omen",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",

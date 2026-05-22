@@ -1,7 +1,7 @@
 theme = noctalia
 font-size = 18
 cursor-style = bar
-font-family = "Iosevka Term"
+font-family = "Iosevka"
 
 # custom-shader = /home/paa/Github/ghostty-shaders/retro-terminal.glsl
 custom-shader  = /home/paa/.config/ghostty/shaders/cursor_smear.glsl
