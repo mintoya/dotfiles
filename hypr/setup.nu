@@ -6,8 +6,6 @@
     "thunar",
     "hyprsunset",
     "nwg-look",
-  ],
-  scripts :[
-    "hyprctl reload"
+    "luajit",
   ],
 }

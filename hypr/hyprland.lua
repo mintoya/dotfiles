@@ -1,5 +1,9 @@
 local hl = hl
-local colors = require("colors")
+local pass, colors = pcall(require("colors"))
+if not pass then
+  colors = { on_secondary_container = "#ff0000", }
+end
+
 
 local mainmod = "ALT"
 local terminal = "ghostty"
@@ -16,6 +20,9 @@ hl.monitor({
 
 hl.on("hyprland.start", function()
   hl.exec_cmd("qs -c noctalia-shell")
+  if not pass then
+    hl.exec_cmd("notify-send -u=critical 'config error' 'couldnt find color file for hyprland config'")
+  end
 end)
 
 hl.config({
