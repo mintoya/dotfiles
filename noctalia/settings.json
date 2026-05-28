@@ -420,7 +420,7 @@
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": "cwal -m dark -C -1 --img $(qs -c noctalia-shell ipc call wallpaper get)"
+        "wallpaperChange": "cwal --img $(qs -c noctalia-shell ipc call wallpaper get)"
     },
     "idle": {
         "customCommands": "[]",
@@ -727,7 +727,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "owl",
+        "wallhavenQuery": "black hole",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",

@@ -1,7 +1,8 @@
 local hl = hl
-local pass, colors = pcall(require("colors"))
+local pass, colors = pcall(require, "colors")
 if not pass then
-  colors = { on_secondary_container = "#ff0000", }
+  colors = { secondary_container = "#ff0000", }
+  hl.exec_cmd("notify-send -u=critical 'config error' 'couldnt find color file for hyprland config'")
 end
 
 
@@ -20,9 +21,6 @@ hl.monitor({
 
 hl.on("hyprland.start", function()
   hl.exec_cmd("qs -c noctalia-shell")
-  if not pass then
-    hl.exec_cmd("notify-send -u=critical 'config error' 'couldnt find color file for hyprland config'")
-  end
 end)
 
 hl.config({
@@ -33,8 +31,8 @@ hl.config({
 
     border_size = 2,
     col = {
-      active_border = colors.secondary_container,
-      inactive_border = "rgba(0,0,0,0)",
+      active_border = colors.secondary_container .. "ff",
+      inactive_border = "#00000000",
     },
   },
   decoration = {
