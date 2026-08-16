@@ -1,18 +1,5 @@
-# This file is used to override default Nushell settings, define
-# (or import) custom commands, or run any other startup tasks.
-# See https://www.nushell.sh/book/configuration.html
-# See `help config nu` for more options
-
-
-
 
 alias restart = shutdown -r now
-
-alias reminder = echo "
-buttercup, lobster, kew,
-hyprctl keyword monitor eDP-1,preferred,auto,1,transform,1 ;
-hyprctl keyword input:touchdevice:transform 1
-"
 
 def set-background [
   --path (-p): string
@@ -60,7 +47,7 @@ source $"($nu.cache-dir)/carapace.nu"
 source $"($nu.cache-dir)/starsihp.nu"
 source $"($nu.cache-dir)/zoxide.nu"
 source $"($nu.cache-dir)/custom.nu"
-source $"~/.cache/cwal/colors.nu"
+# source $"~/.cache/cwal/colors.nu"
 source ./yazi.nu
 
 alias gs = ^lazygit

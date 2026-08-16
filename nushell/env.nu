@@ -21,6 +21,9 @@ $env.PATH = ($env.PATH | prepend "~/.local/bin")
 $env.PATH = ($env.PATH | prepend "~/.cargo/bin")
 $env.PATH = ($env.PATH | prepend "~/go/bin")
 
+# $env.CPATH = ($env | get -o CPATH | default [] | prepend "~/.local/include")
+$env.CPATH = "/home/paa/.local/include"
+
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 
 mkdir $"($nu.cache-dir)"
@@ -43,7 +46,7 @@ save-check $"($nu.cache-dir)/carapace.nu" {carapace _carapace nushell}
 save-check $"($nu.cache-dir)/starsihp.nu" {starship init nu          }
 save-check $"($nu.cache-dir)/zoxide.nu"   {zoxide init nushell       }
 save-check $"($nu.cache-dir)/custom.nu"   {""                        }
-save-check $"~/.cache/cwal/colors.nu"     {""                        }
+# save-check $"~/.cache/cwal/colors.nu"     {""                        }
 
 
 $env.config.table.mode = 'none'
