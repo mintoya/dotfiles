@@ -1,7 +1,7 @@
 {
   requires :[ 
     "hyprland",
-    "noctalia-qs-git",
+    "noctalia",
     "thunar",
     "hyprsunset",
     "nwg-look",

@@ -5,6 +5,7 @@ $character
 
 palette = 'colors'
 
+
 [palettes.colors]
 color1 = '0'
 color2 = '1'
@@ -18,12 +19,12 @@ color9 = '8'
 
 # Prompt symbols
 [character]
-vicmd_symbol   = "[  ](color1)"
-success_symbol = "[  ](green)"
-error_symbol   = "[  ?](red)"
+vicmd_symbol   = "[   ](color1)"
+success_symbol = "[   ](green)"
+error_symbol   = "[   ?](red)"
 
 [directory]
-format = "[ ](fg:color1 bg:none)[ ](bg:color1 fg:color4)[ ](fg:color1 bg:none)[$path ](fg:color3 bg:none)"
+format = "[ ](fg:color1 bg:none)[ ](bg:color1 fg:color4)[  ](fg:color1 bg:none)[$path ](fg:color3 bg:none)"
 
 
 [directory.substitutions]
@@ -36,4 +37,4 @@ format = "[ ](fg:color1 bg:none)[ ](bg:color1 fg:color4)[ ](fg:color1 b
 "Github"    = " "
 
 [git_branch]
-format = "[](fg:color1 bg:none)[ ](bg:color1 fg:color2)[](fg:color1 bg:none)[ $branch](fg:color2) "
+format = "[ ](fg:color1 bg:none)[ ](bg:color1 fg:color2)[ ](fg:color1 bg:none)[ $branch](fg:color2) "

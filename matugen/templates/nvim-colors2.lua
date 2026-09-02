@@ -110,7 +110,10 @@ M.highlights = {
   Type           = { fg = c.color10, bold = true },
   MiniJump       = { undercurl = true },
 
-  -- Pick           = { fg = c.color1, bg = "none" },
+  -- Tree-sitter 
+  ["@punctuation.bracket"]   = { fg = c.color8 },
+  ["@punctuation.delimiter"] = { fg = c.color14 },
+  ["@variable"]              = { fg = c.fg },
 }
 
 vim.g.colors_name = "cwal"
